@@ -1,23 +1,19 @@
 body {
+  <background-color: #E4F9F5;
   color: #40514E;
   margin: 0;
   text-align: center;
   font-family: 'Merriweather', serif;
 }
-
-iframe:focus {
-  outline: none;
-}
-
-iframe[seamless] {
-  display: block;
-}
-
 h1 {
   color: #66BFBF;
-  font-size: 5.625rem;
   text-align: center;
+  margin: 1rem 0;
   font-family: 'Sacramento', cursive;
+  font-weight: normal;
+  font-size: 16px;
+  font-size: 5vw;
+  }
 }
 
 h2 {
@@ -55,27 +51,44 @@ a:hover {
   color: #EAF6F6;
 }
 
-.Logo_top {
-  position: absolute;
-  left: 1%;
-  top: 1%;
-  width: 18%;
+
+.top-container {
+  background-color: #E4F9F5;
+  position: relative;
+  top: 50px;
+  padding-top: 50px;
+  height: 300px;
 }
+
+.middle-container {
+  margin: 100px 0;
+}
+
+.bottom-container {
+  background-color: #66BFBF;
+  padding: 50px 0 20px;
+}
+
+.logo-rep {
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  width: 15%;
+}
+
 .top-cloud {
   position: absolute;
   left: 5%;
   top: 6%;
   width: 15%;
 }
+ 
 
-.title_text {
-  align-self: auto;
-}
 
 .bottom-cloud {
   position: absolute;
   right: 3%;
-  top: 14%;
+  bottom: 8%;
   width: 18%;
 }
 .icon_top_1 {
@@ -88,6 +101,12 @@ a:hover {
   right: 1%;
   top: 2%;
 }
+
+.wrapper {
+  z-index: 1;
+  text-overflow: ;
+}
+
 .btn_top_1 {
   position: absolute;
   right: 60%;
@@ -176,20 +195,6 @@ a:hover {
   background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
   text-decoration: none;
 }
-.top-container {
-  background-color: #E4F9F5;
-  position: relative;
-  padding-top: 120px;
-}
-
-.middle-container {
-  margin: 100px 0;
-}
-
-.bottom-container {
-  background-color: #66BFBF;
-  padding: 50px 0 20px;
-}
 
 .skill-row {
   width: 50%;
@@ -200,12 +205,19 @@ a:hover {
 .pro {
   text-decoration: italic;
 }
-
-.intro {
-  width: 90%;
+.top_back {
+  width: 50%;
   margin: auto;
 }
 
+.img_90 {
+  width: 90%;
+  margin: auto;
+}
+.img_10 {
+  width: 10%;
+  margin: auto;
+}
 .contact-message {
   width: 40%;
   margin: 40px auto 60px;
@@ -218,22 +230,19 @@ a:hover {
 }
 
 
-
-
 .crianca_consulta-img {
-  width: 40%;
+  width: 80%;
   float: left;
   margin-right: 130px;
 }
 
 .nossa_equipe-img {
-  width: 50%;
-  float: left;
-  margin-right: 30px;
-}
+  opacity: 50%;
+    max-width: 100%; width: 100%;
+    height: auto;
+  }
 .percent40-img {
   width: 40%;
-
   margin-left: 30px;
 }
 
