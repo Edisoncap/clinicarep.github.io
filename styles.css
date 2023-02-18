@@ -60,11 +60,11 @@ a:hover {
 }
 
 .top-container {
-   opacity: 60%;
+   opacity: 50%;
   position: absolute;
   top: 50px;
   padding-top: 50px;
-  height: 200px;
+  height: 400px;
 }
 
 .middle-container {
