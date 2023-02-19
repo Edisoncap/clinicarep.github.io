@@ -90,7 +90,13 @@ a:hover {
   width: 10%;
 }
  
-
+.btn131{
+       min-width: 131px;
+        max-width: 131px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+    }
 
 .bottom-cloud {
     position: absolute;
