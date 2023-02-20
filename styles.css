@@ -5,15 +5,18 @@ body {
   text-align: center;
   font-family: 'Merriweather', serif;
 }
-agah1 {
-  color: #66BFBF;
-  text-align: center;
-  margin: 1rem 0;
-  font-family: 'Sacramento', cursive;
-  font-weight:bold;
-  font-size: 4.5rem;
-  font-size: 5vw;
-  }
+
+.btn250{
+  width:250px;
+  max-width:100%;
+}
+
+.btn131{
+  min-width:131px;
+  max-width:131px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 h2 {
   color: #66BFBF;
@@ -60,11 +63,11 @@ a:hover {
 }
 
 .top-container {
-   opacity: 50%;
+   opacity: 60%;
   position: absolute;
   top: 50px;
   padding-top: 50px;
-  height: 400px;
+  height: 200px;
 }
 
 .middle-container {
@@ -73,7 +76,8 @@ a:hover {
 
 .bottom-container {
   background-color: #66BFBF;
-  padding: 50px 0 20px;
+  padding: 0px 0 0px;
+  height: 80px;
 }
 
 .logo-rep {
@@ -85,23 +89,17 @@ a:hover {
 
 .top-cloud {
   position: absolute;
-  left: 20%;
-  top: 1%;
-  width: 10%;
+  left: 40%;
+  top: 5%;
+  width: 8%;
 }
  
-.btn131{
-       min-width: 131px;
-        max-width: 131px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        
-    }
+
 
 .bottom-cloud {
     position: absolute;
-    left: 40%;
-    top: 3%;
+    right: 10%;
+    top: 20%;
     width: 10%;
 }
 .icon_top_1 {
@@ -266,7 +264,8 @@ a:hover {
 .copyright {
   color: #EAF6F6;
   font-size: 0.75rem;
-  padding: 20px 0;
+  padding: 20px 0 0px;
+  text-align: center;
 }
 
 
