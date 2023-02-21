@@ -6,6 +6,17 @@ body {
   font-family: 'Merriweather', serif;
 }
 
+@media (max-width: 767px) {
+ 
+  /* ... */
+
+  .top-content .carousel-control-prev, 
+  .top-content .carousel-control-next { display: none; }
+  .top-content .carousel-indicators li { margin-left: 10px; margin-right: 10px; }
+
+  /* ... */
+
+}
 .btn250{
   width:250px;
   max-width:100%;
