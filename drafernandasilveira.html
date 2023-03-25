@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dr. Iggor Sousa</title>
+    <title>Dra. Fernanda Silveira</title>
     
     	<!--=============== bootstrap  ===============-->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
@@ -233,7 +233,7 @@
 :class="{'md:rounded-br-lg': !scrolledFromTop, 'py-0' : scrolledFromTop, 'md:shadow-md' : !scrolledFromTop}">
 
 <!-- Logo Clinica REP -->
-<a href="clinicarep.com.br"><label style="position:fixed;width:120px;;top:12px;left:12px;z-index:1000;"> 
+<a href="https://clinicarep.com.br"><label style="position:fixed;width:120px;;top:12px;left:18px;z-index:1000;"> 
 <img src="images/logo_clear_250.png"> </label></a>
 
 <img src=""
@@ -271,41 +271,41 @@
 
       <li
       class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-      <a href="#especialidades" @click="navOpen = false">ESPECIALIDADES</a>
+      <a href="https://clinicarep.com.br#especialidades" @click="navOpen = false">ESPECIALIDADES</a>
     </li>
 
      
       <li
         class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-        <a href="#equipe" @click="navOpen = false">EQUIPE</a>
+        <a href="https://clinicarep.com.br#equipe" @click="navOpen = false">EQUIPE</a>
       </li>
 
       <li 
       class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-      <a href="#historia" @click="navOpen = false">HISTÓRIA</a>
+      <a href="https://clinicarep.com.br#historia" @click="navOpen = false">HISTÓRIA</a>
     </li>
 
     <li 
       class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-      <a href="#campanhas" @click="navOpen = false">CAMPANHAS</a>
-    </li>
+      <a href="https://clinicarep.com.br#campanhas" @click="navOpen = false">CAMPANHAS</a>
 
       <li
         class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
         <a href="https://www.instagram.com/repclinica_/"><i class="fa-brands fa-instagram fa-2x" @click="navOpen = false"></i></a>
       </li>
 
-      <li id="waze"
+      <li 
         class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
         <a href="https://ul.waze.com/ul?place=ChIJYZtA8EZbzpQR3YhwPxneDl8&ll=-23.60212990%2C-46.61852130&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
           <i class="fa-brands fa-waze fa-2x" @click="navOpen = false"></i></a>
       </li>
 
-      <li id="localizacao"
+      <li
         class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
         <a href="https://maps.app.goo.gl/SeCpuiu4QRJix5NT7?g_st=iw">
           <i class="fa-solid fa-map-location-dot fa-shake fa-2xl"></i>
-
+<!-- Solução para parar de abrir o link do google Maps no perfil do DR1 -->         
+<a href="https://clinicarep.com.br"></a>
   
         </li>
       </ul>
@@ -344,6 +344,53 @@ else if (page == 'instagram'){
 </script>
 <!--Headerfundo-->
 
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+
+        <!--Desktop --> 
+      <div class="swiper-slide  hidden lg:flex">
+          <div class="h-[300px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/atendimento1.jpg?updatedAt=1679226671538);">   
+          </div>
+        </div>
+
+        <!--Mobile -->
+        <div class="swiper-slide flex lg:hidden">
+          <div class="h-[220px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/mobatendimento1.jpg?updatedAt=1679227896915);">   
+          </div>
+        </div>
+          
+      <!--Desktop -->
+    <div class="swiper-slide  hidden lg:flex">
+      <div class="h-[300px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/atendimento2.jpg?updatedAt=1679226671538);">
+      </div>
+    </div>
+
+    <!--Mobile-->
+    <div class="swiper-slide flex lg:hidden">
+          <div class="h-[220px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/mobatendimento2.jpg?updatedAt=1679227896915;">  
+          </div>
+        </div>
+        
+
+      <!--Desktop -->
+      <div class="swiper-slide hidden lg:flex">
+      <div class="h-[300px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/atendimento3.jpg?updatedAt=1679226670743);">
+      </div>
+    </div>
+
+    <!--Mobile -->
+    <div class="swiper-slide flex lg:hidden">
+          <div class="h-[220px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/mobatendimento3.jpg?updatedAt=1679227896915);">  
+          </div>
+        </div>
+        
+
+
+
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
 
 
   <style>
@@ -414,38 +461,6 @@ else if (page == 'instagram'){
 
 <!--Especialidades-->
 
-<div class="grid h-full grid-cols-1 md:grid-cols-4">
-    <div class="md:h-[600px] h-[350px] hero group" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/reumatopediatra1.jpg?updatedAt=1679230772580);">
-        <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
-        <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
-        >
-        <h3 class="text-3xl font-extrabold text-center text-white uppercase">Reumato pediatria  </h3>
-    </div> 
-      </div>      
-
-      <div class="md:h-[600px] h-[350px] group hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/nefropediatra1.jpg?updatedAt=1679230091632);">
-        <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
-        <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
-        >
-        <h3 class="text-3xl font-extrabold text-center text-white uppercase">Pneumo, Nefro e Gastro Pediatria
-        </h3>
-    </div>   
-      </div>
-      <div class="md:h-[600px] h-[350px] group hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/reumato1.jpg?updatedAt=1679230562911);">
-        <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
-        <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
-        >
-        <h3 class="text-3xl font-extrabold text-center text-white uppercase">Reumatologia</h3>
-    </div>   
-      </div>
-      <div class="md:h-[600px] h-[350px] hero group" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/endocrino2.jpg?updatedAt=1679230943843);">
-        <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
-        <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
-        >
-        <h3 class="text-3xl font-extrabold text-center text-white uppercase">Endocrinologia</h3>
-    </div>   
-      </div>
-</div>
 <!--Nossa Equipe-->
 
 
@@ -487,7 +502,7 @@ else if (page == 'instagram'){
                 Irmandade da Santa Casa de São Paulo-SP (2015-2017) <br>
                 
                 <div class="col-span-1 mr-1 text-right">
-                  <a href="https://www.clinicarep.com.br/drafernandasilveira"><button type="button" class="btn btn-outline-secondary">Site da Dra. Fernanda</button>
+                  <a href="https://www.instagram.com/fernandadoli"><i class="fa-brands fa-instagram fa-2x" @click="navOpen = false"></i>
                 </div></a>
       
         </form>
@@ -516,6 +531,148 @@ else if (page == 'instagram'){
 </div>
 
 <!-- Mais medicos-->
+<!-- Mais medicos-->
+<!--Especialidades-->
+
+<div class="grid h-full grid-cols-1 md:grid-cols-4">
+  <div class="md:h-[600px] h-[350px] hero group" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/reumatopediatra1.jpg?updatedAt=1679230772580);">
+      <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
+      <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
+      >
+      <h3 class="text-3xl font-extrabold text-center text-white uppercase">Reumato pediatria  </h3>
+  </div> 
+    </div>      
+
+    <div class="md:h-[600px] h-[350px] group hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/nefropediatra1.jpg?updatedAt=1679230091632);">
+      <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
+      <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
+      >
+      <h3 class="text-3xl font-extrabold text-center text-white uppercase">Pneumo, Nefro e Gastro Pediatria
+      </h3>
+  </div>   
+    </div>
+    <div class="md:h-[600px] h-[350px] group hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/reumato1.jpg?updatedAt=1679230562911);">
+      <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
+      <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
+      >
+      <h3 class="text-3xl font-extrabold text-center text-white uppercase">Reumatologia</h3>
+  </div>   
+    </div>
+    <div class="md:h-[600px] h-[350px] hero group" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/endocrino2.jpg?updatedAt=1679230943843);">
+      <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
+      <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
+      >
+      <h3 class="text-3xl font-extrabold text-center text-white uppercase">Endocrinologia</h3>
+  </div>   
+    </div>
+</div>
+
+<!--imagens em Bootstrap-->
+
+
+<div class="row" style="background-color:lightblue">
+  <!--dr1 -->
+      <div class="col-lg-3 col-md-6" style="background-color:lightblue">      
+        <img class="rounded-[50%] w-full" src="images/dor_crescimento.jpg"  alt=""></p>
+          <h3 class="text-2xl font-extrabold text-center "></h3> 
+          <h4 class="text-2x1 text-center"> Reumatologia</h4>
+             
+                  <span id="lnk-dr1link"> 
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                      <button class="btn btn-info me-md-2" type="button">Leia mais➥</button></span>
+                    </div>
+         
+            <form id="frm-dr1form" class="bg-white shadow-md rounded-bl rounded-r px-8 pt-6 pb-8 mb-4" onsubmit="" method="post" style="display: none;">
+                
+                    <input id="id" name="id" type="hidden" value="">
+                    Não podemos deixar de falar sobre esse tema tão importante e que tem uma relação bastante próxima com as especialidades que atendemos em nossa clínica.
+
+                    O desequilíbrio mental pode ser o gatilho para o aparecimento de doenças físicas ou a piora das mesmas.</br>
+
+                    
+                    👍 Ao perceber tais sintomas, procure um reumatologista.</br>
+                    <div class="col-span-1 mr-1 text-right">
+                      <a href="https://www.clinicarep.com.br/driggorsousa"><button type="button" class="btn btn-outline-secondary">Site do Dr. Iggor</button>
+                    </div></a>
+             </form>
+      </div>
+    
+    <!--dr2 -->
+    <div class="col-lg-3 col-md-6" style="background-color:lightblue">      
+      <img class="rounded-[50%] w-full" src="images/reumato_2.jpg"  alt=""></p>
+        <h3 class="text-2xl font-extrabold text-center "></h3> 
+        <h4 class="text-2x1 text-center"> Reumato</h4>
+          
+        <span id="lnk-dr2link"> 
+          <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <button class="btn btn-info me-md-2" type="button">Leia mais➥</button></span>
+          </div>
+            <form id="frm-dr2form" class="bg-white shadow-md rounded-bl rounded-r px-8 pt-6 pb-8 mb-4" onsubmit="" method="post" style="display: none;">
+                  <input id="id" name="id" type="hidden" value="">
+    
+                  Procure um Reumatologista<br>
+                  
+                  
+                  <div class="col-span-1 mr-1 text-right">
+                    <a href="https://www.clinicarep.com.br/"><button type="button" class="btn btn-outline-secondary"></button>
+                  </div></a>
+        
+          </form>
+    </div>
+  
+  <!--dr3 -->
+  <div class="col-lg-3 col-md-6" style="background-color:lightblue">      
+    <img class="rounded-[50%] w-full" src="images/reumato_3.jpg"  alt=""></p>
+      <h3 class="text-2xl font-extrabold text-center "></h3> 
+      <h4 class="text-2x1 text-center"> </h4>
+            
+      <span id="lnk-dr3link"> 
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <button class="btn btn-info me-md-2" type="button">Leia mais➥</button></span>
+        </div>
+    
+        <form id="frm-dr3form" class="bg-white shadow-md rounded-bl rounded-r px-8 pt-6 pb-8 mb-4" onsubmit="" method="post" style="display: none;">
+            
+                <input id="id" name="id" type="hidden" value="">
+  
+                              
+                
+                <div class="col-span-1 mr-1 text-right">
+                  <a href="https://www.clinicarep.com.br/"><button type="button" class="btn btn-outline-secondary"></button>
+                </div></a>
+      
+        </form>
+  </div>
+  
+  <!--dr4 -->
+  <div class="col-lg-3 col-md-6" style="background-color:lightblue">      
+    <img class="rounded-[50%] w-full" src="images/reumato_4.jpg"  alt=""></p>
+      <h3 class="text-2xl font-extrabold text-center "></h3> 
+      <h4 class="text-2x1 text-center"></h4>
+      <span id="lnk-dr4link"> 
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <button class="btn btn-info me-md-2" type="button">Leia mais➥</button></span>
+        </div>
+        <form id="frm-dr4form" class="bg-white shadow-md rounded-bl rounded-r px-8 pt-6 pb-8 mb-4" onsubmit="" method="post" style="display: none;">
+            
+                <input id="id" name="id" type="hidden" value="">
+  
+                Nunca negligencie sintomas, marque sua consulta
+                
+                <div class="col-span-1 mr-1 text-right">
+                  <a href="https://www.clinicarep.com.br/"><button type="button" class="btn btn-outline-secondary"></button>
+                </div></a>
+      
+        </form>
+  </div>
+
+<div>
+
+      
+      Marque sua consulta.
+  </br>
+    🚨 Lembrando que os sintomas podem iniciar também na infância e adolescência.
+    
 
 
 <!--História-->
@@ -532,6 +689,7 @@ else if (page == 'instagram'){
 <!--Fim Campanhas-->
 
 
+</div>
 
 
 <style>
@@ -580,7 +738,6 @@ var swiper = new Swiper(".mySwiper3", {
 });
 </script>
 
-
 <style>
     .iframe-container{
         position: relative;
@@ -624,31 +781,31 @@ var swiper = new Swiper(".mySwiper3", {
 
 <!-- Home -->
 
-    <a href="https://clinicarep.com.br"> <label style="position:fixed;bottom:110px;left:5%;text-align:center;font-size:15px; z-index:1000;" >
+    <a href="https://clinicarep.com.br"> <label style="position:fixed;bottom:15px;left:5%;text-align:center;font-size:15px; z-index:1000;" >
    <div class="text-black hover:border-b"><h4>HOME</h4></div></label></a>
 
 <!-- Especialidades -->
 
     <a href="https://clinicarep.com.br#especialidades" @click="navOpen = false"></a>
-    <a href="https://clinicarep.com.br#especialidades"> <label style="position:fixed;bottom:110px;left:20%;text-align:center;font-size:15px; z-index:1000;" >
+    <a href="https://clinicarep.com.br#especialidades"> <label style="position:fixed;bottom:15px;left:20%;text-align:center;font-size:15px; z-index:1000;" >
    <div class="text-black hover:border-b">ESPEC.</div></label></a>
 
 <!-- Equipe -->
 
     <a href="https://clinicarep.com.br#EQUIPE" @click="navOpen = false"></a>
-    <a href="https://clinicarep.com.br#equipe"> <label style="position:fixed;bottom:110px;left:35%;text-align:center;font-size:15px; z-index:1000;" >
+    <a href="https://clinicarep.com.br#equipe"> <label style="position:fixed;bottom:15px;left:35%;text-align:center;font-size:15px; z-index:1000;" >
    <div class="text-black hover:border-b">EQUIPE</div></label></a>
 
 <!-- História -->
 
     <a href="https://clinicarep.com.br#historia" @click="navOpen = false"></a>
-    <a href="https://clinicarep.com.br#historia"> <label style="position:fixed;bottom:110px;right:30%;text-align:center;font-size:15px; z-index:1000;" >
+    <a href="https://clinicarep.com.br#historia"> <label style="position:fixed;bottom:15px;right:30%;text-align:center;font-size:15px; z-index:1000;" >
    <div class="text-black hover:border-b">HISTÓRIA</div></label></a>
 
 <!-- Campanhas -->
 
     <a href="https://clinicarep.com.br#campanhas" @click="navOpen = false"></a>
-    <a href="https://clinicarep.com.br#campanhas"> <label style="position:fixed;bottom:110px;right:5%;text-align:center;font-size:15px; z-index:1000;" >
+    <a href="https://clinicarep.com.br#campanhas"> <label style="position:fixed;bottom:15px;right:5%;text-align:center;font-size:15px; z-index:1000;" >
    <div class="text-black hover:border-b">CAMPANHAS</div></label></a>
 
 
@@ -660,18 +817,18 @@ var swiper = new Swiper(".mySwiper3", {
   </div>
 
  
+<!-- Meu Footer -- Meu Rodapeh de botao -->
+  
+<!-- Todos os Direitos Reservados -->
 
-  <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
-    <h2  class="flex flex-col items-center justify-between w-full h-full gap-4 px-4 py-3 text-white lg:flex-row"
-    >
-      <div class="text-sm text-justified">
-        © 2023 Clinica REP. Todos os Direitos Reservados
-      </div>
-      
+<label style="position:fixed;width:100%;height:130px;position: absolute:bottom ; bottom:0px;color:#FFF;opacity: 50% box-shadow: 1px 1px 2px #888;" > 
+  <div class="relative pb-24 bg-opacity-80 bg-verdeclaro">
+  
 
-
-   
-
+  <label style="position:fixed;bottom:110px;right:5%;text-align:center;font-size:15px;text-white z-index:1000;" >
+    <div class="">© 2023 Clinica REP. Todos os Direitos Reservados</div></label></a>
+ </label>
+</div>
 
  
 
