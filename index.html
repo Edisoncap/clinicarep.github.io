@@ -263,7 +263,7 @@
   :class="{'h-24': !scrolledFromTop, 'h-20': scrolledFromTop, 'bg-transparent': scrolledFromTop, 'text-black': !scrolledFromTop, 'text-black': !scrolledFromTop, 'md:bg-white' : scrolledFromTop, 'shadow-md' : scrolledFromTop}"
 >
 
-  <a class="px-6 py-3 bg-white md:-mt-2" href="https://clinicarep.com.br"
+  <a class="px-6 py-3 bg-white md:-mt-2" href="https://www.clinicarep.com.br"
     :class="{'md:rounded-br-lg': !scrolledFromTop, 'py-0' : scrolledFromTop, 'md:shadow-md' : !scrolledFromTop}">
 
 <!-- Logo Clinica REP -->
@@ -299,7 +299,7 @@
       :class="{'md:shadow-md': scrolledFromTop}">
       <li id="home" 
         class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-        <a href="https://clinicarep.com.br" @click="navOpen = false">HOME</a>
+        <a href="https://www.clinicarep.com.br" @click="navOpen = false">HOME</a>
       </li>
 
       <li
@@ -315,12 +315,12 @@
 
       <li 
       class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-      <a href="#historia" @click="navOpen = false">HISTÓRIA</a>
+      <a href="#institucional" @click="navOpen = false">INSTITUCIONAL</a>
     </li>
 
     <li 
       class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-      <a href="#campanhas" @click="navOpen = false">CAMPANHAS</a>
+      <a href="#contato" @click="navOpen = false">CONTATO</a>
     </li>
 
       <li
@@ -339,7 +339,7 @@
         <a href="https://maps.app.goo.gl/SeCpuiu4QRJix5NT7?g_st=iw">
           <i class="fa-solid fa-map-location-dot fa-shake fa-2xl"></i>
  <!-- Solução para parar de abrir o link do google Maps no perfil do DR1 -->         
-          <a href="https://clinicarep.com.br"></a>
+          <a href="https://www.clinicarep.com.br"></a>
 
         </li>
       </ul>
@@ -352,8 +352,8 @@ var path = window.location.pathname;
 var page = path.split("/").pop();
 console.log( page );
 
-if (page == 'historia'){
-  document.getElementById("historia").classList.add("text-verdeclaro");
+if (page == 'institucional'){
+  document.getElementById("institucional").classList.add("text-verdeclaro");
 } 
 
 else if (page == 'home'){
@@ -375,6 +375,11 @@ else if (page == 'localizacao'){
 else if (page == 'instagram'){
   document.getElementById("instagram").classList.add("text-verdeclaro");
 }
+
+if (page == 'contato'){
+  document.getElementById("contato").classList.add("text-verdeclaro");
+} 
+
 </script>
 <!--Headerfundo-->
 
@@ -423,6 +428,7 @@ else if (page == 'instagram'){
 
     </div>
     <div class="swiper-button-next"></div>
+    
     <div class="swiper-button-prev"></div>
   </div>
 
@@ -493,7 +499,7 @@ else if (page == 'instagram'){
 <div class="relative flex flex-col w-full md:flex-row">
     <div class="md:w-[40%] w-full flex-col h-[400px] py-24 -mt-32 rounded-tr-[64px] relative z-30 px-10 flex justify-center bg-verdeclaro">
       
-        <h2 class="text-4xl font-extrabold text-right text-white uppercase">Nosso trabalho pode ser definido em 3 palavras: </br> </br> Dedicação </br> </br> Paciência </br> </br> Conhecimento 
+        <h2 class="text-4xl font-extrabold text-right text-white uppercase">Nosso trabalho em 3 palavras: </br> </br> Dedicação </br> </br> Paciência </br> </br> Conhecimento 
     </div>
     <div class="relative flex items-end max-w-xl px-12 py-12 md:py-16 md:mb-4">
         <p class="leading-6 text-black opacity-70">
@@ -761,9 +767,9 @@ else if (page == 'instagram'){
 <!-- Mais medicos-->
 
 
-<!--História-->
-<!---->
 
+<!---->
+<div id="institucional"></div>
 
 <!---->
 
@@ -786,23 +792,15 @@ else if (page == 'instagram'){
 <!--Institucional-->
 
 <div class="col-lg-6 col-md-6" style="background-color:lightblue">
-        <div class="pb-24 swiper md:-mr-42 slide3 mySwiper3">
-            <div class=" swiper-wrapper">
-              <div class="relative swiper-slide slide3"> 
-                <img alt="" class="w-full rounded-lg" src="images/institucional3.jpg" />
+    <div class="pb-24 swiper md:-mr-42 slide3 mySwiper3">
+        <div class=" swiper-wrapper">
+              <div class="relative swiper-slide slide3">
+                <img alt="" class="rounded-lg" src="images/visao.jpg" />
                 <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
                   <h2 class="text-4xl font-extrabold text-center text-top text-white">
                     Valores </h2> 
                     <h3 class="text-3xl font-extrabold text-justified text-top text-white">
-                      Qualidade assistencial, respeito ao paciente e aos envolvidos</h3</div></div>
-              </div>
-              <div class="relative swiper-slide slide3">
-                <img alt="" class="rounded-lg" src="images/institucional2.jpg" />
-                <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
-                  <h2 class="text-4xl font-extrabold text-center text-top text-white">
-                    Visão </h2> 
-                    <h3 class="text-3xl font-extrabold text-justified text-top text-white">
-                      Ser referência nos atendimentos e cuidado com os pacientes</h3</div></div>
+                      Tratamento Humanizado</h3</div></div>
               </div>
               <div class="relative swiper-slide slide3">
                 <img alt="" class="rounded-lg" src="images/institucional1.jpg" />
@@ -810,7 +808,7 @@ else if (page == 'instagram'){
                   <h2 class="text-4xl font-extrabold text-center text-top text-white">
                     Missão </h2> 
                     <h3 class="text-3xl font-extrabold text-justified text-top text-white">
-                    Promover saúde e bem estar a todos de forma humanizada</h3</div></div>
+                    Sua saúde é a nossa missão</h3</div></div>
               </div>
               </div>
             </div>
@@ -835,25 +833,11 @@ else if (page == 'instagram'){
                     <h3 class="text-3xl font-extrabold text-justified text-top text-white">
                       Mais</h3</div></div>
               </div>
-              <div class="relative swiper-slide slide3">
-                <img alt="" class="rounded-lg" src="images/campanha2.jpg" />
-                <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
-                  <h2 class="text-4xl font-extrabold text-center text-top text-white">
-                    Saiba</h2> 
-                    <h3 class="text-3xl font-extrabold text-justified text-top text-white">
-                      Mais</h3</div></div>
-              </div>
-              <div class="relative swiper-slide slide3">
-                <img alt="" class="rounded-lg" src="images/campanha1.jpg" />
-                <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
-                  <h2 class="text-4xl font-extrabold text-center text-top text-white">
-                    Saiba </h2> 
-                    <h3 class="text-3xl font-extrabold text-justified text-top text-white">
-                    Mais</h3</div></div>
-              </div>
+              
+              
 
               <div class="relative swiper-slide slide3">
-                <img alt="" class="rounded-lg" src="images/doencas.jpg" />
+                <img alt="" class="rounded-lg" src="images/crianca_consulta.jpg" />
                 <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
                   <h2 class="text-4xl font-extrabold text-center text-top text-white">
                     Saiba </h2> 
@@ -934,11 +918,19 @@ var swiper = new Swiper(".mySwiper3", {
       }
     </style>
 <!--Footer-->
+
 <!-- Botão Whatsapp -->
 <a href="https://api.whatsapp.com/send?phone=5511972268107&text=Ol%C3%A1,%20vim%20pelo%20site%20da%20Clínica%20REP%20e%20gostaria%20de%20agendar%20uma%20consulta">
-  <label style="position:fixed;width:45px;height:35px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:10px;text-align:center;font-size:20px;box-shadow: 1px 1px 2px #888;
-  z-index:1000;" target="_blank" for="my-modal-4" class="btn"><i class="fa fa-brands fa-whatsapp fa-xl"></i></label>
- </a>
+    <label style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:15px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+    z-index:1000;" target="_blank" for="my-modal-4" class="btn"><i class="fa fa-brands fa-whatsapp fa-xl"></i></label>
+   </a>
+  
+   <!-- Botão Telefone -->
+  <a href="tel:011972268107">
+      <label style="position:fixed;width:60px;height:60px;bottom:40px;left:40px;background-color:#25d366;color:#FFF;border-radius:15px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+      z-index:1000;" target="_blank" for="my-modal-4" class="btn"><i class="fa-solid fa-phone fa-shake fa-xl"></i></label>
+     </a>
+
 
  
 <!-- Botão Google Maps --
@@ -953,18 +945,13 @@ var swiper = new Swiper(".mySwiper3", {
   z-index:1000;" > <i class="fa-brands fa-waze fa-2x" style="color: #1f2b51"></i></label></a>
 !-- Botão waze -->
 
- <!-- Botão Telefone -->
-<a href="tel:011972268107">
-    <label style="position:fixed;width:45px;height:35px;bottom:40px;left:40px;background-color:#25d366;color:#FFF;border-radius:10px;text-align:center;font-size:15px;box-shadow: 1px 1px 2px #888;
-    z-index:1000;" target="_blank" for="my-modal-4" class="btn"><i class="fa-solid fa-phone fa-shake fa-lg"></i></label>
-   </a>
   
  
 
 
 <!-- Home --
 
-    <a href="https://clinicarep.com.br"> <label style="position:fixed;bottom:110px;left:5%;text-align:center;font-size:15px; z-index:1000;" >
+    <a href="https://www.clinicarep.com.br"> <label style="position:fixed;bottom:110px;left:5%;text-align:center;font-size:15px; z-index:1000;" >
    <div class="text-black hover:border-b"><h4>HOME</h4></div></label></a>
 
 !-- Especialidades --
@@ -981,8 +968,8 @@ var swiper = new Swiper(".mySwiper3", {
 
 !-- História --
 
-    <a href="historia" @click="navOpen = false"></a>
-    <a href="#historia"> <label style="position:fixed;bottom:110px;right:30%;text-align:center;font-size:15px; z-index:1000;" >
+    <a href="institucional" @click="navOpen = false"></a>
+    <a href="#institucional"> <label style="position:fixed;bottom:110px;right:30%;text-align:center;font-size:15px; z-index:1000;" >
    <div class="text-black hover:border-b">HISTÓRIA</div></label></a>
 
 !-- Campanhas --
@@ -995,15 +982,51 @@ var swiper = new Swiper(".mySwiper3", {
 
     
     
-
+<div id="contato"></div>
     </div>
   </div>
 
  
   <div class="d-lg-none">
   <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
-    <h2  class="flex flex-col items-center justify-between w-full h-full gap-4 px-4 py-3 text-white lg:flex-row"
-    >
+    <h2  class="flex flex-col items-center justify-between w-full h-full gap-4 px-4 py-3 text-white lg:flex-row">
+
+        <a href="https://www.clinicarep.com.br" @click="navOpen = false">HOME</a>
+     
+
+      <li
+      class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
+      <a href="#especialidades" @click="navOpen = false">ESPECIALIDADES</a>
+    </li>
+
+     
+      <li
+        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
+        <a href="#equipe" @click="navOpen = false">EQUIPE</a>
+      </li>
+
+      <li 
+      class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
+      <a href="#institucional" @click="navOpen = false">INSTITUCIONAL</a>
+    </li>
+
+       <li
+        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
+        <a href="https://www.instagram.com/repclinica_/"><i class="fa-brands fa-instagram fa-2x" @click="navOpen = false"></i></a>
+      </li>
+
+      <li
+        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
+        <a href="https://ul.waze.com/ul?place=ChIJYZtA8EZbzpQR3YhwPxneDl8&ll=-23.60212990%2C-46.61852130&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
+          <i class="fa-brands fa-waze fa-2x" @click="navOpen = false"></i></a>
+      </li>
+
+      <li
+        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
+        <a href="https://maps.app.goo.gl/SeCpuiu4QRJix5NT7?g_st=iw">
+          <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+
+
       <div class="text-sm text-justified">
         © 2023 Clinica REP. Todos os Direitos Reservados
       </div>
