@@ -21,7 +21,6 @@
   --soft:#f1f5f4;         /* cinza esverdeado */
 }
 
-
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
@@ -30,7 +29,22 @@ body{
   line-height:1.7;
 }
 
-/* HERO COM SLIDESHOW */
+/* LOGO FLUTUANTE MOBILE */
+.logo-float{
+  position:fixed;
+  top:16px;
+  right:16px;
+  width:70px;
+  opacity:.9;
+  z-index:999;
+  pointer-events:none;
+}
+
+@media (min-width:769px){
+  .logo-float{display:none;}
+}
+
+/* HERO */
 .hero{
   height:90vh;
   position:relative;
@@ -48,7 +62,6 @@ body{
   );
   z-index:1;
 }
-
 
 .slideshow{
   position:absolute;
@@ -80,7 +93,7 @@ body{
 
 .hero img{
   width:140px;
-  margin-bottom:30px;
+  margin:25px 0;
 }
 
 .hero h1{
@@ -95,6 +108,7 @@ body{
   max-width:600px;
 }
 
+/* BOTÃO */
 .cta{
   margin-top:30px;
   display:inline-block;
@@ -103,15 +117,13 @@ body{
   color:#3f4f3f;
   text-decoration:none;
   border-radius:999px;
-  font-weight:400;
-  transition:all .3s ease;
+  transition:.3s;
 }
 
 .cta:hover{
   background:var(--primary);
-  color:#ffffff;
+  color:white;
 }
-
 
 /* SEÇÕES */
 section{
@@ -146,10 +158,10 @@ h2{
 
 .medico{
   background:white;
-  border-radius:30px;
-  padding:30px;
+  border-radius:32px;
+  padding:34px;
   text-align:center;
-  box-shadow:0 20px 45px rgba(0,0,0,.08);
+  box-shadow:0 18px 45px rgba(0,0,0,.06);
 }
 
 .medico img{
@@ -160,7 +172,6 @@ h2{
 
 .medico h3{
   font-family:'Playfair Display', serif;
-  font-weight:400;
   font-size:1.5rem;
   color:var(--primary);
 }
@@ -174,45 +185,45 @@ h2{
   margin-top:22px;
   display:inline-block;
   padding:10px 28px;
-  background:transparent;
   border:1.5px solid var(--primary);
   border-radius:999px;
   text-decoration:none;
   color:var(--primary);
-  font-size:.9rem;
-  transition:all .3s ease;
+  transition:.3s;
 }
 
 .medico a:hover{
   background:var(--primary);
-  color:#ffffff;
+  color:white;
 }
-.medico{
-  background:var(--white);
-  border-radius:32px;
-  padding:34px;
-  text-align:center;
-  box-shadow:0 18px 45px rgba(0,0,0,.06);
-}
-
 
 /* FOOTER */
 footer{
-  background:var(--bg);
+  background:var(--soft);
   padding:50px 20px;
   text-align:center;
   font-size:14px;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+  .hero{height:100vh;}
+  .hero h1{font-size:2.1rem;}
+  section{padding:80px 18px;}
 }
 </style>
 </head>
 
 <body>
 
+<!-- LOGO MOBILE -->
+<img src="images/Logo_round-modified.png" alt="Clínica REP" class="logo-float">
+
 <header class="hero">
   <div class="slideshow"></div>
   <div class="hero-content">
-
-    <h1>Cuidado médico com delicadeza, ciência e atenção</h1>    <img src="images/logo_round_green_250.png" alt="Clínica REP">
+    <h1>Cuidado médico com delicadeza, ciência e atenção</h1>
+    <img src="images/logo_round_green_250.png" alt="Clínica REP">
     <p>Reumatologia Pediátrica • Endocrinologia Pediátrica • Endocrinologia</p>
     <a class="cta" href="https://wa.me/5511972268107">Agendar pelo WhatsApp</a>
   </div>
