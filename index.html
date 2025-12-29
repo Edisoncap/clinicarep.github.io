@@ -1,130 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Agende sua Consulta | Clínica REP</title>
 
-  <title>Clínica REP | Atendimento Humanizado</title>
-  <meta name="description" content="Clínica REP – Atendimento humanizado em reumatologia, endocrinologia e especialidades pediátricas." />
+  <meta name="description" content="Agende sua consulta na Clínica REP. Atendimento humanizado em reumatologia pediátrica, endocrinologia e pediatria.">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="canonical" href="https://www.clinicarep.com.br/agendamento">
 
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #0ea5a4;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .cta {
+      background: #22c55e;
+      color: white;
+      padding: 18px 30px;
+      display: inline-block;
+      border-radius: 8px;
+      font-size: 18px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    footer {
+      background: #f1f5f9;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="header">
-  <div class="container">
-    <img src="images/logo_clear_250.png" alt="Clínica REP" class="logo">
+<header>
+  <h1>Agende sua Consulta na Clínica REP</h1>
+  <p>Atendimento humanizado em reumatologia pediátrica, endocrinologia e pediatria</p>
 
-    <nav class="nav">
-      <button class="menu-toggle" aria-label="Abrir menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <ul class="menu">
-        <li><a href="#especialidades">Especialidades</a></li>
-        <li><a href="#equipe">Equipe</a></li>
-        <li><a href="#institucional">Institucional</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li>
-          <a href="https://www.instagram.com/repclinica_" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <a class="cta" 
+     href="https://wa.me/5511972268107" 
+     aria-label="Agendar consulta pelo WhatsApp">
+     Agendar pelo WhatsApp
+  </a>
 </header>
 
-<main>
+<section>
+  <h2>Por que escolher a Clínica REP?</h2>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="swiper heroSwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image:url(images/atendimento1.jpg)"></div>
-      <div class="swiper-slide" style="background-image:url(images/atendimento2.jpg)"></div>
-      <div class="swiper-slide" style="background-image:url(images/atendimento3.jpg)"></div>
+  <div class="benefits">
+    <div class="card">
+      <h3>👩‍⚕️ Equipe Especializada</h3>
+      <p>Médicos com experiência em reumatologia pediátrica, endocrinologia e cuidado infantil.</p>
+    </div>
+
+    <div class="card">
+      <h3>❤️ Atendimento Humanizado</h3>
+      <p>Cuidado individualizado, respeitando cada paciente e sua família.</p>
+    </div>
+
+    <div class="card">
+      <h3>📍 Localização Acessível</h3>
+      <p>Clínica com fácil acesso e estrutura preparada para crianças e adolescentes.</p>
     </div>
   </div>
-  <div class="hero-text">
-    <h1>Atendimento Humanizado</h1>
-    <p>Cuidado médico com dedicação, paciência e conhecimento.</p>
-  </div>
 </section>
 
-<!-- ESPECIALIDADES -->
-<section id="especialidades" class="section">
-  <h2>Especialidades</h2>
+<section>
+  <h2>Especialidades Atendidas</h2>
 
-  <div class="grid">
-    <article class="card">Reumatologia Pediátrica</article>
-    <article class="card">Pneumo, Nefro e Gastro Pediatria</article>
-    <article class="card">Reumatologia</article>
-    <article class="card">Endocrinologia</article>
-  </div>
-</section>
+  <ul>
+    <li>Reumatologia Pediátrica</li>
+    <li>Endocrinologia Pediátrica</li>
+    <li>Pediatria</li>
+    <li>Reumatologia</li>
+  </ul>
 
-<!-- EQUIPE -->
-<section id="equipe" class="section bg-light">
-  <h2>Nossa Equipe</h2>
-
-  <div class="grid">
-    <article class="doctor">
-      <img src="images/driggor1.jpg" alt="Dr. Iggor Sousa" loading="lazy">
-      <h3>Dr. Iggor Sousa</h3>
-      <p>Reumatologista Pediátrico</p>
-      <button class="btn toggle">Saiba mais</button>
-      <div class="bio">
-        <p>Formado pela UFPA, residência em Pediatria e Reumatologia Pediátrica pela UNIFESP.</p>
-        <a href="https://www.clinicarep.com.br/driggorsousa" class="link">Site pessoal</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- INSTITUCIONAL -->
-<section id="institucional" class="section">
-  <h2>Institucional</h2>
   <p>
-    A Clínica REP nasceu com o propósito de oferecer atendimento médico
-    humanizado, com foco em crianças, adolescentes e adultos.
+    Nossa equipe atua no diagnóstico e acompanhamento de doenças autoimunes,
+    hormonais e do desenvolvimento infantil, sempre com foco na qualidade de vida.
   </p>
 </section>
 
-<!-- CONTATO -->
-<section id="contato" class="section bg-primary">
-  <h2>Contato</h2>
-  <p>Agende sua consulta</p>
+<section>
+  <h2>Como funciona o agendamento?</h2>
 
-  <div class="actions">
-    <a href="tel:11972268107" class="btn white">
-      <i class="fa-solid fa-phone"></i> Ligar
-    </a>
-    <a href="https://api.whatsapp.com/send?phone=5511972268107" class="btn green">
-      <i class="fa-brands fa-whatsapp"></i> WhatsApp
-    </a>
-  </div>
+  <ol>
+    <li>Clique no botão de WhatsApp</li>
+    <li>Informe o nome do paciente e a especialidade desejada</li>
+    <li>Nossa equipe confirma o melhor horário disponível</li>
+  </ol>
+
+  <a class="cta" 
+     href="https://wa.me/5511972268107">
+     Falar com a Clínica REP
+  </a>
 </section>
 
-</main>
-
-<footer class="footer">
-  <p>© 2025 Clínica REP. Todos os direitos reservados.</p>
+<footer>
+  <p><strong>Clínica REP</strong></p>
+  <p>Telefone / WhatsApp: (11) 97226-8107</p>
+  <p>Atendimento médico especializado com cuidado e confiança.</p>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
 
 </body>
 </html>
