@@ -22,6 +22,11 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
+
+  <img src="images/Logo_round-modified.png"
+     alt="Clínica REP"
+     class="logo-float">
+
   font-family:'Montserrat', sans-serif;
   color:var(--text);
   line-height:1.7;
@@ -191,6 +196,28 @@ footer{
   70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
   100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
+  
+  /* LOGO FLUTUANTE */
+.logo-float{
+  position:fixed;
+  top:16px;
+  right:16px;
+  width:70px;
+  opacity:.95;
+  z-index:1200;
+  pointer-events:none;
+}
+.logo-float{
+  filter:drop-shadow(0 6px 14px rgba(0,0,0,.18));
+}
+
+/* desktop um pouco maior */
+@media (min-width:769px){
+  .logo-float{
+    width:90px;
+  }
+}
+
 </style>
 </head>
 
@@ -246,3 +273,4 @@ footer{
 
 </body>
 </html>
+
