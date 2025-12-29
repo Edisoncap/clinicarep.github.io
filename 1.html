@@ -21,23 +21,14 @@
   --soft:#f1f5f4;         /* cinza esverdeado */
 }
 
-body.dark{
-  --bg-main:#1f2d2b;
-  --bg-soft:#243634;
-  --card:#2c3f3c;
-  --text-main:#f1f5f4;
-  --text-soft:#cbd5d1;
-  --primary:#8fae9b;
-  --secondary:#e8dcc9;
-}
 
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  background:var(--bg-main, #ffffff);
-  color:var(--text-main, #1f2937);
+  font-family:'Montserrat', sans-serif;
+  color:var(--text);
+  line-height:1.7;
 }
-
 
 /* HERO COM SLIDESHOW */
 .hero{
@@ -123,19 +114,18 @@ body{
 
 
 /* SEÇÕES */
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:110px 20px;
+}
+
 section:nth-of-type(even){
-  background:var(--bg-soft, #f1f5f4);
+  background:var(--soft);
 }
 
 section:nth-of-type(odd){
-  background:var(--bg-main, #ffffff);
-}
-
-.card,
-.doctor-card,
-.especialidade-card{
-  background:var(--card, #ffffff);
-  color:var(--text-main, #1f2937);
+  background:var(--white);
 }
 
 h2{
@@ -221,8 +211,8 @@ footer{
 <header class="hero">
   <div class="slideshow"></div>
   <div class="hero-content">
-    <img src="images/logo_round_green_250.png" alt="Clínica REP">
-    <h1>Cuidado médico com delicadeza, ciência e atenção</h1>
+
+    <h1>Cuidado médico com delicadeza, ciência e atenção</h1>    <img src="images/logo_round_green_250.png" alt="Clínica REP">
     <p>Reumatologia Pediátrica • Endocrinologia Pediátrica • Endocrinologia</p>
     <a class="cta" href="https://wa.me/5511972268107">Agendar pelo WhatsApp</a>
   </div>
@@ -264,5 +254,3 @@ footer{
 
 </body>
 </html>
-
-
