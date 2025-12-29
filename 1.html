@@ -21,7 +21,11 @@
   --soft:#f1f5f4;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:'Montserrat', sans-serif;
@@ -29,37 +33,64 @@ body{
   line-height:1.7;
 }
 
-/* LOGO FLUTUANTE MOBILE */
+/* LOGO MOBILE */
 .logo-float{
   position:fixed;
   top:16px;
   right:16px;
   width:70px;
-  opacity:.9;
   z-index:999;
-  pointer-events:none;
 }
 
 @media (min-width:769px){
   .logo-float{display:none;}
 }
 
-/* HERO */
+/* ======================
+   HERO BASE
+====================== */
 .hero{
-  height:90vh;
-  position:relative;
-  overflow:hidden;
-  color:white;
+  display:flex;
+  min-height:90vh;
+  width:100%;
 }
 
-.hero::before{
+/* TEXTO */
+.hero-text{
+  flex:1;
+  padding:120px 80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:white;
+}
+
+.hero-text h1{
+  font-family:'Playfair Display', serif;
+  font-size:3.4rem;
+  font-weight:300;
+  color:var(--primary);
+  margin-bottom:24px;
+}
+
+.hero-text p{
+  font-size:1.2rem;
+  max-width:480px;
+  color:#4b5563;
+}
+
+/* IMAGEM */
+.hero-image{
+  flex:1;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-image::after{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    rgba(107,127,106,.65),
-    rgba(107,127,106,.65)
-  );
+  background:rgba(107,127,106,.35);
   z-index:1;
 }
 
@@ -67,51 +98,36 @@ body{
   position:absolute;
   inset:0;
   z-index:0;
-  animation:slide 30s infinite;
   background-size:cover;
   background-position:center;
+  animation:slide 30s infinite;
 }
 
+/* SLIDES */
 @keyframes slide{
-  0%   {background-image:url("images/1_home.png")}
-  25%  {background-image:url("images/maos.jpg")}
-  50%  {background-image:url("images/visao.jpg")}
-  75%  {background-image:url("images/crianca_consulta.jpg")}
-  100% {background-image:url("images/1_home.png")}
+  0%{background-image:url("images/1_home.png")}
+  25%{background-image:url("images/maos.jpg")}
+  50%{background-image:url("images/visao.jpg")}
+  75%{background-image:url("images/crianca_consulta.jpg")}
+  100%{background-image:url("images/1_home.png")}
 }
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:1100px;
-  padding:0 20px;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.hero h1{
-  font-family:'Playfair Display', serif;
-  font-size:3.2rem;
-  font-weight:300;
-  margin-bottom:20px;
-}
-
-.hero p{
-  font-size:1.2rem;
-  max-width:600px;
-}
-
-/* SEÇÕES */
+/* ======================
+   SEÇÕES
+====================== */
 section{
   max-width:1200px;
   margin:auto;
   padding:110px 20px;
 }
 
-section:nth-of-type(even){background:var(--soft)}
-section:nth-of-type(odd){background:var(--white)}
+section:nth-of-type(even){
+  background:var(--soft);
+}
+
+section:nth-of-type(odd){
+  background:white;
+}
 
 h2{
   font-family:'Playfair Display', serif;
@@ -178,16 +194,14 @@ footer{
   font-size:14px;
 }
 
-/* BOTÃO WHATSAPP FIXO (MOBILE) */
+/* ======================
+   BOTÃO WHATSAPP
+====================== */
 .whatsapp-fixed{
   display:none;
 }
 
 @media (max-width:768px){
-  .hero{height:100vh;}
-  .hero h1{font-size:2.1rem;}
-  section{padding:80px 18px;}
-
   .whatsapp-fixed{
     display:block;
     position:fixed;
@@ -195,16 +209,53 @@ footer{
     left:50%;
     transform:translateX(-50%);
     z-index:1000;
-
-    padding:16px 40px;
+    padding:16px 38px;
     background:#25D366;
     color:white;
     text-decoration:none;
     border-radius:999px;
-
     font-size:16px;
     font-weight:500;
     box-shadow:0 10px 25px rgba(37,211,102,.4);
+  }
+}
+
+/* ======================
+   MOBILE HERO
+====================== */
+@media (max-width:768px){
+
+  .hero{
+    flex-direction:column;
+    min-height:100vh;
+  }
+
+  .hero-text{
+    position:absolute;
+    inset:0;
+    padding:0 20px;
+    justify-content:center;
+    text-align:center;
+    background:transparent;
+    z-index:2;
+  }
+
+  .hero-text h1{
+    font-size:2.2rem;
+    color:white;
+  }
+
+  .hero-text p{
+    color:white;
+    margin:0 auto;
+  }
+
+  .hero-image{
+    height:100vh;
+  }
+
+  .hero-image::after{
+    display:none;
   }
 }
 </style>
@@ -212,19 +263,22 @@ footer{
 
 <body>
 
-<!-- LOGO MOBILE -->
 <img src="images/Logo_round-modified.png" alt="Clínica REP" class="logo-float">
 
 <header class="hero">
-  <div class="slideshow"></div>
-  <div class="hero-content">
+  <div class="hero-text">
     <h1>Cuidado médico com delicadeza, ciência e atenção</h1>
     <p>Reumatologia Pediátrica • Endocrinologia Pediátrica • Endocrinologia</p>
+  </div>
+
+  <div class="hero-image">
+    <div class="slideshow"></div>
   </div>
 </header>
 
 <section>
   <h2>Nossa Equipe</h2>
+
   <div class="equipe">
 
     <div class="medico">
@@ -253,11 +307,9 @@ footer{
 
 <footer>
   <strong>Clínica REP</strong><br>
-  WhatsApp: (11) 97226-8107<br>
   Atendimento humanizado e especializado
 </footer>
 
-<!-- BOTÃO WHATSAPP FIXO -->
 <a href="https://wa.me/5511972268107" class="whatsapp-fixed">
   💬 Agendar pelo WhatsApp
 </a>
