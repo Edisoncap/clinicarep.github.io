@@ -21,7 +21,9 @@
   --soft:#f1f5f4;         /* cinza esverdeado */
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
+
+  
+
 
 body{
   font-family:'Montserrat', sans-serif;
@@ -125,6 +127,8 @@ body{
   color:white;
 }
 
+
+
 /* SEÇÕES */
 section{
   max-width:1200px;
@@ -211,6 +215,28 @@ footer{
   .hero h1{font-size:2.1rem;}
   section{padding:80px 18px;}
 }
+  /* BOTÃO WHATSAPP FIXO NO MOBILE */
+@media (max-width:768px){
+  .whatsapp-fixed{
+    position:fixed;
+    bottom:16px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:1000;
+
+    padding:16px 40px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:999px;
+
+    font-size:16px;
+    font-weight:500;
+
+    box-shadow:0 12px 30px rgba(37,211,102,.4);
+  }
+}
+
 </style>
 </head>
 
@@ -223,9 +249,20 @@ footer{
   <div class="slideshow"></div>
   <div class="hero-content">
     <h1>Cuidado médico com delicadeza, ciência e atenção</h1>
-    <img src="images/logo_round_green_250.png" alt="Clínica REP">
-    <p>Reumatologia Pediátrica • Endocrinologia Pediátrica • Endocrinologia</p>
-    <a class="cta" href="https://wa.me/5511972268107">Agendar pelo WhatsApp</a>
+      <p>Reumatologia Pediátrica • Endocrinologia Pediátrica • Endocrinologia</p>
+<a href="https://wa.me/5511972268107"
+   class="whatsapp-fixed">
+  💬 Agendar pelo WhatsApp
+</a>
+   class="cta"
+   style="
+     background:#25D366;
+     color:white;
+     box-shadow:0 10px 30px rgba(37,211,102,.35);
+   ">
+  Agendar pelo WhatsApp
+</a>
+
   </div>
 </header>
 
@@ -259,9 +296,14 @@ footer{
 
 <footer>
   <strong>Clínica REP</strong><br>
-  WhatsApp: (11) 97226-8107<br>
-  Atendimento humanizado e especializado
+<a href="https://wa.me/5511972268107"
+   class="whatsapp-fixed">
+  💬 Agendar pelo WhatsApp
+</a>
+
+
 </footer>
 
 </body>
 </html>
+
