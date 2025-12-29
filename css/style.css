@@ -103,4 +103,23 @@
   footer strong {
     color: var(--primary);
   }
+.doctor-card a.saiba-mais {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 26px;
+  background: transparent;
+  border: 2px solid #0f766e;
+  color: #0f766e;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.doctor-card a.saiba-mais:hover {
+  background: #0f766e;
+  color: #ffffff;
+}
+
 </style>
