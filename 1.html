@@ -21,14 +21,23 @@
   --soft:#f1f5f4;         /* cinza esverdeado */
 }
 
+body.dark{
+  --bg-main:#1f2d2b;
+  --bg-soft:#243634;
+  --card:#2c3f3c;
+  --text-main:#f1f5f4;
+  --text-soft:#cbd5d1;
+  --primary:#8fae9b;
+  --secondary:#e8dcc9;
+}
 
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  font-family:'Montserrat', sans-serif;
-  color:var(--text);
-  line-height:1.7;
+  background:var(--bg-main, #ffffff);
+  color:var(--text-main, #1f2937);
 }
+
 
 /* HERO COM SLIDESHOW */
 .hero{
@@ -114,18 +123,19 @@ body{
 
 
 /* SEÇÕES */
-section{
-  max-width:1200px;
-  margin:auto;
-  padding:110px 20px;
-}
-
 section:nth-of-type(even){
-  background:var(--soft);
+  background:var(--bg-soft, #f1f5f4);
 }
 
 section:nth-of-type(odd){
-  background:var(--white);
+  background:var(--bg-main, #ffffff);
+}
+
+.card,
+.doctor-card,
+.especialidade-card{
+  background:var(--card, #ffffff);
+  color:var(--text-main, #1f2937);
 }
 
 h2{
@@ -254,4 +264,5 @@ footer{
 
 </body>
 </html>
+
 
