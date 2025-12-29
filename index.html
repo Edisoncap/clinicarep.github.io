@@ -1,1057 +1,130 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Clínica Rep 🩺</title>
-    
-    	<!--=============== bootstrap  ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-            
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L7F9BQ07P"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-2L7F9BQ07P');
-      <!-- End Google tag (gtag.js) -->
- </script>
-    <!-- End of Google tag (gtag.js) -->
+  <title>Clínica REP | Atendimento Humanizado</title>
+  <meta name="description" content="Clínica REP – Atendimento humanizado em reumatologia, endocrinologia e especialidades pediátricas." />
 
-	<!--=============== basic  ===============-->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Clinica REP</title>
-	<meta name="robots" content="index, follow" />
-	<meta name="keywords" content="" />
-	
-	<meta name="description" content="Atendimento humanizado." />
-	<!--=============== css  ===============-->
-	<link
-  href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
-  rel="stylesheet"
-  type="text/css"
-/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-<style>
-  * {
-    font-family: 'Manrope', sans-serif;
-  }
-</style>
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
-<!-- ============================================ CSS ============================================== -->
-<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,900" rel="stylesheet">
-<link rel="stylesheet" type="text/css" media="all" href="estilos.css" />
-<link rel="stylesheet" type="text/css" media="all" href="slick.css" />
-<link rel="stylesheet" type="text/css" media="all" href="hamburgers.css" />
-<!-- ============================================ CSS ============================================== -->
-	<!--=============== scripts  ===============-->
-	<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-	<!--=============== JAVAscript  ===============-->
-<script>
-
-  $(function() {
-  $("#lnk-dr1link").click(function() {
-    if ($("#frm-dr1form").is(":visible")) {
-        $("#pnl-dr1link").addClass('rounded-bl')
-        $("#pnl-dr1link").addClass('rounded-br')
-    } else {
-      $("#pnl-dr1link").removeClass('rounded-bl')
-      $("#pnl-dr1link").removeClass('rounded-br')     
-    }
-  $("#frm-dr1form").toggle("slow");
-});
-  });
-  
-  $(function() {
-  $("#lnk-dr2link").click(function() {
-    if ($("#frm-dr2form").is(":visible")) {
-        $("#pnl-dr2link").addClass('rounded-bl')
-        $("#pnl-dr2link").addClass('rounded-br')
-    } else {
-      $("#pnl-dr2link").removeClass('rounded-bl')
-      $("#pnl-dr2link").removeClass('rounded-br')     
-    }
-  $("#frm-dr2form").toggle("slow");
-});
-  });
-
- 
-  $(function() {
-  $("#lnk-dr3link").click(function() {
-    if ($("#frm-dr3form").is(":visible")) {
-        $("#pnl-dr3link").addClass('rounded-bl')
-        $("#pnl-dr3link").addClass('rounded-br')
-    } else {
-      $("#pnl-dr3link").removeClass('rounded-bl')
-      $("#pnl-dr3link").removeClass('rounded-br')     
-    }
-  $("#frm-dr3form").toggle("slow");
-});
-  });
-
- 
-  $(function() {
-  $("#lnk-dr4link").click(function() {
-    if ($("#frm-dr4form").is(":visible")) {
-        $("#pnl-dr4link").addClass('rounded-bl')
-        $("#pnl-dr4link").addClass('rounded-br')
-    } else {
-      $("#pnl-dr4link").removeClass('rounded-bl')
-      $("#pnl-dr4link").removeClass('rounded-br')     
-    }
-  $("#frm-dr4form").toggle("slow");
-});
-  });
-
- 
-  $(function() {
-  $("#lnk-dr5link").click(function() {
-    if ($("#frm-dr5form").is(":visible")) {
-        $("#pnl-dr5link").addClass('rounded-bl')
-        $("#pnl-dr5link").addClass('rounded-br')
-    } else {
-      $("#pnl-dr5link").removeClass('rounded-bl')
-      $("#pnl-dr5link").removeClass('rounded-br')     
-    }
-  $("#frm-dr5form").toggle("slow");
-});
-  });
-
- 
-  $(function() {
-  $("#lnk-dr6link").click(function() {
-    if ($("#frm-dr6form").is(":visible")) {
-        $("#pnl-dr6link").addClass('rounded-bl')
-        $("#pnl-dr6link").addClass('rounded-br')
-    } else {
-      $("#pnl-dr6link").removeClass('rounded-bl')
-      $("#pnl-dr6link").removeClass('rounded-br')     
-    }
-  $("#frm-dr6form").toggle("slow");
-});
-  });
-
- 
-  $(function() {
-  $("#lnk-dr7link").click(function() {
-    if ($("#frm-dr7form").is(":visible")) {
-        $("#pnl-dr7link").addClass('rounded-bl')
-        $("#pnl-dr7link").addClass('rounded-br')
-    } else {
-      $("#pnl-dr7link").removeClass('rounded-bl')
-      $("#pnl-dr7link").removeClass('rounded-br')     
-    }
-  $("#frm-dr7form").toggle("slow");
-});
-  });
-
-  $(function() {
-  $("#lnk-dr8ink").click(function() {
-    if ($("#frm-dr8form").is(":visible")) {
-        $("#pnl-dr8link").addClass('rounded-bl')
-        $("#pnl-dr8link").addClass('rounded-br')
-    } else {
-      $("#pnl-dr8link").removeClass('rounded-bl')
-      $("#pnl-dr8link").removeClass('rounded-br')     
-    }
-  $("#frm-dr8form").toggle("slow");
-});
-  });
-  
-  $(function() {
-  $("#lnk-camplink").click(function() {
-    if ($("#frm-campform").is(":visible")) {
-        $("#pnl-camplink").addClass('rounded-bl')
-        $("#pnl-camplink").addClass('rounded-br')
-    } else {
-      $("#pnl-camplink").removeClass('rounded-bl')
-      $("#pnl-camplink").removeClass('rounded-br')     
-    }
-  $("#frm-campform").toggle("slow");
-});
-  });
-
-
-  $(function() {
-  $("#lnk-localizacaolink").click(function() {
-    if ($("#frm-localizacaoform").is(":visible")) {
-        $("#pnl-localizacaolink").addClass('rounded-bl')
-        $("#pnl-localizacaolink").addClass('rounded-br')
-    } else {
-      $("#pnl-localizacaolink").removeClass('rounded-bl')
-      $("#pnl-localizacaolink").removeClass('rounded-br')     
-    }
-  $("#frm-localizacaoform").toggle("slow");
-});
-  });
-
- 
-
-</script>
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            azulclaro: "#19A7CE",
-            verdeclaro: "#98DFD6",
-          }
-        }
-      }
-    }
-
-    new WOW().init();
-  </script>	
-  <!--=============== favicons ===============-->
-	<link rel="icon" class="w-20 h-20" href="images/logo_round_green_250.png">
-
-
-<!--=============== JQUERY  ===============-->
-
-<style>
-  
-  </style>
-  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
+<body>
 
-<body  x-data="{navOpen: false, scrolledFromTop: false}"
-  x-init="window.pageYOffset >= 250 ? scrolledFromTop = true : scrolledFromTop = false"
-  @scroll.window="window.pageYOffset >= 250 ? scrolledFromTop = true : scrolledFromTop = false">
+<header class="header">
+  <div class="container">
+    <img src="images/logo_clear_250.png" alt="Clínica REP" class="logo">
 
- <!--Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-
-<!--Navbar-->
-<header
-  class="relative z-40 flex items-center justify-between w-full transition-all duration-300 bg-white md:fixed md:bg-transparent"
-  :class="{'h-24': !scrolledFromTop, 'h-20': scrolledFromTop, 'bg-transparent': scrolledFromTop, 'text-black': !scrolledFromTop, 'text-black': !scrolledFromTop, 'md:bg-white' : scrolledFromTop, 'shadow-md' : scrolledFromTop}"
->
-
-  <a class="px-6 py-3 bg-white md:-mt-2" href="https://www.clinicarep.com.br"
-    :class="{'md:rounded-br-lg': !scrolledFromTop, 'py-0' : scrolledFromTop, 'md:shadow-md' : !scrolledFromTop}">
-
-<!-- Logo Clinica REP -->
-<a href="https://www.clinicarep.com.br"><label style="position:fixed;width:120px;;top:12px;right:12px;z-index:1000;"> 
-  <img src="images/logo_clear_250.png"> </label></a>
-
-    <img src=""
-      alt=""
-      class="h-16 transition duration-200 origin-left transform"
-    />
-  </a>
-  <nav class="fixed">
-    <button class="mx-6 text-black lg:hidden" @click="navOpen = !navOpen">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-8 h-8 text-black"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
-    </button>
-    <ul
-      class="fixed left-0 right-0 flex flex-col min-h-screen gap-2 px-6 pt-8 mt-5 transition duration-300 transform translate-x-full bg-white md:-mt-2 md:rounded-bl-lg md:flex-row md:relative md:flex md:space-x-10 md:min-h-0 md:space-y-0 md:translate-x-0 md:py-8 md:gap-6 md:px-16"
-      :class="{'translate-x-full': !navOpen}"
-      :class="{'translate-x-0': navOpen}"
-      :class="{'md:shadow-md': scrolledFromTop}">
-      <li id="home" 
-        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-        <a href="https://www.clinicarep.com.br" @click="navOpen = false">HOME</a>
-      </li>
-
-      <li
-      class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-      <a href="#especialidades" @click="navOpen = false">ESPECIALIDADES</a>
-    </li>
-
-     
-      <li
-        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-        <a href="#equipe" @click="navOpen = false">EQUIPE</a>
-      </li>
-
-      <li 
-      class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-      <a href="#institucional" @click="navOpen = false">INSTITUCIONAL</a>
-    </li>
-
-    <li 
-      class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-      <a href="#contato" @click="navOpen = false">CONTATO</a>
-    </li>
-<p style="margin:5px;"></p>
-
-      <li
-        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-        <a href="https://www.instagram.com/repclinica_/">
-          <i class="fa-brands fa-instagram fa-2x" @click="navOpen = false"></i> instagram</a>
-          
-      </li>
-      
-<p style="margin:5px;"></p>
-
-      <li
-        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-        <a href="https://ul.waze.com/ul?place=ChIJYZtA8EZbzpQR3YhwPxneDl8&ll=-23.60212990%2C-46.61852130&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
-          <i class="fa-brands fa-waze fa-2x" @click="navOpen = false"></i> waze</a>
-          
-      </li>
-<br>
-      <li
-        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-        <a href="https://maps.app.goo.gl/SeCpuiu4QRJix5NT7?g_st=iw">
-           <i class="fa-solid fa-location-dot fa-bounce fa-2xl"></i> Google Maps</a> 
-        <!--<img class="icon_top" src="gif/googlemaps.gif" alt="Google Maps" width="100">Google Maps
-        -->    
-           
-           <!-- Solução para parar de abrir o link do google Maps no perfil do DR1 -->         
-          <a href="https://www.clinicarep.com.br"></a>
-
+    <nav class="nav">
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="menu">
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#institucional">Institucional</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li>
+          <a href="https://www.instagram.com/repclinica_" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
         </li>
       </ul>
-  </nav>
+    </nav>
+  </div>
 </header>
 
+<main>
 
-<script>
-var path = window.location.pathname;
-var page = path.split("/").pop();
-console.log( page );
-
-if (page == 'institucional'){
-  document.getElementById("institucional").classList.add("text-verdeclaro");
-} 
-
-else if (page == 'home'){
-  document.getElementById("home").classList.add("text-verdeclaro");
-}
-
-else if (page == 'equipe'){
-  document.getElementById("equipe").classList.add("text-verdeclaro");
-}
-
-else if (page == 'especialidades'){
-  document.getElementById("especialidades").classList.add("text-verdeclaro");
-}
-
-else if (page == 'localizacao'){
-  document.getElementById("localizacao").classList.add("text-verdeclaro");
-}
-
-else if (page == 'instagram'){
-  document.getElementById("instagram").classList.add("text-verdeclaro");
-}
-
-if (page == 'contato'){
-  document.getElementById("contato").classList.add("text-verdeclaro");
-} 
-
-</script>
-<!--Headerfundo-->
-
-<div class="swiper mySwiper">
+<!-- HERO -->
+<section class="hero">
+  <div class="swiper heroSwiper">
     <div class="swiper-wrapper">
-
-          <!--Desktop --> 
-        <div class="swiper-slide  hidden lg:flex">
-            <div class="h-[600px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/atendimento3.jpg?updatedAt=1679226671538);">   
-            </div>
-          </div>
-
-          <!--Mobile -->
-          <div class="swiper-slide flex lg:hidden">
-            <div class="h-[520px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/mobatendimento3.jpg?updatedAt=1679227896915);">   
-            </div>
-          </div>
-            
-        <!--Desktop -->
-      <div class="swiper-slide  hidden lg:flex">
-        <div class="h-[600px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/atendimento2.jpg?updatedAt=1679226671538);">
-        </div>
-      </div>
-
-      <!--Mobile-->
-      <div class="swiper-slide flex lg:hidden">
-            <div class="h-[520px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/mobatendimento2.jpg?updatedAt=1679227896915;">  
-            </div>
-          </div>
-          
-
-        <!--Desktop -->
-        <div class="swiper-slide hidden lg:flex">
-        <div class="h-[600px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/atendimento1.jpg?updatedAt=1679226670743);">
-        </div>
-      </div>
-
-      <!--Mobile -->
-      <div class="swiper-slide flex lg:hidden">
-            <div class="h-[520px] hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/mobatendimento1.jpg?updatedAt=1679227896915);">  
-            </div>
-          </div>
-          
-          
-
-
-
-    </div>
-    <div class="swiper-button-next"></div>
-    
-    <div class="swiper-button-prev"></div>
-  </div>
-
-
-  <style>
-
-
-    .swiper {
-      width: 100%;
-      height: auto;
-    }
-    
-
-  .swiper-button-next {
-  background-image: url();
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
-}
-
-.swiper-button-prev {
-  background-image: url();
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
-}
-
-.swiper-button-next::after {
-  display: none;
-}
-
-.swiper-button-prev::after {
-  display: none;
-}
-
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-}
-.swiper-slide img {
-    display: block;
-    width: 100%;
-}
-
-  </style>
-
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        loop: true,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-</script>
-<!--Seção de apresentação-->
-<div class="d-lg-none">
-<div class="relative flex flex-col w-full md:flex-row">
-    <div class="md:w-[40%] w-full flex-col h-[400px] py-24 -mt-32 rounded-tr-[64px] relative z-30 px-10 flex justify-center bg-verdeclaro">
-      
-        <h2 class="text-4xl font-extrabold text-right text-white uppercase">Nosso trabalho em 3 palavras: </br> </br> Dedicação </br> </br> Paciência </br> </br> Conhecimento 
-    </div>
-    <div class="relative flex items-end max-w-xl px-12 py-12 md:py-16 md:mb-4">
-        <p class="leading-6 text-black opacity-70">
-        Dedicação<br> Toda a equipe da Clínica REP tem amor pelo que faz. O resultado é satisfação dos pacientes.
-        <br> <br>
-        Paciência<br> atendimento de crianças, adolescentes e idosos é personalizado e direcionado para esse público. Atender estes público exige experiência e paciência.
-        <br> <br>
-        Conhecimento<br>
-        Atualização constante, motivação, participação de congressos e eventos, a equipe está sempre envolvida em eventos que possam agreguem conhecimento.              
-        </p>
+      <div class="swiper-slide" style="background-image:url(images/atendimento1.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/atendimento2.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/atendimento3.jpg)"></div>
     </div>
   </div>
-    <div id="especialidades"></div>
-    <div class="bottom-0 right-0 flex items-center justify-center pb-20 md:items-end md:justify-end md:absolute md:py-0">
-        <div class="flex flex-col items-center md:pr-4 md:flex-row">
-            <img alt="logo" class="w-20 h-20" src="images/logo_round_150.png" alt="">
-            <h2 class="text-2xl font-extrabold text-center uppercase md:text-4xl">Especialidades</h2>
-        </div>
-    </div>
-</div>
-</div>
-
-
-<!--Especialidades-->
-
-<div class="grid h-full grid-cols-1 md:grid-cols-4">
-    <div class="md:h-[600px] h-[350px] hero group" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/reumatopediatra1.jpg?updatedAt=1679230772580);">
-        <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
-        <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
-        >
-        <h3 class="text-3xl font-extrabold text-center text-white uppercase">Reumatologia pediátrica  </h3>
-    </div> 
-      </div>      
-
-      <div class="md:h-[600px] h-[350px] group hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/nefropediatra1.jpg?updatedAt=1679230091632);">
-        <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
-        <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
-        >
-        <h3 class="text-3xl font-extrabold text-center text-white uppercase">Dermatologia Pediátrica, Nefrologia e Gastroenterologia Pediátrica
-        </h3>
-    </div>   
-      </div>
-      <div class="md:h-[600px] h-[350px] group hero" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/reumato1.jpg?updatedAt=1679230562911);">
-        <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
-        <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
-        >
-        <h3 class="text-3xl font-extrabold text-center text-white uppercase">Reumatologia</h3>
-    </div>   
-      </div>
-      <div class="md:h-[600px] h-[350px] hero group" style="background-image: url(https://ik.imagekit.io/c1yl32ofc/endocrino2.jpg?updatedAt=1679230943843);">
-        <div class="duration-300 transform opacity-50 group-hover:opacity-70 group-hover:bg-azulclaro hero-overlay bg-primary-content -z-0"></div>
-        <div class="relative z-20 flex flex-col items-center justify-center w-full h-full gap-3"
-        >
-        <h3 class="text-3xl font-extrabold text-center text-white uppercase">Endocrinologia e metabolismo</h3>
-    </div>   
-      </div>
-</div>
-<!--Nossa Equipe-->
-<div id="equipe"></div>
-<br>
-
-
-</div>
-  <div class="relative flex flex-col w-full md:flex-row">
-    <div class="md:w-[40%] w-full flex-col h-[20px] py-24 -mt-32 rounded-tr-[32px] relative z-30 px-10 flex justify-center bg-verdeclaro">
-        <h2 class="text-4xl font-extrabold text-right text-white uppercase">Nossa Equipe</br>
-    </div>
+  <div class="hero-text">
+    <h1>Atendimento Humanizado</h1>
+    <p>Cuidado médico com dedicação, paciência e conhecimento.</p>
   </div>
-</div>
+</section>
 
-          
+<!-- ESPECIALIDADES -->
+<section id="especialidades" class="section">
+  <h2>Especialidades</h2>
 
- 
-
-<!--Equipe em Bootstrap-->
-
-
-<div class="row" style="background-color:lightblue">
-<!--dr1 Iggor-->
-    <div class="col-lg-3 col-md-6" style="background-color:lightblue">      
-      <img class="rounded-[50%] w-full" src="images/driggor1.jpg"  alt=""></p>
-        <h3 class="text-2xl font-extrabold text-center ">Dr. Iggor Sousa</h3> 
-        <h4 class="text-2x1 text-center"> Diretor técnico da Clínica REP,<br>Reumatologista Pediátrico</h4>
-           
-                <span id="lnk-dr1link"> 
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <div class="btn btn-primary">Saiba mais ˅</div>
-                </span>
-                  </div>
-
-          <form id="frm-dr1form" class="bg-white shadow-md rounded-bl rounded-r px-8 pt-6 pb-8 mb-4" onsubmit="" method="post" style="display: none;">
-              
-                  <input id="id" name="id" type="hidden" value="">
-    
-                      
-                      <img src="images/driggor.jpg">
-                  <div class="col-span-1 mr-1 text-right">
-                    <a href="https://www.linkedin.com/in/iggor-sousa-9a29b345" style=""><div class="btn btn-default center-block">Linkedin do Dr. Iggor</div></a>
-                   
-                      
-                  </div></a>
-           </form>
-    </div>
-  
-  <!--dr2 Fernanda Silveira-->
-  <div class="col-lg-3 col-md-6" style="background-color:lightblue">      
-    <img class="rounded-[50%] w-full" src="images/drafernanda1.jpg"  alt=""></p>
-      <h3 class="text-2xl font-extrabold text-center ">Dra. Fernanda Silveira</h3> 
-      <h4 class="text-2x1 text-center"> Reumatologista<br>da Clínica REP</h4>
-        
-      <span id="lnk-dr2link"> 
-        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-          <div class="btn btn-primary">Saiba mais ˅</div>
-      </span>
-        </div>
-          <form id="frm-dr2form" class="bg-white shadow-md rounded-bl rounded-r px-8 pt-6 pb-8 mb-4" onsubmit="" method="post" style="display: none;">
-                <input id="id" name="id" type="hidden" value="">
-  
-                <img src="images/drafernanda.jpg">
-                
-                <div class="col-span-1 mr-1 text-right">
-                  <a href="https://www.instagram.com/fernandadoli/"style=""><div class="btn btn-primary">Instagram Dra. Fernanda</div>
-                </div></a>
-      
-        </form>
+  <div class="grid">
+    <article class="card">Reumatologia Pediátrica</article>
+    <article class="card">Pneumo, Nefro e Gastro Pediatria</article>
+    <article class="card">Reumatologia</article>
+    <article class="card">Endocrinologia</article>
   </div>
+</section>
 
-<!--dr3 Victor Silveira-->
-<div class="col-lg-3 col-md-6" style="background-color:lightblue">      
-  <img class="rounded-[50%] w-full" src="images/drvictor1.jpg"  alt=""></p>
-    <h3 class="text-2xl font-extrabold text-center ">Dr. Victor Silveira</h3> 
-    <h4 class="text-2x1 text-center"> Endocrinologista da Clínica REP<br>Exame de bioimpedância incluso na consulta <br>para um tratamento totalmente personalizado</h4>
-<h4 class="text-2xl font-extrabold text-center "></h4> 
-    <span id="lnk-dr3link"> 
-      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-        <div class="btn btn-primary">Saiba mais ˅</div>
+<!-- EQUIPE -->
+<section id="equipe" class="section bg-light">
+  <h2>Nossa Equipe</h2>
+
+  <div class="grid">
+    <article class="doctor">
+      <img src="images/driggor1.jpg" alt="Dr. Iggor Sousa" loading="lazy">
+      <h3>Dr. Iggor Sousa</h3>
+      <p>Reumatologista Pediátrico</p>
+      <button class="btn toggle">Saiba mais</button>
+      <div class="bio">
+        <p>Formado pela UFPA, residência em Pediatria e Reumatologia Pediátrica pela UNIFESP.</p>
+        <a href="https://www.clinicarep.com.br/driggorsousa" class="link">Site pessoal</a>
       </div>
-  
-      <form id="frm-dr3form" class="bg-white shadow-md rounded-bl rounded-r px-8 pt-6 pb-8 mb-4" onsubmit="" method="post" style="display: none;">
-          
-              <input id="id" name="id" type="hidden" value="">
-
-              <img src="images/drvictor.jpg">
-              
-              <div class="col-span-1 mr-1 text-right">
-		   
-                <a href="https://www.instagram.com/victor_ssilveira/"style=""><div class="btn btn-primary">Instagram do Dr. Victor</div>
-              </div></a>
-    
-      </form>
-</div>
-
-<!--dr4 Janólia Costa-->
-<div class="col-lg-3 col-md-6" style="background-color:lightblue">      
-  <img class="rounded-[50%] w-full" src="images/drajanolia1.jpg"  alt=""></p>
-    <h3 class="text-2xl font-extrabold text-center ">Dra. Janólia Costa</h3> 
-    <h4 class="text-2x1 text-center">Nefrologista Pediátrica<br>da Clínica REP</h4>
-    <span id="lnk-dr4link"> 
-      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-        <div class="btn btn-primary">Saiba mais ˅</div>
-      </div>
-      <form id="frm-dr4form" class="bg-white shadow-md rounded-bl rounded-r px-8 pt-6 pb-8 mb-4" onsubmit="" method="post" style="display: none;">
-          
-              <input id="id" name="id" type="hidden" value="">
-
-              <img src="images/drajanolia.jpg">
-
-              <div class="col-span-1 mr-1 text-right">
-                <a href="https://www.instagram.com/janolianefroped"style=""><div class="btn btn-primary">Instagram da Dra. Janólia</div>
-              </div></a>
-    
-      </form>
-</div>
-
-
-
-<!--dr6 Mariana Vieria Leite-->
-<div class="col-lg-3 col-md-6" style="background-color:lightblue">      
-  <img class="rounded-[50%] w-full" src="images/Dramariana.jpg"  alt=""></p>
-    <h3 class="text-2xl font-extrabold text-center ">Dra. Mariana Vieria Leite</h3> 
-    <h4 class="text-2x1 text-center">Dermatologia Clínica adulto e pediátrica <br>da Clínica REP </h4>
-
-    <span id="lnk-dr6link"> 
-      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-        <div class="btn btn-primary">Saiba mais ˅</div>
-      </div>
-      <form id="frm-dr6form" class="bg-white shadow-md rounded-bl rounded-r px-8 pt-6 pb-8 mb-4" onsubmit="" method="post" style="display: none;">
-          
-              <input id="id" name="id" type="hidden" value="">
-
-              
-              <img src="images/dramariana.jpg">
-              
-              <div class="col-span-1 mr-1 text-right">
-                <a href="https://www.instagram.com/mariana_vieira_leite/" style=""style=""><div class="btn btn-primary">Instagram da Dra. Mariana </div>
-              </div></a>
-    
-      </form>
-</div>
-
-<!--dr7 Caroline Malka-->
-<div class="col-lg-3 col-md-6" style="background-color:lightblue">      
-  <img class="rounded-[50%] w-full" src="images/dracaroline1.jpg"  alt=""></p>
-    <h3 class="text-2xl font-extrabold text-center ">Dra. Caroline Malka</h3> 
-    <h4 class="text-2x1 text-center"> Gastroenterologista<br> da Clínica REP</h4>
-    <span id="lnk-dr7link"> 
-      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-        <div class="btn btn-primary">Saiba mais ˅</div></span>
-      </div>
-      <form id="frm-dr7form" class="bg-white shadow-md rounded-bl rounded-r px-8 pt-6 pb-8 mb-4" onsubmit="" method="post" style="display: none;">
-          
-              <input id="id" name="id" type="hidden" value="">
-
-              <img src="images/dracaroline.jpg">
-              
-              <div class="col-span-1 mr-1 text-right">
-                <a href="https://www.instagram.com/carolmalka/" style=""><div class="btn btn-primary">Instagram da Dra. Caroline </button>
-              </div></a>
-    
-      </form>
-</div>
-
-<!--dr8-->
-<div class="col-lg-3 col-md-6" style="background-color:lightblue">      
-  <img class="rounded-[50%] w-full" src=""  alt=""></p>
-    <h3 class="text-2xl font-extrabold text-center "></h3> 
-    <h4 class="text-2x1 text-center"><br></h4><br>
-      
-
-          </div>
-      
-      <form id="frm-dr7form" class="bg-white shadow-md rounded-bl rounded-r px-8 pt-6 pb-8 mb-4" onsubmit="" method="post" style="display: none;">
-          
-              <input id="id" name="id" type="hidden" value="">
-
-              
-              <div class="col-span-1 mr-1 text-right">
-               
-              </div></a>
-    
-      </form>
-</div>
-</div>
-</div>
-<!-- Mais medicos-->
-
-
-
-<!---->
-<div id="institucional"></div>
-
-<!---->
-
+    </article>
   </div>
-    <div class="relative w-full md:w-[60%] p-24 rounded-bl-[64px] justify-center items-start flex bg-verdeclaro">
-        <div class="grid gap-12 md:grid-cols-2">
-            <div class="flex flex-col gap-4">
-                <img class="w-full ml-6 md:w-6/12" src="" width="100%" alt="">
-                <img class="rounded-[50%] w-80"  src="images/driggor1.jpg"  alt="">
-                <h3 class="text-3xl font-extrabold text-center text-white">Dr. Iggor Sousa</h3> 
-                <h3 class="text-2xl text-center text-white">Idealizador e fundador da Clínica REP</h3> 
+</section>
 
-                </div>
-           
-        </div>
-    </div>
-</div>
+<!-- INSTITUCIONAL -->
+<section id="institucional" class="section">
+  <h2>Institucional</h2>
+  <p>
+    A Clínica REP nasceu com o propósito de oferecer atendimento médico
+    humanizado, com foco em crianças, adolescentes e adultos.
+  </p>
+</section>
 
+<!-- CONTATO -->
+<section id="contato" class="section bg-primary">
+  <h2>Contato</h2>
+  <p>Agende sua consulta</p>
 
-<!--Institucional-->
-
-<div class="col-lg-6 col-md-6" style="background-color:lightblue">
-    <div class="pb-24 swiper md:-mr-42 slide3 mySwiper3">
-        <div class=" swiper-wrapper">
-              <div class="relative swiper-slide slide3">
-                <img alt="" class="rounded-lg" src="images/maos.jpg" />
-                <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
-                  <h2 class="text-4xl font-extrabold text-center text-top text-white">
-                    Valores </h2> 
-                    <h3 class="text-3xl font-extrabold text-justified text-top text-white">
-                      Tratamento Humanizado</h3</div></div>
-              </div>
-              <div class="relative swiper-slide slide3">
-                <img alt="" class="rounded-lg" src="images/visao.jpg" />
-                <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
-                  <h2 class="text-4xl font-extrabold text-center text-top text-white">
-                    Missão </h2> 
-                    <h3 class="text-3xl font-extrabold text-justified text-top text-white">
-                    Sua saúde é a nossa missão</h3</div></div>
-              </div>
-              </div>
-            </div>
-        </div>
-     
-        
-    </div>
-</div>
-<!--Fim Institucional-->
-
-
-
-<!--Campanhas-->
-<div class="col-lg-6 col-md-6" style="background-color:lightblue">
-        <div class="pb-24 swiper md:-mr-42 slide3 mySwiper3">
-            <div class=" swiper-wrapper">
-              <div class="relative swiper-slide slide3"> 
-                <img alt="" class="w-full rounded-lg" src="images/endocrino.jpg" />
-                <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
-                  <h2 class="text-4xl font-extrabold text-center text-top text-white">
-                    Saiba</h2> 
-                    <h3 class="text-3xl font-extrabold text-justified text-top text-white">
-                      Mais</h3</div></div>
-              </div>
-              
-              
-
-              <div class="relative swiper-slide slide3">
-                <img alt="" class="rounded-lg" src="images/crianca_consulta.jpg" />
-                <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
-                  <h2 class="text-4xl font-extrabold text-center text-top text-white">
-                    Saiba </h2> 
-                    <h3 class="text-3xl font-extrabold text-justified text-top text-white">
-                    Mais</h3</div></div>
-        </div>
-       </div>
-        </div>
-    </div>
-</div>
-
-
-<!--Fim Campanhas-->
-
-
-
-
-<style>
-<style>
-
-
-    .swiper-slide.slide3 {
-      background-position: center;
-      background-size: cover;
-      width: 85%;
-      height: 440px;
-    }
-
-    .swiper-3d .swiper-slide-shadow-right{
-        border-radius:8px;
-      }
-
-    .swiper-slide.slide2 img {
-      display: block;
-      width: 100%;
-    }
-</style>
-
-<script>
-
-var swiper = new Swiper(".mySwiper3", {
-  effect: "coverflow",
-  grabCursor: true,
-  spaceBetween: 40,
-  autoplay:true,
-  initialSlide:3,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  autoplay: {
-      reverseDirection: true,
-  	},
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 70,
-    modifier: 1,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
-</script>
-
-
-<style>
-    .iframe-container{
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%; 
-        height: 0;
-      }
-      .iframe-container iframe{
-        position: absolute;
-        top:0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-<!--Footer-->
-
-<!-- Botão Whatsapp -->
-<a href="https://api.whatsapp.com/send?phone=5511972268107&text=Ol%C3%A1,%20vim%20pelo%20site%20da%20Clínica%20REP%20e%20gostaria%20de%20agendar%20uma%20consulta">
-    <label style="position:fixed;width:90px;height:90px;bottom:15px;right:15px;background-color: transparent; border-color: transparent;
-    border-radius:15px; z-index:1000;" target="_blank"  for="my-modal-4"class="btn"><img src="png/wpp100.png" alt=""></label>
-   </a>
-   
-
-   <!-- Botão Telefone -->
-  <a href="tel:011972268107">
-      <label style="position:fixed;width:90px;height:90px;bottom:15px;left:15px;background-color: transparent; border-color: transparent;
-      border-radius:15px; z-index:1000;" target="_blank" class="btn"> <img src="png/phone100.png" alt=""></label>
-     </a>
-
-
- 
-<!-- Botão Google Maps --
-<a href="https://maps.app.goo.gl/SeCpuiu4QRJix5NT7?g_st=iw">
-    <label style="position:fixed;width:60px;height:60px;bottom:40px;right:33%;color:gray; text-align:center;font-size:30px;
-    z-index:1000;"> <i class="fa-solid fa-map-location-dot fa-2xl" style="color: #1f2b51;"></i></label>
-   </a>
-   
-!-- Botão waze --
-<a href="https://ul.waze.com/ul?place=ChIJYZtA8EZbzpQR3YhwPxneDl8&ll=-23.60212990%2C-46.61852130&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
-  <label style="position:fixed;width:60px;height:60px;bottom:40px;left:30%;color:#FFF;text-align:center;font-size:30px;opacity: 50% box-shadow; 1px 1px 2px #888;
-  z-index:1000;" > <i class="fa-brands fa-waze fa-2x" style="color: #1f2b51"></i></label></a>
-!-- Botão waze -->
-
-  
- 
-
-
-<!-- Home --
-
-    <a href="https://www.clinicarep.com.br"> <label style="position:fixed;bottom:110px;left:5%;text-align:center;font-size:15px; z-index:1000;" >
-   <div class="text-black hover:border-b"><h4>HOME</h4></div></label></a>
-
-!-- Especialidades --
-
-    <a href="#especialidades" @click="navOpen = false"></a>
-    <a href="#especialidades"> <label style="position:fixed;bottom:110px;left:20%;text-align:center;font-size:15px; z-index:1000;" >
-   <div class="text-black hover:border-b">ESPEC.</div></label></a>
-
-!-- Equipe --
-
-    <a href="EQUIPE" @click="navOpen = false"></a>
-    <a href="#equipe"> <label style="position:fixed;bottom:110px;left:35%;text-align:center;font-size:15px; z-index:1000;" >
-   <div class="text-black hover:border-b">EQUIPE</div></label></a>
-
-!-- História --
-
-    <a href="institucional" @click="navOpen = false"></a>
-    <a href="#institucional"> <label style="position:fixed;bottom:110px;right:30%;text-align:center;font-size:15px; z-index:1000;" >
-   <div class="text-black hover:border-b">HISTÓRIA</div></label></a>
-
-!-- Campanhas --
-
-    <a href="campanhas" @click="navOpen = false"></a>
-    <a href="#campanhas"> <label style="position:fixed;bottom:110px;right:5%;text-align:center;font-size:15px; z-index:1000;" >
-   <div class="text-black hover:border-b">CAMPANHAS</div></label></a>
--->
-
-
-    
-    
-<div id="contato"></div>
-    </div>
+  <div class="actions">
+    <a href="tel:11972268107" class="btn white">
+      <i class="fa-solid fa-phone"></i> Ligar
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=5511972268107" class="btn green">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
   </div>
+</section>
 
- 
-  <div class="d-lg-none">
-  <div class="relative p-6 font-bold text-center text-white rounded-lg lg:absolute -bottom-4 -right-0 bg-opacity-80 bg-verdeclaro">
-    <h2  class="flex flex-col items-center justify-between w-full h-full gap-4 px-4 py-3 text-white lg:flex-row">
+</main>
 
-        <a href="https://www.clinicarep.com.br" @click="navOpen = false">HOME</a>
-     
+<footer class="footer">
+  <p>© 2025 Clínica REP. Todos os direitos reservados.</p>
+</footer>
 
-      <li
-      class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-      <a href="#especialidades" @click="navOpen = false">ESPECIALIDADES</a>
-    </li>
-
-     
-      <li
-        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-        <a href="#equipe" @click="navOpen = false">EQUIPE</a>
-      </li>
-
-      <li 
-      class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-      <a href="#institucional" @click="navOpen = false">INSTITUCIONAL</a>
-    </li>
-
-       <li
-        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-        <a href="https://www.instagram.com/repclinica_/">
-           <i class="fa-brands fa-instagram fa-2x" @click="navOpen = false"></i> instagram</a>
-      
-      </li>
-
-      <li
-        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-        <a href="https://ul.waze.com/ul?place=ChIJYZtA8EZbzpQR3YhwPxneDl8&ll=-23.60212990%2C-46.61852130&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
-          <i class="fa-brands fa-waze fa-2x" @click="navOpen = false"></i> waze</a>
-          
-      </li>
-
-      <li
-        class="transition-all duration-300 ease-out hover:scale-105 hover:text-verdeclaro">
-        <a href="https://maps.app.goo.gl/SeCpuiu4QRJix5NT7?g_st=iw">
-          <i class="fa-solid fa-location-dot fa-bounce fa-2xl"></i> Google maps</a>
-        <!---Google Maps icon from FontAwesome         
-           <img class="icon_top" src="gif/googlemaps.gif" alt="Google Maps" width="100">Google Maps
-        -->
-     
-<p style="margin:40px;"></p>
-
-      <div class="text-sm text-justified">
-        © 2025 Clinica REP 
-        <br>Todos os Direitos Reservados
-        
-      </div>
-    </div>
-      
-
-
-<script>
-  const $input = document.querySelector('[data-js="input"]')
-  $input.addEventListener('input', handleInput, false)
-
-function handleInput (e) {
-  e.target.value = phoneMask(e.target.value)
-}
-
-function phoneMask (telefone) {
-  return telefone.replace(/\D/g, '')
-    .replace(/^(\d)/, '($1')
-    .replace(/^(\(\d{2})(\d)/, '$1) $2')
-    .replace(/(\d{5})(\d{1,4})/, '$1-$2')
-    .replace(/(-\d{4})\d+?$/, '$1');
-}
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
 
 </body>
-
 </html>
