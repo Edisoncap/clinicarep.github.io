@@ -14,26 +14,19 @@
 
 <style>
 :root{
-  --primary:#6b7f6a;      /* verde musgo */
-  --secondary:#e8dcc9;    /* bege */
+  --primary:#6b7f6a;
+  --secondary:#e8dcc9;
   --text:#1f2937;
   --white:#ffffff;
-  --soft:#f1f5f4;         /* cinza esverdeado */
+  --soft:#f1f5f4;
 }
 
-
-  <a href="https://wa.me/5511972268107"
-   class="whatsapp-fixed">
-  💬 Agendar pelo WhatsApp
-</a>
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
   font-family:'Montserrat', sans-serif;
   color:var(--text);
   line-height:1.7;
-}
-.whatsapp-fixed{
-  display:none;
 }
 
 /* LOGO FLUTUANTE MOBILE */
@@ -98,11 +91,6 @@ body{
   justify-content:center;
 }
 
-.hero img{
-  width:140px;
-  margin:25px 0;
-}
-
 .hero h1{
   font-family:'Playfair Display', serif;
   font-size:3.2rem;
@@ -115,25 +103,6 @@ body{
   max-width:600px;
 }
 
-/* BOTÃO */
-.cta{
-  margin-top:30px;
-  display:inline-block;
-  padding:16px 42px;
-  background:var(--secondary);
-  color:#3f4f3f;
-  text-decoration:none;
-  border-radius:999px;
-  transition:.3s;
-}
-
-.cta:hover{
-  background:var(--primary);
-  color:white;
-}
-
-
-
 /* SEÇÕES */
 section{
   max-width:1200px;
@@ -141,13 +110,8 @@ section{
   padding:110px 20px;
 }
 
-section:nth-of-type(even){
-  background:var(--soft);
-}
-
-section:nth-of-type(odd){
-  background:var(--white);
-}
+section:nth-of-type(even){background:var(--soft)}
+section:nth-of-type(odd){background:var(--white)}
 
 h2{
   font-family:'Playfair Display', serif;
@@ -214,15 +178,18 @@ footer{
   font-size:14px;
 }
 
-/* MOBILE */
+/* BOTÃO WHATSAPP FIXO (MOBILE) */
+.whatsapp-fixed{
+  display:none;
+}
+
 @media (max-width:768px){
   .hero{height:100vh;}
   .hero h1{font-size:2.1rem;}
   section{padding:80px 18px;}
-}
-  /* BOTÃO WHATSAPP FIXO NO MOBILE */
-@media (max-width:768px){
+
   .whatsapp-fixed{
+    display:block;
     position:fixed;
     bottom:16px;
     left:50%;
@@ -237,11 +204,9 @@ footer{
 
     font-size:16px;
     font-weight:500;
-
     box-shadow:0 10px 25px rgba(37,211,102,.4);
   }
 }
-
 </style>
 </head>
 
@@ -254,10 +219,8 @@ footer{
   <div class="slideshow"></div>
   <div class="hero-content">
     <h1>Cuidado médico com delicadeza, ciência e atenção</h1>
-      <p>Reumatologia Pediátrica • Endocrinologia Pediátrica • Endocrinologia</p>
-
+    <p>Reumatologia Pediátrica • Endocrinologia Pediátrica • Endocrinologia</p>
   </div>
-  
 </header>
 
 <section>
@@ -290,13 +253,14 @@ footer{
 
 <footer>
   <strong>Clínica REP</strong><br>
-
-
-
+  WhatsApp: (11) 97226-8107<br>
+  Atendimento humanizado e especializado
 </footer>
+
+<!-- BOTÃO WHATSAPP FIXO -->
+<a href="https://wa.me/5511972268107" class="whatsapp-fixed">
+  💬 Agendar pelo WhatsApp
+</a>
 
 </body>
 </html>
-
-
-
