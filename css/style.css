@@ -1,12 +1,12 @@
 <style>
-  :root {
-    --primary: #0F766E;
-    --secondary: #5EEAD4;
-    --cta: #22C55E;
-    --bg-light: #F8FAFC;
-    --text-main: #1F2937;
-    --text-muted: #4B5563;
-  }
+
+:root{
+  --primary:#6b7f6a;      /* verde musgo */
+  --secondary:#e8dcc9;    /* bege */
+  --text:#1f2937;
+  --white:#ffffff;
+  --soft:#f1f5f4;         /* cinza esverdeado */
+}
 
   body {
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -35,35 +35,44 @@
     color: #ECFEFF;
   }
 
-  section {
-    padding: 50px 20px;
-    max-width: 900px;
-    margin: auto;
-  }
+ section{
+  max-width:1200px;
+  margin:auto;
+  padding:110px 20px;
+}
+
+section:nth-of-type(even){
+  background:var(--soft);
+}
+
+section:nth-of-type(odd){
+  background:var(--white);
+}
+
 
   h2 {
     color: var(--primary);
     margin-bottom: 20px;
   }
 
-  .cta {
-    background: var(--cta);
-    color: white;
-    padding: 18px 34px;
-    display: inline-block;
-    border-radius: 999px;
-    font-size: 18px;
-    text-decoration: none;
-    margin-top: 25px;
-    font-weight: 600;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
-  }
+  
+  .cta{
+  margin-top:30px;
+  display:inline-block;
+  padding:16px 42px;
+  background:var(--secondary);
+  color:#3f4f3f;
+  text-decoration:none;
+  border-radius:999px;
+  font-weight:400;
+  transition:all .3s ease;
+}
 
-  .cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(34, 197, 94, 0.4);
-  }
+.cta:hover{
+  background:var(--primary);
+  color:#ffffff;
+}
+
 
   .benefits {
     display: grid;
@@ -103,6 +112,18 @@
   footer strong {
     color: var(--primary);
   }
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    rgba(107,127,106,.65),
+    rgba(107,127,106,.65)
+  );
+  z-index:1;
+}
+
 .doctor-card a.saiba-mais {
   display: inline-block;
   margin-top: 15px;
@@ -120,6 +141,23 @@
 .doctor-card a.saiba-mais:hover {
   background: #0f766e;
   color: #ffffff;
+}
+.medico a{
+  margin-top:22px;
+  display:inline-block;
+  padding:10px 28px;
+  background:transparent;
+  border:1.5px solid var(--primary);
+  border-radius:999px;
+  text-decoration:none;
+  color:var(--primary);
+  font-size:.9rem;
+  transition:all .3s ease;
+}
+
+.medico a:hover{
+  background:var(--primary);
+  color:#ffffff;
 }
 
 </style>
