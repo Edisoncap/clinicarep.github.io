@@ -17,6 +17,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+/* BOTÃO PADRÃO */
+.btn-outline{
+  display:inline-block;
+  margin-top:18px;
+  padding:10px 22px;
+  border:1px solid var(--accent);
+  border-radius:999px;
+  background:none;
+  color:var(--accent);
+  font-size:14px;
+  text-decoration:none;
+  transition:.3s ease;
+}
+
+.btn-outline:hover{
+  background:rgba(127,224,195,.12);
+  transform:translateY(-2px);
+}
+
 :root{
   --bg:#071A17;
   --surface:#0C2622;
@@ -389,19 +408,29 @@ section{
   <h2 style="text-align:center;color:var(--primary)">Nossa Equipe</h2>
   <div class="equipe">
     <div class="medico">
-      <img src="images/driggor1.jpg">
-      <h3>Dr. Iggor Sousa</h3>
-      <p>Reumatologia Pediátrica</p>
-    </div>
+
+  <img src="images/driggor1.jpg">
+  <h3>Dr. Iggor Sousa</h3>
+  <p>Reumatologia Pediátrica</p>
+  <a href="driggorsousa.html" class="btn-outline">Saiba mais</a>
+</div>
+
+    
+ 
+      <div class="medico">
+  <img src="images/drafernanda1.jpg">
+  <h3>Dra. Fernanda Silveira</h3>
+  <p>Endocrinologia Pediátrica</p>
+  <a href="drafernandasilveira.html" class="btn-outline">Saiba mais</a>
+</div>
+      
+
     <div class="medico">
-      <img src="images/drafernanda1.jpg">
-      <h3>Dra. Fernanda Silveira</h3>
-      <p>Endocrinologia Pediátrica</p>
-    </div>
-    <div class="medico">
-      <img src="images/drvictor1.jpg">
-      <h3>Dr. Victor Silveira</h3>
-      <p>Endocrinologia</p>
+  <img src="images/drvictor1.jpg">
+  <h3>Dr. Victor Silveira</h3>
+  <p>Endocrinologia</p>
+  <a href="drvictorsilveira.html" class="btn-outline">Saiba mais</a>
+</div>
     </div>
   </div>
 </section>
