@@ -80,8 +80,7 @@ body{
   color:var(--muted);
 }
 .menu{
-  position:absolute;
-  right:24px;
+  position:relative;
 }
 
 .menu button{
@@ -91,6 +90,24 @@ body{
   padding:10px 18px;
   border-radius:999px;
   cursor:pointer;
+  font-size:14px;
+}
+
+/* DROPDOWN */
+.menu-content{
+  position:absolute;
+  top:100%;
+  right:0;
+  margin-top:12px;
+  background:var(--surface);
+  border-radius:16px;
+  min-width:220px;
+  box-shadow:0 30px 60px rgba(0,0,0,.6);
+
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(10px);
+  transition:.25s ease;
 }
 
 .menu-content a{
@@ -99,17 +116,18 @@ body{
   color:var(--text);
   text-decoration:none;
   font-size:14px;
-  transition:background .3s ease;
 }
 
 .menu-content a:hover{
   background:rgba(127,224,195,.12);
 }
 
-
+/* ABERTURA */
 .menu:hover .menu-content,
 .menu-content:hover{
-  display:block;
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
 }
 
 
@@ -205,5 +223,6 @@ section{
 
 </body>
 </html>
+
 
 
