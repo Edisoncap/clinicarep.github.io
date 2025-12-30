@@ -2,202 +2,270 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Clínica REP</title>
+<title>Clínica REP | Atendimento Humanizado</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Clínica REP – Cuidado médico humanizado em Reumatologia Pediátrica e Endocrinologia.">
+<meta name="description" content="Clínica REP – Atendimento humanizado em Reumatologia Pediátrica e Endocrinologia.">
 
 <link rel="icon" href="images/logo_round_green_250.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --green:#6f8476;
-  --beige:#f5f1eb;
-  --soft:#f8faf9;
-  --text:#2c2f33;
+  --bg:#0B1220;
+  --surface:#0F172A;
+  --primary:#5EEAD4;
+  --secondary:#38BDF8;
+  --text:#E5E7EB;
+  --muted:#94A3B8;
+  --border:rgba(148,163,184,.15);
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:'Montserrat', sans-serif;
+  background:var(--bg);
   color:var(--text);
-  line-height:1.85;
-  background:white;
+  line-height:1.7;
+}
+
+/* LOGO FLUTUANTE */
+.logo-float{
+  position:fixed;
+  top:16px;
+  right:16px;
+  width:80px;
+  z-index:1200;
+  filter:drop-shadow(0 10px 22px rgba(0,0,0,.6));
 }
 
 /* HERO */
 .hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  padding:0 6vw;
-  background:url("images/1_home.png") center/cover no-repeat;
+  height:100vh;
+  position:relative;
+  overflow:hidden;
 }
 
+/* SLIDESHOW */
+.slideshow{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+
+.slideshow span{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  animation:fade 30s infinite;
+  filter:brightness(.75) saturate(.9);
+}
+
+.slideshow span:nth-child(1){
+  background-image:url("images/1_home_clean.png");
+  animation-delay:0s;
+}
+.slideshow span:nth-child(2){
+  background-image:url("images/atendimento1.jpg");
+  animation-delay:6s;
+}
+.slideshow span:nth-child(3){
+  background-image:url("images/maos.jpg");
+  animation-delay:12s;
+}
+.slideshow span:nth-child(4){
+  background-image:url("images/visao.jpg");
+  animation-delay:18s;
+}
+.slideshow span:nth-child(5){
+  background-image:url("images/atendimento2.png");
+  animation-delay:24s;
+}
+
+@keyframes fade{
+  0%{opacity:0}
+  10%{opacity:1}
+  30%{opacity:1}
+  40%{opacity:0}
+  100%{opacity:0}
+}
+
+/* OVERLAY */
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(2,6,23,.55),
+    rgba(2,6,23,.75)
+  );
+  z-index:1;
+}
+
+/* HERO CONTENT */
 .hero-content{
-  max-width:720px;
+  position:relative;
+  z-index:2;
+  height:100%;
+  max-width:1200px;
+  padding:0 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
 .hero h1{
   font-family:'Playfair Display', serif;
+  font-size:3rem;
   font-weight:300;
-  font-size:3.6rem;
-  line-height:1.2;
+  max-width:720px;
+  color:white;
 }
 
 .hero p{
-  margin-top:28px;
+  margin-top:16px;
   font-size:1.15rem;
-  max-width:520px;
-  color:#4b5563;
+  color:var(--primary);
 }
 
 /* SEÇÕES */
 section{
-  padding:120px 6vw;
+  padding:100px 20px;
 }
 
-.center{
-  max-width:820px;
-  margin:auto;
-  text-align:center;
+section:nth-of-type(even){
+  background:var(--surface);
 }
 
-.soft{background:var(--soft)}
-.beige{background:var(--beige)}
-
+/* TÍTULOS */
 h2{
+  text-align:center;
   font-family:'Playfair Display', serif;
+  font-size:2.4rem;
   font-weight:300;
-  font-size:2.6rem;
-  color:var(--green);
-  margin-bottom:48px;
-}
-
-/* TEXTO */
-.editorial{
-  font-size:1.05rem;
-  color:#4b5563;
-}
-
-/* IMAGEM FULL */
-.full-image{
-  height:70vh;
-  background:url("images/maos.jpg") center/cover no-repeat;
-}
-
-/* VALORES */
-.valores{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:60px;
-  margin-top:70px;
-}
-
-.valor h3{
-  font-family:'Playfair Display', serif;
-  font-weight:400;
-  color:var(--green);
-  margin-bottom:10px;
+  color:var(--primary);
+  margin-bottom:60px;
 }
 
 /* EQUIPE */
 .equipe{
+  max-width:1200px;
+  margin:auto;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:80px;
+  gap:40px;
 }
 
 .medico{
+  background:linear-gradient(
+    160deg,
+    rgba(94,234,212,.08),
+    rgba(56,189,248,.04)
+  );
+  border-radius:28px;
+  padding:36px 30px;
   text-align:center;
+  border:1px solid var(--border);
+  backdrop-filter:blur(6px);
+  transition:.4s;
+}
+
+.medico:hover{
+  transform:translateY(-8px);
+  box-shadow:0 35px 80px rgba(0,0,0,.6);
 }
 
 .medico img{
   width:100%;
-  border-radius:50%;
   aspect-ratio:1/1;
   object-fit:cover;
-  margin-bottom:28px;
+  border-radius:50%;
+  margin-bottom:22px;
+  border:3px solid rgba(94,234,212,.35);
 }
 
 .medico h3{
   font-family:'Playfair Display', serif;
-  font-weight:400;
   font-size:1.45rem;
-  color:var(--green);
+  color:white;
 }
 
 .medico p{
   font-size:.95rem;
-  color:#6b7280;
+  color:var(--muted);
 }
 
 .medico a{
   display:inline-block;
-  margin-top:16px;
-  font-size:.9rem;
-  color:var(--green);
-  text-decoration:none;
-  border-bottom:1px solid var(--green);
-}
-
-/* CTA FINAL */
-.cta a{
-  display:inline-block;
-  margin-top:36px;
-  padding:14px 44px;
-  background:var(--green);
-  color:white;
+  margin-top:22px;
+  padding:12px 30px;
   border-radius:999px;
   text-decoration:none;
-  font-size:.95rem;
+  font-weight:500;
+  color:#020617;
+  background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  transition:.3s;
+}
+
+.medico a:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 30px rgba(56,189,248,.45);
 }
 
 /* FOOTER */
 footer{
-  padding:70px 20px;
+  background:#020617;
+  padding:50px 20px;
   text-align:center;
   font-size:14px;
-  color:#6b7280;
+  color:var(--muted);
 }
 
-/* WHATSAPP */
+/* WHATSAPP FIXO MOBILE */
 .whatsapp-fixed{
   display:none;
 }
 
-@media(max-width:768px){
-  .hero h1{font-size:2.4rem}
-
-  section{padding:90px 24px}
+@media (max-width:768px){
+  .hero h1{font-size:2.1rem}
 
   .whatsapp-fixed{
     display:flex;
+    align-items:center;
+    justify-content:center;
     position:fixed;
     bottom:18px;
     right:18px;
     width:56px;
     height:56px;
-    border-radius:50%;
     background:#25D366;
-    align-items:center;
-    justify-content:center;
+    border-radius:50%;
     z-index:1000;
     animation:pulse 2s infinite;
   }
 
   .whatsapp-fixed svg{
-    width:26px;
-    height:26px;
+    width:28px;
+    height:28px;
     fill:white;
   }
 }
 
 @keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}
   70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
   100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
@@ -206,90 +274,59 @@ footer{
 
 <body>
 
+<img src="images/Logo_round-modified.png" alt="Clínica REP" class="logo-float">
+
 <header class="hero">
+  <div class="slideshow">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="overlay"></div>
+
   <div class="hero-content">
-    <h1>Cuidado médico com tempo, escuta e ciência</h1>
-    <p>Uma clínica pensada para acolher crianças, adolescentes e famílias.</p>
+    <h1>Cuidado médico com delicadeza, ciência e atenção</h1>
+    <p>Reumatologia Pediátrica • Endocrinologia Pediátrica • Endocrinologia</p>
   </div>
 </header>
 
 <section>
-  <div class="center">
-    <h2>Sobre a Clínica REP</h2>
-    <p class="editorial">
-      A Clínica REP foi criada para oferecer um atendimento médico ético,
-      cuidadoso e baseado em evidências, respeitando a individualidade
-      de cada paciente.
-    </p>
-  </div>
-</section>
+  <h2>Nossa Equipe</h2>
+  <div class="equipe">
 
-<div class="full-image"></div>
-
-<section class="soft">
-  <div class="center">
-    <h2>Nossos valores</h2>
-    <div class="valores">
-      <div class="valor">
-        <h3>Escuta</h3>
-        <p>Consultas sem pressa, com atenção real.</p>
-      </div>
-      <div class="valor">
-        <h3>Ciência</h3>
-        <p>Atualização constante e prática baseada em evidências.</p>
-      </div>
-      <div class="valor">
-        <h3>Acolhimento</h3>
-        <p>Um ambiente seguro para pacientes e famílias.</p>
-      </div>
+    <div class="medico">
+      <img src="images/driggor1.jpg" alt="Dr. Iggor Sousa">
+      <h3>Dr. Iggor Sousa</h3>
+      <p>Reumatologia Pediátrica</p>
+      <a href="driggorsousa.html">Saiba mais</a>
     </div>
-  </div>
-</section>
 
-<section class="beige">
-  <div class="center">
-    <h2>Nossa equipe</h2>
-    <div class="equipe">
-      <div class="medico">
-        <img src="images/driggor1.jpg">
-        <h3>Dr. Iggor Sousa</h3>
-        <p>Reumatologia Pediátrica</p>
-        <a href="driggorsousa.html">Saiba mais</a>
-      </div>
-      <div class="medico">
-        <img src="images/drafernanda1.jpg">
-        <h3>Dra. Fernanda Silveira</h3>
-        <p>Endocrinologia Pediátrica</p>
-        <a href="drafernandasilveira.html">Saiba mais</a>
-      </div>
-      <div class="medico">
-        <img src="images/drvictor1.jpg">
-        <h3>Dr. Victor Silveira</h3>
-        <p>Endocrinologia</p>
-        <a href="drvictorsilveira.html">Saiba mais</a>
-      </div>
+    <div class="medico">
+      <img src="images/drafernanda1.jpg" alt="Dra. Fernanda Silveira">
+      <h3>Dra. Fernanda Silveira</h3>
+      <p>Endocrinologia Pediátrica</p>
+      <a href="drafernandasilveira.html">Saiba mais</a>
     </div>
-  </div>
-</section>
 
-<section>
-  <div class="center cta">
-    <h2>Agende sua consulta</h2>
-    <p class="editorial">Estamos prontos para cuidar de você.</p>
-    <a href="https://wa.me/5511972268107">Agendar pelo WhatsApp</a>
+    <div class="medico">
+      <img src="images/drvictor1.jpg" alt="Dr. Victor Silveira">
+      <h3>Dr. Victor Silveira</h3>
+      <p>Endocrinologia</p>
+      <a href="drvictorsilveira.html">Saiba mais</a>
+    </div>
+
   </div>
 </section>
 
 <footer>
-  Clínica REP
+  <strong>Clínica REP</strong><br>
+  Atendimento humanizado
 </footer>
 
-<a href="https://wa.me/5511972268107" class="whatsapp-fixed">
-  <svg viewBox="0 0 32 32">
-    <path d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.4 2 7.7L0 32l8.5-2.2c2.2 1.2 4.8 1.9 7.5 1.9 8.8 0 16-7.2 16-16S24.8 0 16 0z"/>
-  </svg>
+<a href="https://wa.me/5511972268107" class="whatsapp-fixed" aria-label="WhatsApp">
+<svg viewBox="0 0 32 32">
+<path d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.4 2 7.7L0 32l8.5-2.2c2.2 1.2 4.8 1.9 7.5 1.9 8.8 0 16-7.2 16-16S24.8 0 16 0z"/>
+</svg>
 </a>
 
 </body>
 </html>
-
