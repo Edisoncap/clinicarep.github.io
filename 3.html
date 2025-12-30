@@ -58,23 +58,30 @@ body{
 /* ===== TOPO ===== */
 
 
-<div class="topbar">
-  <div class="topbar-left">
-    <img src="images/Logo2025clear.png" alt="Clínica REP" class="logo-img">
-    <div class="logo-text">
-      <span class="logo-clinica">Clínica</span>
-      <span class="logo-rep"> REP</span>
-    </div>
-  </div>
+.topbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 32px;
+  z-index:1300;
+  background:linear-gradient(to bottom, rgba(7,26,23,.9), rgba(7,26,23,.6));
+  backdrop-filter:blur(8px);
+}
 
-  <div class="menu">
-    <button>Menu</button>
-    <div class="menu-content">
-      ...
-    </div>
-  </div>
-</div>
+.topbar-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
 
+.logo-img{
+  height:46px;
+  opacity:0.65;
+}
   
 .logo-center{
   height:0px;
@@ -457,7 +464,7 @@ section{
 
 <body>
 
-<!-- TOPO -->
+
 <!-- TOPO -->
 <div class="topbar">
   <div class="topbar-left">
