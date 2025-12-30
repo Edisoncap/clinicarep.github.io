@@ -218,10 +218,12 @@ body{
 }
 
 .hero-story h2{
-  font-family:'Playfair Display', serif;
-  font-size:3rem;
-  font-weight:300;
-  color:white;
+  font-family:'Sacramento', cursive;
+  font-size:3.6rem;
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:1px;
+  text-shadow:0 4px 18px rgba(0,0,0,.35);
 }
 
 .hero-story p{
@@ -372,6 +374,18 @@ section{
   letter-spacing:2px;
   opacity:.9;
   transform:translateX(-30px);
+}
+/* ================= MOBILE ================= */
+@media (max-width:768px){
+  .hero-story h2{
+    font-size:2.6rem;
+  line-height:1.15;
+    letter-spacing:.5px;
+  }
+
+  .hero-story p{
+    font-size:1rem;
+  }
 }
 
 </style>
