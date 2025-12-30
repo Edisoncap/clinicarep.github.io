@@ -19,7 +19,6 @@
   --accent:#7FE0C3;
   --text:#E6F4F1;
   --muted:#9CCFC3;
-  --border:rgba(63,174,154,.18);
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -28,77 +27,119 @@ body{
   font-family:'Montserrat', sans-serif;
   background:var(--bg);
   color:var(--text);
-  line-height:1.7;
 }
 
-/* LOGO */
-.logo-float{
+/* ===== TOPO ===== */
+.topbar{
   position:fixed;
-  top:16px;
-  right:16px;
-  width:80px;
-  z-index:1200;
-  filter:drop-shadow(0 10px 22px rgba(0,0,0,.6));
+  top:0;
+  width:100%;
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1300;
+  background:linear-gradient(to bottom, rgba(7,26,23,.9), rgba(7,26,23,.6));
+  backdrop-filter:blur(8px);
 }
 
-/* HERO */
+.logo-center{
+  height:54px;
+}
+
+/* MENU */
+.menu{
+  position:absolute;
+  right:24px;
+}
+
+.menu button{
+  background:none;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  padding:10px 18px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.menu-content{
+  display:none;
+  position:absolute;
+  right:0;
+  margin-top:12px;
+  background:var(--surface);
+  border-radius:16px;
+  overflow:hidden;
+  min-width:200px;
+  box-shadow:0 30px 60px rgba(0,0,0,.6);
+}
+
+.menu:hover .menu-content{
+  display:block;
+}
+
+.menu-content a{
+  display:block;
+  padding:14px 18px;
+  text-decoration:none;
+  color:var(--text);
+  font-size:14px;
+  transition:.3s;
+}
+
+.menu-content a:hover{
+  background:rgba(127,224,195,.08);
+}
+
+/* ===== HERO ===== */
 .hero{
   height:100vh;
   position:relative;
   overflow:hidden;
+  padding-top:90px;
 }
 
-/* SLIDESHOW HERO */
-.hero .slideshow{
-  position:absolute;
-  inset:0;
-  z-index:0;
-}
-
-.hero .slideshow span{
+.slideshow span{
   position:absolute;
   inset:0;
   background-size:cover;
   background-position:center;
   opacity:0;
   animation:heroBg 30s infinite;
-  filter:brightness(.7) saturate(.9);
 }
 
-.hero .slideshow span:nth-child(1){
+.slideshow span:nth-child(1){
   background-image:url("images/1_home_clean.png");
-  animation-delay:0s;
 }
-.hero .slideshow span:nth-child(2){
+.slideshow span:nth-child(2){
   background-image:url("images/atendimento1.jpg");
   animation-delay:10s;
 }
-.hero .slideshow span:nth-child(3){
+.slideshow span:nth-child(3){
   background-image:url("images/visao.jpg");
   animation-delay:20s;
 }
 
 @keyframes heroBg{
   0%{opacity:0}
-  8%{opacity:1}
+  10%{opacity:1}
   30%{opacity:1}
-  38%{opacity:0}
+  40%{opacity:0}
   100%{opacity:0}
 }
 
-/* OVERLAY */
 .overlay{
   position:absolute;
   inset:0;
   background:linear-gradient(
     to bottom,
-    rgba(7,26,23,.55),
+    rgba(7,26,23,.6),
     rgba(7,26,23,.85)
   );
-  z-index:1;
 }
 
-/* HERO STORY */
+/* HERO TEXT */
 .hero-content{
   position:relative;
   z-index:2;
@@ -121,15 +162,13 @@ body{
 
 .hero-story h1{
   font-family:'Playfair Display', serif;
-  font-size:3.4rem;
-  font-weight:300;
+  font-size:3.2rem;
   color:white;
 }
 
 .hero-story h2{
-  font-size:1.4rem;
   color:var(--accent);
-  margin:10px 0;
+  margin:12px 0;
 }
 
 .hero-story p{
@@ -137,98 +176,20 @@ body{
 }
 
 @keyframes heroStory{
-  0%{opacity:0;transform:translateY(12px)}
-  8%{opacity:1;transform:translateY(0)}
+  0%{opacity:0}
+  10%{opacity:1}
   30%{opacity:1}
-  38%{opacity:0;transform:translateY(-12px)}
+  40%{opacity:0}
   100%{opacity:0}
 }
 
-/* STORYTELLING ATENDIMENTO */
-.storytelling{
-  position:relative;
-  height:70vh;
-  overflow:hidden;
-}
-
-.storytelling .slideshow span{
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  opacity:0;
-  animation:fade 20s infinite;
-}
-
-.storytelling .slideshow span:nth-child(1){
-  background-image:url("images/atendimento4.jpg");
-}
-.storytelling .slideshow span:nth-child(2){
-  background-image:url("images/atendimento5.jpg");
-  animation-delay:10s;
-}
-
-@keyframes fade{
-  0%{opacity:0}
-  10%{opacity:1}
-  45%{opacity:1}
-  55%{opacity:0}
-  100%{opacity:0}
-}
-
-.story-content{
-  position:relative;
-  z-index:2;
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-
-.story-text{
-  position:absolute;
-  opacity:0;
-  animation:storyFade 20s infinite;
-}
-
-.story-text:nth-child(1){animation-delay:0s}
-.story-text:nth-child(2){animation-delay:10s}
-
-.story-text h3{
-  font-family:'Playfair Display', serif;
-  font-size:2.4rem;
-  color:white;
-}
-
-.story-text p{
-  color:var(--accent);
-}
-
-@keyframes storyFade{
-  0%{opacity:0}
-  10%{opacity:1}
-  45%{opacity:1}
-  55%{opacity:0}
-  100%{opacity:0}
-}
-
-/* SEÇÕES */
+/* ===== SEÇÕES ===== */
 section{
   padding:100px 20px;
 }
 
-section:nth-of-type(even){
+#equipe{
   background:var(--surface);
-}
-
-h2{
-  text-align:center;
-  font-family:'Playfair Display', serif;
-  font-size:2.4rem;
-  font-weight:300;
-  color:var(--primary);
-  margin-bottom:60px;
 }
 
 /* EQUIPE */
@@ -241,56 +202,68 @@ h2{
 }
 
 .medico{
-  background:linear-gradient(
-    160deg,
-    rgba(63,174,154,.12),
-    rgba(127,224,195,.06)
-  );
+  background:rgba(127,224,195,.06);
   border-radius:28px;
   padding:36px 30px;
   text-align:center;
-  border:1px solid var(--border);
-  transition:.4s;
-}
-
-.medico:hover{
-  transform:translateY(-8px);
 }
 
 .medico img{
   width:100%;
   aspect-ratio:1/1;
-  object-fit:cover;
   border-radius:50%;
   margin-bottom:22px;
-  border:3px solid rgba(127,224,195,.45);
 }
 
-.medico h3{
-  font-family:'Playfair Display', serif;
-  color:white;
+/* ===== WHATSAPP ===== */
+.whatsapp-fixed{
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1400;
+  animation:pulse 2s infinite;
 }
 
-.medico p{
-  color:var(--muted);
+.whatsapp-fixed svg{
+  width:28px;
+  fill:white;
 }
 
-/* FOOTER */
-footer{
-  background:#041310;
-  padding:50px 20px;
-  text-align:center;
-  color:var(--muted);
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
+  70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
 </style>
 </head>
 
 <body>
 
-<img src="images/Logo_round-modified.png" alt="Clínica REP" class="logo-float">
+<!-- TOPO -->
+<div class="topbar">
+  <img src="images/Logo_round-modified.png" alt="Clínica REP" class="logo-center">
+
+  <div class="menu">
+    <button>Menu</button>
+    <div class="menu-content">
+      <a href="#">Home</a>
+      <a href="#quem-somos">Quem somos</a>
+      <a href="#equipe">Nossa equipe</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Santa+Cruz+2105+Sala+107+São+Paulo+SP" target="_blank">Localização</a>
+      <a href="https://wa.me/5511972268107" target="_blank">Contato</a>
+    </div>
+  </div>
+</div>
 
 <!-- HERO -->
-<header class="hero">
+<header class="hero" id="home">
   <div class="slideshow">
     <span></span><span></span><span></span>
   </div>
@@ -305,61 +278,44 @@ footer{
     <div class="hero-story">
       <h1>Clínica REP</h1>
       <h2>Endocrinologia Pediátrica</h2>
-      <p>Crescimento, desenvolvimento e equilíbrio desde a infância.</p>
+      <p>Crescimento e equilíbrio desde a infância.</p>
     </div>
     <div class="hero-story">
       <h1>Clínica REP</h1>
       <h2>Endocrinologia</h2>
-      <p>Precisão clínica para todas as fases da vida.</p>
+      <p>Precisão clínica em todas as fases da vida.</p>
     </div>
   </div>
 </header>
 
-<!-- STORYTELLING ATENDIMENTO -->
-<section class="storytelling">
-  <div class="slideshow">
-    <span></span><span></span>
-  </div>
-  <div class="overlay"></div>
-
-  <div class="story-content">
-    <div class="story-text">
-      <h3>Acolhimento desde o primeiro contato</h3>
-      <p>Tudo começa com escuta, cuidado e atenção verdadeira.</p>
-    </div>
-    <div class="story-text">
-      <h3>Confiança construída com ciência</h3>
-      <p>Precisão médica aliada à empatia e presença.</p>
-    </div>
-  </div>
-</section>
-
-<!-- NOSSA EQUIPE -->
-<section>
-  <h2>Nossa Equipe</h2>
+<!-- EQUIPE -->
+<section id="equipe">
+  <h2 style="text-align:center;color:var(--primary)">Nossa Equipe</h2>
   <div class="equipe">
     <div class="medico">
-      <img src="images/driggor1.jpg" alt="Dr. Iggor Sousa">
+      <img src="images/driggor1.jpg">
       <h3>Dr. Iggor Sousa</h3>
       <p>Reumatologia Pediátrica</p>
     </div>
     <div class="medico">
-      <img src="images/drafernanda1.jpg" alt="Dra. Fernanda Silveira">
+      <img src="images/drafernanda1.jpg">
       <h3>Dra. Fernanda Silveira</h3>
       <p>Endocrinologia Pediátrica</p>
     </div>
     <div class="medico">
-      <img src="images/drvictor1.jpg" alt="Dr. Victor Silveira">
+      <img src="images/drvictor1.jpg">
       <h3>Dr. Victor Silveira</h3>
       <p>Endocrinologia</p>
     </div>
   </div>
 </section>
 
-<footer>
-  <strong>Clínica REP</strong><br>
-  Atendimento humanizado
-</footer>
+<!-- WHATSAPP -->
+<a href="https://wa.me/5511972268107" class="whatsapp-fixed" target="_blank" aria-label="WhatsApp">
+<svg viewBox="0 0 32 32">
+<path d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.4 2 7.7L0 32l8.5-2.2c2.2 1.2 4.8 1.9 7.5 1.9 8.8 0 16-7.2 16-16S24.8 0 16 0z"/>
+</svg>
+</a>
 
 </body>
 </html>
