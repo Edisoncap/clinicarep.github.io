@@ -48,7 +48,7 @@ body{
   overflow:hidden;
 }
 
-/* SLIDESHOW BASE */
+/* SLIDESHOW */
 .slideshow{
   position:absolute;
   inset:0;
@@ -61,7 +61,7 @@ body{
   background-size:cover;
   background-position:center;
   opacity:0;
-  animation:fade 20s infinite;
+  animation:fade 30s infinite;
   filter:brightness(.7) saturate(.9);
 }
 
@@ -84,8 +84,8 @@ body{
 @keyframes fade{
   0%{opacity:0}
   10%{opacity:1}
-  45%{opacity:1}
-  55%{opacity:0}
+  30%{opacity:1}
+  40%{opacity:0}
   100%{opacity:0}
 }
 
@@ -101,32 +101,58 @@ body{
   z-index:1;
 }
 
-/* HERO CONTENT */
+/* HERO STORYTELLING */
 .hero-content{
   position:relative;
   z-index:2;
   height:100%;
-  max-width:1200px;
-  padding:0 20px;
   display:flex;
-  flex-direction:column;
+  align-items:center;
   justify-content:center;
+  text-align:center;
+  padding:0 20px;
 }
 
-.hero h1{
+.hero-story{
+  position:absolute;
+  opacity:0;
+  animation:heroStory 30s infinite;
+}
+
+.hero-story:nth-child(1){animation-delay:0s}
+.hero-story:nth-child(2){animation-delay:10s}
+.hero-story:nth-child(3){animation-delay:20s}
+
+.hero-story h1{
   font-family:'Playfair Display', serif;
-  font-size:3rem;
+  font-size:3.4rem;
   font-weight:300;
   color:white;
+  margin-bottom:10px;
 }
 
-.hero p{
-  margin-top:16px;
-  font-size:1.15rem;
+.hero-story h2{
+  font-family:'Montserrat', sans-serif;
+  font-size:1.4rem;
+  font-weight:500;
   color:var(--accent);
+  margin-bottom:14px;
 }
 
-/* STORYTELLING */
+.hero-story p{
+  font-size:1.05rem;
+  color:var(--muted);
+}
+
+@keyframes heroStory{
+  0%{opacity:0;transform:translateY(12px)}
+  8%{opacity:1;transform:translateY(0)}
+  30%{opacity:1}
+  38%{opacity:0;transform:translateY(-12px)}
+  100%{opacity:0}
+}
+
+/* STORYTELLING INTERMEDIÁRIO */
 .storytelling{
   position:relative;
   height:70vh;
@@ -214,11 +240,6 @@ h2{
   transition:.4s;
 }
 
-.medico:hover{
-  transform:translateY(-8px);
-  box-shadow:0 35px 80px rgba(0,0,0,.6);
-}
-
 .medico img{
   width:100%;
   aspect-ratio:1/1;
@@ -253,17 +274,35 @@ footer{
 
 <img src="images/Logo_round-modified.png" alt="Clínica REP" class="logo-float">
 
+<!-- HERO STORYTELLING -->
 <header class="hero">
   <div class="slideshow">
     <span></span><span></span><span></span><span></span><span></span>
   </div>
   <div class="overlay"></div>
+
   <div class="hero-content">
-    <h1>Clínica REP</h1>
-    <p> • Reumatologia Pediátrica • Endocrinologia Pediátrica • Endocrinologia</p>
+    <div class="hero-story">
+      <h1>Clínica REP</h1>
+      <h2>Reumatologia Pediátrica</h2>
+      <p>Cuidar das articulações é cuidar do futuro.</p>
+    </div>
+
+    <div class="hero-story">
+      <h1>Clínica REP</h1>
+      <h2>Endocrinologia Pediátrica</h2>
+      <p>Crescimento, desenvolvimento e equilíbrio desde a infância.</p>
+    </div>
+
+    <div class="hero-story">
+      <h1>Clínica REP</h1>
+      <h2>Endocrinologia</h2>
+      <p>Precisão clínica para todas as fases da vida.</p>
+    </div>
   </div>
 </header>
 
+<!-- STORYTELLING ATENDIMENTO -->
 <section class="storytelling">
   <div class="slideshow">
     <span></span>
@@ -284,28 +323,25 @@ footer{
   </div>
 </section>
 
+<!-- EQUIPE -->
 <section>
   <h2>Nossa Equipe</h2>
   <div class="equipe">
-
     <div class="medico">
       <img src="images/driggor1.jpg">
       <h3>Dr. Iggor Sousa</h3>
       <p>Reumatologia Pediátrica</p>
     </div>
-
     <div class="medico">
       <img src="images/drafernanda1.jpg">
       <h3>Dra. Fernanda Silveira</h3>
       <p>Endocrinologia Pediátrica</p>
     </div>
-
     <div class="medico">
       <img src="images/drvictor1.jpg">
       <h3>Dr. Victor Silveira</h3>
       <p>Endocrinologia</p>
     </div>
-
   </div>
 </section>
 
