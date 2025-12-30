@@ -170,6 +170,30 @@ section{
   margin-bottom:14px;
 }
 
+  @keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* pequeno atraso entre os textos */
+.hero h1 { animation-delay: 0.2s; }
+.hero h2 { animation-delay: 0.5s; }
+.hero p  { animation-delay: 0.8s; }
+
+
 </style>
 </head>
 
@@ -233,5 +257,6 @@ section{
 
 </body>
 </html>
+
 
 
