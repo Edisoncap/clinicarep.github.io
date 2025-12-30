@@ -56,18 +56,7 @@ body{
 }
 
 /* ===== TOPO ===== */
-.topbar{
-  position:fixed;
-  top:0;
-  width:100%;
-  height:90px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:1300;
-  background:linear-gradient(to bottom, rgba(7,26,23,.9), rgba(7,26,23,.6));
-  backdrop-filter:blur(8px);
-}
+
 
 <div class="topbar">
   <div class="topbar-left">
@@ -384,52 +373,52 @@ section{
   70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
   100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
-<!-- comentário /* LOGO TEXTO MANUSCRITO */
-.logo-text{
-  font-family:'Sacramento', cursive;
-  font-size:40px;
-  color:var(--accent);
-  letter-spacing:2px;
-  opacity:.9;
-  transform:translateX(-30px);
-}-->
-  /* Clínica → cursivo e REP Fonte PlayFair */
-.logo-clinica{
-  font-family:'Sacramento', cursive;
-  font-size:42px;
-  letter-spacing:2px;
+
+
+  /* TOPBAR CONTAINER ESQUERDO DO TOPO */
+
+.topbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 32px;
+  z-index:1300;
+  background:linear-gradient(to bottom, rgba(7,26,23,.9), rgba(7,26,23,.6));
+  backdrop-filter:blur(8px);
 }
 
-/* REP → Playfair Display */
-.logo-rep{
-  font-family:'Playfair Display', serif;
-  font-size:36px;
-  font-weight:400;
-  letter-spacing:3px;
-}
-
-  /* CONTAINER ESQUERDO DO TOPO */
 .topbar-left{
   display:flex;
   align-items:center;
-  gap:14px; /* espaço entre logo e texto */
+  gap:14px;
 }
 
-/* LOGO IMAGEM */
 .logo-img{
-  height:46px;        /* ajuste fino */
-  opacity:0.75;       /* transparência */
+  height:46px;
+  opacity:0.65;
 }
 
-/* Ajuste fino opcional */
 .logo-text{
   display:flex;
   align-items:center;
 }
-.logo-img{
-  opacity:0.65;
-  filter:grayscale(10%);
+
+.logo-clinica{
+  font-family:'Sacramento', cursive;
+  font-size:42px;
 }
+
+.logo-rep{
+  font-family:'Playfair Display', serif;
+  font-size:36px;
+  letter-spacing:3px;
+}
+
+
 
 /* ================= MOBILE ================= */
 
@@ -469,12 +458,18 @@ section{
 <body>
 
 <!-- TOPO -->
+<!-- TOPO -->
 <div class="topbar">
-  <div class="logo-text">
-  <span class="logo-clinica">Clínica</span>
-  <span class="logo-rep">REP</span>
-</div>
-    <div class="menu">
+  <div class="topbar-left">
+    <img src="images/logo2025clear.png" alt="Clínica REP" class="logo-img">
+
+    <div class="logo-text">
+      <span class="logo-clinica">Clínica</span>
+      <span class="logo-rep"> REP</span>
+    </div>
+  </div>
+
+  <div class="menu">
     <button>Menu</button>
     <div class="menu-content">
       <a href="#">Home</a>
@@ -484,6 +479,7 @@ section{
     </div>
   </div>
 </div>
+
 
 <!-- HERO -->
 <header class="hero">
