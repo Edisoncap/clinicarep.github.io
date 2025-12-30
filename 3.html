@@ -48,15 +48,14 @@ body{
   overflow:hidden;
 }
 
-.slideshow,
-.gallery-slideshow .slideshow{
+/* SLIDESHOW BASE */
+.slideshow{
   position:absolute;
   inset:0;
   z-index:0;
 }
 
-.slideshow span,
-.gallery-slideshow .slideshow span{
+.slideshow span{
   position:absolute;
   inset:0;
   background-size:cover;
@@ -66,16 +65,18 @@ body{
   filter:brightness(.75);
 }
 
-.slideshow span:nth-child(1){background-image:url("images/1_home_clean.png")}
-.slideshow span:nth-child(2){background-image:url("images/atendimento1.jpg")}
-.slideshow span:nth-child(3){background-image:url("images/maos.jpg")}
-.slideshow span:nth-child(4){background-image:url("images/visao.jpg")}
-.slideshow span:nth-child(5){background-image:url("images/atendimento2.png")}
+/* HERO SLIDES */
+.hero .slideshow span:nth-child(1){background-image:url("images/1_home_clean.png")}
+.hero .slideshow span:nth-child(2){background-image:url("images/atendimento1.jpg")}
+.hero .slideshow span:nth-child(3){background-image:url("images/maos.jpg")}
+.hero .slideshow span:nth-child(4){background-image:url("images/visao.jpg")}
+.hero .slideshow span:nth-child(5){background-image:url("images/atendimento2.png")}
 
-.gallery-slideshow .slideshow span:nth-child(1){
+/* STORY SLIDES */
+.storytelling .slideshow span:nth-child(1){
   background-image:url("images/atendimento4.jpg");
 }
-.gallery-slideshow .slideshow span:nth-child(2){
+.storytelling .slideshow span:nth-child(2){
   background-image:url("images/atendimento5.jpg");
   animation-delay:10s;
 }
@@ -95,7 +96,7 @@ body{
   background:linear-gradient(
     to bottom,
     rgba(2,6,23,.55),
-    rgba(2,6,23,.8)
+    rgba(2,6,23,.85)
   );
   z-index:1;
 }
@@ -123,6 +124,59 @@ body{
   margin-top:16px;
   font-size:1.15rem;
   color:var(--primary);
+}
+
+/* STORYTELLING */
+.storytelling{
+  position:relative;
+  height:70vh;
+  overflow:hidden;
+}
+
+.story-content{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+.story-text{
+  position:absolute;
+  opacity:0;
+  animation:storyFade 20s infinite;
+}
+
+.story-text:nth-child(1){
+  animation-delay:0s;
+}
+
+.story-text:nth-child(2){
+  animation-delay:10s;
+}
+
+.story-text h3{
+  font-family:'Playfair Display', serif;
+  font-size:2.4rem;
+  font-weight:300;
+  color:white;
+  margin-bottom:14px;
+}
+
+.story-text p{
+  font-size:1.05rem;
+  color:var(--primary);
+}
+
+@keyframes storyFade{
+  0%{opacity:0;transform:translateY(10px)}
+  10%{opacity:1;transform:translateY(0)}
+  45%{opacity:1}
+  55%{opacity:0;transform:translateY(-10px)}
+  100%{opacity:0}
 }
 
 /* SEÇÕES */
@@ -185,17 +239,6 @@ h2{
   color:var(--muted);
 }
 
-/* GALERIA SLIDESHOW */
-.gallery-slideshow{
-  position:relative;
-  height:70vh;
-  overflow:hidden;
-}
-
-.gallery-slideshow .overlay{
-  z-index:1;
-}
-
 /* FOOTER */
 footer{
   background:#020617;
@@ -211,6 +254,7 @@ footer{
 
 <img src="images/Logo_round-modified.png" alt="Clínica REP" class="logo-float">
 
+<!-- HERO -->
 <header class="hero">
   <div class="slideshow">
     <span></span><span></span><span></span><span></span><span></span>
@@ -222,34 +266,51 @@ footer{
   </div>
 </header>
 
-<section>
-  <h2>Nossa Equipe</h2>
-  <div class="equipe">
-    <div class="medico">
-      <img src="images/driggor1.jpg">
-      <h3>Dr. Iggor Sousa</h3>
-      <p>Reumatologia Pediátrica</p>
-    </div>
-    <div class="medico">
-      <img src="images/drafernanda1.jpg">
-      <h3>Dra. Fernanda Silveira</h3>
-      <p>Endocrinologia Pediátrica</p>
-    </div>
-    <div class="medico">
-      <img src="images/drvictor1.jpg">
-      <h3>Dr. Victor Silveira</h3>
-      <p>Endocrinologia</p>
-    </div>
-  </div>
-</section>
-
-<!-- NOVO BLOCO SLIDESHOW -->
-<section class="gallery-slideshow">
+<!-- STORYTELLING -->
+<section class="storytelling">
   <div class="slideshow">
     <span></span>
     <span></span>
   </div>
   <div class="overlay"></div>
+
+  <div class="story-content">
+    <div class="story-text">
+      <h3>Acolhimento desde o primeiro contato</h3>
+      <p>Tudo começa com escuta, cuidado e atenção verdadeira.</p>
+    </div>
+
+    <div class="story-text">
+      <h3>Confiança construída com ciência</h3>
+      <p>Delicadeza, precisão e presença em cada consulta.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section>
+  <h2>Nossa Equipe</h2>
+  <div class="equipe">
+
+    <div class="medico">
+      <img src="images/driggor1.jpg">
+      <h3>Dr. Iggor Sousa</h3>
+      <p>Reumatologia Pediátrica</p>
+    </div>
+
+    <div class="medico">
+      <img src="images/drafernanda1.jpg">
+      <h3>Dra. Fernanda Silveira</h3>
+      <p>Endocrinologia Pediátrica</p>
+    </div>
+
+    <div class="medico">
+      <img src="images/drvictor1.jpg">
+      <h3>Dr. Victor Silveira</h3>
+      <p>Endocrinologia</p>
+    </div>
+
+  </div>
 </section>
 
 <footer>
