@@ -26,6 +26,13 @@ body{
   background:var(--bg);
   color:var(--text);
 }
+.overlay{
+  background:linear-gradient(
+    to bottom,
+    rgba(7,26,23,.15),
+    rgba(7,26,23,.45)
+  );
+}
 
 /* TOPO */
 .topbar{
@@ -86,21 +93,25 @@ body{
   cursor:pointer;
 }
 
-.menu-content{
-  display:none;
-  position:absolute;
-  right:0;
-  margin-top:12px;
-  background:var(--surface);
-  border-radius:16px;
-  overflow:hidden;
-  min-width:220px;
-  box-shadow:0 30px 60px rgba(0,0,0,.6);
+.menu-content a{
+  display:block;
+  padding:14px 18px;
+  color:var(--text);
+  text-decoration:none;
+  font-size:14px;
+  transition:background .3s ease;
 }
 
-.menu:hover .menu-content{
+.menu-content a:hover{
+  background:rgba(127,224,195,.12);
+}
+
+
+.menu:hover .menu-content,
+.menu-content:hover{
   display:block;
 }
+
 
 /* CONTEÚDO */
 section{
@@ -194,4 +205,5 @@ section{
 
 </body>
 </html>
+
 
