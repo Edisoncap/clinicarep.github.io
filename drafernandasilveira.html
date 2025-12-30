@@ -2,108 +2,100 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Dra. Fernanda Silveira | Clínica REP</title>
+<title>Dra. Fernanda Silveira | Reumatologia</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link rel="icon" href="images/logo_round_green_250.png">
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Playfair+Display:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --primary:#6b7f6a;
-  --soft:#f1f5f4;
-  --text:#1f2937;
+/* (mesmo CSS base do Dr. Iggor, muda apenas imagem/texto) */
+body{
+  font-family:'Montserrat', sans-serif;
+  background:#071A17;
+  color:#E6F4F1;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Montserrat',sans-serif;color:var(--text);line-height:1.7}
 
-/* HERO */
-.hero{
-  height:70vh;
-  position:relative;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.45);
-}
-.hero img{
+.topbar{
+  position:fixed;
+  top:0;
   width:100%;
-  height:100%;
-  object-fit:cover;
-}
-.hero-content{
-  position:absolute;
-  inset:0;
+  height:90px;
   display:flex;
   align-items:center;
-  padding:40px;
-  color:white;
-}
-.hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:3rem;
-  font-weight:300;
+  padding:0 32px;
+  background:rgba(7,26,23,.85);
 }
 
-/* CONTEÚDO */
-section{
-  max-width:900px;
-  margin:auto;
-  padding:80px 20px;
-}
-h2{
-  font-family:'Playfair Display',serif;
-  font-weight:300;
-  font-size:2rem;
-  color:var(--primary);
-  margin-bottom:24px;
-}
-p{margin-bottom:20px}
+.logo-img{height:64px;opacity:.7}
 
-.voltar{
-  display:inline-block;
-  margin-top:40px;
-  padding:12px 28px;
-  border:1.5px solid var(--primary);
-  border-radius:999px;
-  text-decoration:none;
-  color:var(--primary);
+.hero{
+  height:100vh;
+  padding-top:90px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    linear-gradient(to bottom, rgba(7,26,23,.5), rgba(7,26,23,.8)),
+    url("images/drafernanda2.jpg") center/cover no-repeat;
 }
-.voltar:hover{
-  background:var(--primary);
-  color:white;
-}
+
+.hero h1{font-family:'Playfair Display';font-size:3rem}
+.hero h2{font-family:'Sacramento';font-size:3.4rem;color:#7FE0C3}
+.hero p{max-width:720px;margin:20px auto;color:#9CCFC3}
+
+section{padding:100px 20px}
+.content{max-width:900px;margin:auto;text-align:center}
+.content img{width:260px;border-radius:50%;margin-bottom:30px}
 </style>
 </head>
 
 <body>
 
+<div class="topbar">
+  <img src="images/logo2025clear.png" class="logo-img">
+</div>
+
 <header class="hero">
-  <img src="images/drafernanda2.jpg">
-  <div class="hero-content">
+  <div>
     <h1>Dra. Fernanda Silveira</h1>
+    <h2>Reumatologia</h2>
+    <p>
+      Dra. Fernanda Silveira é médica especialista em Reumatologia, com atuação dedicada ao cuidado de 
+      pacientes com doenças autoimunes, inflamatórias e reumatológicas, 
+      sempre aliando conhecimento técnico, escuta atenta e acompanhamento contínuo.
+    </p>
   </div>
 </header>
 
 <section>
-  <h2>Reumatologia Pediátrica</h2>
+  <div class="content">
+    <img src="images/drafernanda2.jpg">
+    <p>
+      Com sólida formação e experiência em grandes instituições de saúde de São Paulo, 
+      sua prática é pautada pela medicina baseada em evidências, 
+      sem abrir mão de um atendimento humanizado e individualizado.
 
-  <p>
-    Pediatra com especialização em reumatologia pediátrica pela Universidade Federal de São Paulo, 
-    tendo sua atuação focada em doenças autoimunes e inflamatórias 
-    com mais de 10 anos de experiência na área de pediatria geral e emergência pediátrica. 
+    <p>
+    Ao longo de sua trajetória profissional, a Dra. Fernanda construiu uma atuação consistente tanto em consultório quanto em ambiente hospitalar, incluindo acompanhamento de pacientes em tratamento com terapias imunobiológicas e infusões.
 
-  </p>
+Atualmente, integra o corpo clínico de instituições de referência, como:
 
-  <p>
-    Possui especialização em Gestão da Qualidade em Saúde pela Faculdade Israelita de Ciências da Saúde Albert Einstein, 
-    atuando como diretor técnico da Clínica REP desde a fundação.
-  </p>
+AMA Especialidades Itaquera
 
-  <a href="index.html" class="voltar">← Voltar ao site</a>
+Hospital Leforte
+
+Centro de Infusão do Hospital Leforte
+
+Hospital Bosque da Saúde
+
+Essa vivência permite uma abordagem completa, segura e atualizada, 
+especialmente nos casos que exigem acompanhamento prolongado e tratamentos de maior complexidade.
+     </p>
+  
+  </div>
 </section>
 
 </body>
 </html>
-
