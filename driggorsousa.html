@@ -72,6 +72,35 @@ body{
   margin:20px auto 0;
   color:var(--muted);
 }
+.menu{
+  position:absolute;
+  right:24px;
+}
+
+.menu button{
+  background:none;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  padding:10px 18px;
+  border-radius:999px;
+  cursor:pointer;
+}
+
+.menu-content{
+  display:none;
+  position:absolute;
+  right:0;
+  margin-top:12px;
+  background:var(--surface);
+  border-radius:16px;
+  overflow:hidden;
+  min-width:220px;
+  box-shadow:0 30px 60px rgba(0,0,0,.6);
+}
+
+.menu:hover .menu-content{
+  display:block;
+}
 
 /* CONTEÚDO */
 section{
@@ -88,6 +117,23 @@ section{
   width:260px;
   border-radius:50%;
   margin-bottom:30px;
+}
+.btn-outline{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 26px;
+  border:1px solid var(--accent);
+  border-radius:999px;
+  background:none;
+  color:var(--accent);
+  font-size:14px;
+  text-decoration:none;
+  transition:.3s ease;
+}
+
+.btn-outline:hover{
+  background:rgba(127,224,195,.12);
+  transform:translateY(-2px);
 }
 
 </style>
@@ -114,35 +160,22 @@ section{
   <div class="content">
     <img src="images/driggor2.jpg" alt="Dr. Iggor Sousa">
   
-  <h2>Reumatologia Pediátrica</h2>
+    <h2>Reumatologia Pediátrica</h2>
 
-  <p>
-    Pediatra com especialização em reumatologia pediátrica pela Universidade Federal de São Paulo, 
-    tendo sua atuação focada em doenças autoimunes e inflamatórias 
-    com mais de 10 anos de experiência na área de pediatria geral e emergência pediátrica. 
+    <p>
+      Pediatra com especialização em reumatologia pediátrica, com atuação focada
+      em doenças autoimunes e inflamatórias da infância, sempre priorizando
+      o desenvolvimento saudável e a qualidade de vida.
+    </p>
 
-  </p>
+    <p>
+      Possui especialização em Gestão da Qualidade em Saúde e atua como diretor
+      técnico da Clínica REP desde a sua fundação.
+    </p>
 
-  <p>
-   Especialização em Gestão da Qualidade em Saúde pela Faculdade Israelita de Ciências da Saúde Albert Einstein, 
-    atuando como diretor técnico da Clínica REP desde a fundação.
-  </p>
-
-  <a href="index.html" class="btn-outline btn-voltar">Voltar</a>
-
-
+    <a href="index.html" class="btn-outline">Voltar ao site</a>
   </div>
 </section>
-...
-</section> <!-- último conteúdo da página do médico -->
-
-<section style="text-align:left; padding:60px 20px;">
-  <a href="index.html" class="btn-outline">Voltar</a>
-</section>
 
 </body>
 </html>
-
-</body>
-</html>
-
