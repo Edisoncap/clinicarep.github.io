@@ -60,7 +60,6 @@ body{
   padding:10px 18px;
   border-radius:999px;
   cursor:pointer;
-  font-size:14px;
 }
 
 .menu-content{
@@ -71,7 +70,7 @@ body{
   background:var(--surface);
   border-radius:16px;
   overflow:hidden;
-  min-width:200px;
+  min-width:220px;
   box-shadow:0 30px 60px rgba(0,0,0,.6);
 }
 
@@ -84,7 +83,6 @@ body{
   padding:14px 18px;
   text-decoration:none;
   color:var(--text);
-  font-size:14px;
   transition:.3s;
 }
 
@@ -100,23 +98,24 @@ body{
   padding-top:90px;
 }
 
-.slideshow span{
+.hero .slideshow span{
   position:absolute;
   inset:0;
   background-size:cover;
   background-position:center;
   opacity:0;
   animation:heroBg 30s infinite;
+  filter:brightness(.7);
 }
 
-.slideshow span:nth-child(1){
+.hero .slideshow span:nth-child(1){
   background-image:url("images/1_home_clean.png");
 }
-.slideshow span:nth-child(2){
+.hero .slideshow span:nth-child(2){
   background-image:url("images/atendimento1.jpg");
   animation-delay:10s;
 }
-.slideshow span:nth-child(3){
+.hero .slideshow span:nth-child(3){
   background-image:url("images/visao.jpg");
   animation-delay:20s;
 }
@@ -132,11 +131,7 @@ body{
 .overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    to bottom,
-    rgba(7,26,23,.6),
-    rgba(7,26,23,.85)
-  );
+  background:linear-gradient(to bottom, rgba(7,26,23,.6), rgba(7,26,23,.85));
 }
 
 /* HERO TEXT */
@@ -183,7 +178,77 @@ body{
   100%{opacity:0}
 }
 
-/* ===== SEÇÕES ===== */
+/* ===== STORYTELLING ATENDIMENTO ===== */
+.storytelling{
+  position:relative;
+  height:70vh;
+  overflow:hidden;
+}
+
+.storytelling .slideshow span{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  animation:fade 20s infinite;
+  filter:brightness(.7);
+}
+
+.storytelling .slideshow span:nth-child(1){
+  background-image:url("images/atendimento4.jpg");
+}
+.storytelling .slideshow span:nth-child(2){
+  background-image:url("images/atendimento5.jpg");
+  animation-delay:10s;
+}
+
+@keyframes fade{
+  0%{opacity:0}
+  10%{opacity:1}
+  45%{opacity:1}
+  55%{opacity:0}
+  100%{opacity:0}
+}
+
+.story-content{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.story-text{
+  position:absolute;
+  opacity:0;
+  animation:storyFade 20s infinite;
+}
+
+.story-text:nth-child(1){animation-delay:0s}
+.story-text:nth-child(2){animation-delay:10s}
+
+.story-text h3{
+  font-family:'Playfair Display', serif;
+  font-size:2.4rem;
+  color:white;
+}
+
+.story-text p{
+  color:var(--accent);
+}
+
+@keyframes storyFade{
+  0%{opacity:0}
+  10%{opacity:1}
+  45%{opacity:1}
+  55%{opacity:0}
+  100%{opacity:0}
+}
+
+/* ===== EQUIPE ===== */
 section{
   padding:100px 20px;
 }
@@ -192,7 +257,6 @@ section{
   background:var(--surface);
 }
 
-/* EQUIPE */
 .equipe{
   max-width:1200px;
   margin:auto;
@@ -248,13 +312,11 @@ section{
 
 <!-- TOPO -->
 <div class="topbar">
-  <img src="images/Logo_round-modified.png" alt="Clínica REP" class="logo-center">
-
+  <img src="images/Logo_round-modified.png" class="logo-center">
   <div class="menu">
     <button>Menu</button>
     <div class="menu-content">
       <a href="#">Home</a>
-      <a href="#quem-somos">Quem somos</a>
       <a href="#equipe">Nossa equipe</a>
       <a href="https://www.google.com/maps/search/?api=1&query=Rua+Santa+Cruz+2105+Sala+107+São+Paulo+SP" target="_blank">Localização</a>
       <a href="https://wa.me/5511972268107" target="_blank">Contato</a>
@@ -263,12 +325,11 @@ section{
 </div>
 
 <!-- HERO -->
-<header class="hero" id="home">
+<header class="hero">
   <div class="slideshow">
     <span></span><span></span><span></span>
   </div>
   <div class="overlay"></div>
-
   <div class="hero-content">
     <div class="hero-story">
       <h1>Clínica REP</h1>
@@ -288,7 +349,25 @@ section{
   </div>
 </header>
 
-<!-- EQUIPE -->
+<!-- STORYTELLING ATENDIMENTO -->
+<section class="storytelling">
+  <div class="slideshow">
+    <span></span><span></span>
+  </div>
+  <div class="overlay"></div>
+  <div class="story-content">
+    <div class="story-text">
+      <h3>Acolhimento desde o primeiro contato</h3>
+      <p>Tudo começa com escuta, cuidado e atenção verdadeira.</p>
+    </div>
+    <div class="story-text">
+      <h3>Confiança construída com ciência</h3>
+      <p>Precisão médica aliada à empatia e presença.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NOSSA EQUIPE -->
 <section id="equipe">
   <h2 style="text-align:center;color:var(--primary)">Nossa Equipe</h2>
   <div class="equipe">
@@ -311,7 +390,7 @@ section{
 </section>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/5511972268107" class="whatsapp-fixed" target="_blank" aria-label="WhatsApp">
+<a href="https://wa.me/5511972268107" class="whatsapp-fixed" target="_blank">
 <svg viewBox="0 0 32 32">
 <path d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.4 2 7.7L0 32l8.5-2.2c2.2 1.2 4.8 1.9 7.5 1.9 8.8 0 16-7.2 16-16S24.8 0 16 0z"/>
 </svg>
