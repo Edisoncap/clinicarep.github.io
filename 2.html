@@ -133,9 +133,12 @@ body{
   filter:brightness(.7);
 }
 
+/* Slide 1 */
 .hero .slideshow span:nth-child(1){
   background-image:url("images/drafernanda2.jpg");
 }
+
+/* Slide 2 */
 .hero .slideshow span:nth-child(2){
   background-image:url("images/driggor2.jpg");
   animation-delay:10s;
@@ -147,6 +150,27 @@ body{
   40%{opacity:1}
   50%{opacity:0}
   100%{opacity:0}
+}
+
+  @keyframes heroText{
+  0%{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  10%{
+    opacity:1;
+    transform:translateY(0);
+  }
+  40%{
+    opacity:1;
+  }
+  50%{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  100%{
+    opacity:0;
+  }
 }
 
 .overlay{
@@ -169,12 +193,21 @@ body{
 .hero-story{
   position:absolute;
   opacity:0;
-  animation:heroStory 30s infinite;
+  animation:heroText 20s infinite;
+  text-align:center;
+  max-width:800px;
+  padding:0 20px;
 }
 
-.hero-story:nth-child(1){animation-delay:0s}
-.hero-story:nth-child(2){animation-delay:10s}
-.hero-story:nth-child(3){animation-delay:20s}
+/* Texto 1 → imagem 1 */
+.hero-story:nth-child(1){
+  animation-delay:0s;
+}
+
+/* Texto 2 → imagem 2 */
+.hero-story:nth-child(2){
+  animation-delay:10s;
+}
 
 .hero-story h1{
   font-family:'Playfair Display', serif;
@@ -196,8 +229,8 @@ body{
 @keyframes heroStory{
   0%{opacity:0}
   10%{opacity:1}
-  30%{opacity:1}
-  40%{opacity:0}
+  40%{opacity:1}
+  50%{opacity:0}
   100%{opacity:0}
 }
 
@@ -372,9 +405,10 @@ section{
   </div>
 
    <div class="hero-story">
-    <h2>Endocrinologia</h2>
-    <p>Precisão clínica em todas as fases da vida.</p>
-  </div>
+  <h2>Reumatologia Pediátrica</h2>
+  <p>Ciência, cuidado e compromisso com o desenvolvimento infantil.</p>
+</div>
+
 </div>
 </header>
 
