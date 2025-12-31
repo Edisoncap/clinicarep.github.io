@@ -2,20 +2,39 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Dra. Fernanda Silveira | Reumatologia</title>
+<title>Dra. Fernanda Silveira | Reumatologia </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="icon" href="images/logo_round_green_250.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Playfair+Display:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-/* (mesmo CSS base do Dr. Iggor, muda apenas imagem/texto) */
-body{
-  font-family:'Montserrat', sans-serif;
-  background:#071A17;
-  color:#E6F4F1;
+:root{
+  --bg:#071A17;
+  --surface:#0C2622;
+  --primary:#3FAE9A;
+  --accent:#7FE0C3;
+  --text:#E6F4F1;
+  --muted:#9CCFC3;
 }
 
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Montserrat', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.overlay{
+  background:linear-gradient(
+    to bottom,
+    rgba(7,26,23,.03),
+    rgba(7,26,23,.08)
+  );
+}
+
+/* TOPO */
 .topbar{
   position:fixed;
   top:0;
@@ -23,12 +42,15 @@ body{
   height:90px;
   display:flex;
   align-items:center;
+  justify-content:space-between;
   padding:0 32px;
-  background:rgba(7,26,23,.85);
+  z-index:1000;
+  background:linear-gradient(to bottom, rgba(7,26,23,.9), rgba(7,26,23,.6));
 }
 
 .logo-img{height:64px;opacity:.7}
 
+/* HERO */
 .hero{
   height:100vh;
   padding-top:90px;
@@ -37,65 +59,273 @@ body{
   justify-content:center;
   text-align:center;
   background:
-    linear-gradient(to bottom, rgba(7,26,23,.5), rgba(7,26,23,.8)),
-    url("images/drafernanda2.jpg") center/cover no-repeat;
+     url("images/drafernanda1.jpg") center/cover no-repeat;
 }
 
-.hero h1{font-family:'Playfair Display';font-size:3rem}
-.hero h2{font-family:'Sacramento';font-size:3.4rem;color:#7FE0C3}
-.hero p{max-width:720px;margin:20px auto;color:#9CCFC3}
+.hero h1{
+  font-family:'Playfair Display', serif;
+  font-size:3rem;
+}
 
-section{padding:100px 20px}
-.content{max-width:900px;margin:auto;text-align:center}
-.content img{width:260px;border-radius:50%;margin-bottom:30px}
+.hero h2{
+  font-family:'Sacramento', cursive;
+  font-size:3.4rem;
+  color:var(--accent);
+}
+
+.hero p{
+  max-width:700px;
+  margin:20px auto 0;
+  color:var(--muted);
+}
+.menu{
+  position:relative;
+}
+
+.menu button{
+  background:none;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  padding:10px 18px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+/* DROPDOWN */
+.menu-content{
+  position:absolute;
+  top:100%;
+  right:0;
+  margin-top:12px;
+  background:var(--surface);
+  border-radius:16px;
+  min-width:220px;
+  box-shadow:0 30px 60px rgba(0,0,0,.6);
+
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(10px);
+  transition:.25s ease;
+}
+
+.menu-content a{
+  display:block;
+  padding:14px 18px;
+  color:var(--text);
+  text-decoration:none;
+  font-size:14px;
+}
+
+.menu-content a:hover{
+  background:rgba(127,224,195,.12);
+}
+
+/* ABERTURA */
+.menu:hover .menu-content,
+.menu-content:hover{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+
+
+/* CONTEÚDO */
+section{
+  padding:100px 20px;
+}
+
+.content{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.content img{
+  width:260px;
+  border-radius:50%;
+  margin-bottom:30px;
+}
+.btn-outline{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 26px;
+  border:1px solid var(--accent);
+  border-radius:999px;
+  background:none;
+  color:var(--accent);
+  font-size:14px;
+  text-decoration:none;
+  transition:.3s ease;
+}
+
+.btn-outline:hover{
+  background:rgba(127,224,195,.12);
+  transform:translateY(-2px);
+}
+  
+.content h2{
+  font-family:'Playfair Display', serif;
+  font-size:1.8rem;
+  margin-bottom:14px;
+}
+
+  @keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* pequeno atraso entre os textos */
+.hero h1 { animation-delay: 0.2s; }
+.hero h2 { animation-delay: 0.5s; }
+.hero p  { animation-delay: 0.8s; }
+
+
+
+:root{
+  --bg:#071A17;
+  --surface:#0C2622;
+  --primary:#3FAE9A;
+  --accent:#7FE0C3;
+  --text:#E6F4F1;
+  --muted:#9CCFC3;
+}
+
+/* todo o seu CSS acima */
+
+/* BOTÃO */
+.btn-outline:hover{
+  background:rgba(127,224,195,.12);
+  transform:translateY(-2px);
+}
+
+/* CONTRASTE DOS TEXTOS DO HERO */
+/* Títulos do hero */
+.hero h1,
+.hero h2{
+  text-shadow:
+    0 2px 6px rgba(0,0,0,.45);
+}
+
+/* Sombra no Texto menor (descrição) */
+.hero p{
+  text-shadow:
+    0 1px 2px rgba(0,0,0,.7),
+    0 4px 14px rgba(0,0,0,.6);
+}
+
+
+  .content > h2:first-of-type{
+  margin-top: -40px;
+}
+
+
 </style>
+
 </head>
 
 <body>
 
 <div class="topbar">
   <img src="images/logo2025clear.png" class="logo-img">
+
+  <div class="menu">
+    <button>Menu</button>
+    <div class="menu-content">
+      <a href="index.html">Home</a>
+      <a href="index.html#equipe">Nossa equipe</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Santa+Cruz+2105+Sala+107+São+Paulo+SP" target="_blank">
+        Localização
+      </a>
+      <a href="https://wa.me/5511972268107" target="_blank">
+        Contato
+      </a>
+    </div>
+  </div>
 </div>
+
 
 <header class="hero">
   <div>
     <h1>Dra. Fernanda Silveira</h1>
     <h2>Reumatologia</h2>
     <p>
-      Dra. Fernanda Silveira é médica especialista em Reumatologia, com atuação dedicada ao cuidado de 
-      pacientes com doenças autoimunes, inflamatórias e reumatológicas, 
-      sempre aliando conhecimento técnico, escuta atenta e acompanhamento contínuo.
     </p>
+    
   </div>
 </header>
 
 <section>
   <div class="content">
-    <img src="images/drafernanda2.jpg">
-    <p>
-      Com sólida formação e experiência em grandes instituições de saúde de São Paulo, 
-      sua prática é pautada pela medicina baseada em evidências, 
-      sem abrir mão de um atendimento humanizado e individualizado.
+    
+   <h2>Sobre a médica</h2>
+    
+    <img src="images/drafernanda2.jpg" alt="Dra. Fernanda Silveira">
 
-    <p>
-    Ao longo de sua trajetória profissional, a Dra. Fernanda construiu uma atuação consistente tanto em consultório quanto em ambiente hospitalar, incluindo acompanhamento de pacientes em tratamento com terapias imunobiológicas e infusões.
+<p>
+  Médica reumatologista dedicada ao cuidado de pacientes com doenças
+  reumatológicas, atuando no diagnóstico e no acompanhamento clínico
+  de condições que afetam a mobilidade, a funcionalidade e a qualidade
+  de vida.
+</p>
+<br>
+<p>
+  O atendimento é baseado em uma abordagem individualizada e fundamentada
+  em evidências científicas, com foco no controle da dor, na preservação
+  da funcionalidade e na melhora global da saúde.
+</p>
+    
+<h2 style="margin-top:40px;">Formação e atuação</h2>
 
-Atualmente, integra o corpo clínico de instituições de referência, como:
+<p>
+  Médica formada pela Universidade Federal do Pará (UFPA), com residência
+  médica em Clínica Médica e Reumatologia pela Santa Casa de São Paulo,
+  e título de especialista pela Sociedade Brasileira de Reumatologia (SBR).
+</p>
+<br>
+<p>
+  Atualmente, realiza pós-graduação em Medicina do Exercício e do Esporte,
+  integrando o exercício físico como estratégia terapêutica segura e
+  personalizada no cuidado reumatológico.
+</p>
+    
+<br>
+    
+<p>
+  Também possui especialização em Gestão da Qualidade em Saúde pela
+  Faculdade Israelita de Ciências da Saúde Albert Einstein, atuando
+  como diretor técnico da Clínica REP desde a sua fundação, com foco
+  na organização de processos assistenciais e na excelência do
+  atendimento médico.
+</p>
 
-AMA Especialidades Itaquera
+    <a href="index.html" class="btn-outline">Voltar ao site</a>
 
-Hospital Leforte
-
-Centro de Infusão do Hospital Leforte
-
-Hospital Bosque da Saúde
-
-Essa vivência permite uma abordagem completa, segura e atualizada, 
-especialmente nos casos que exigem acompanhamento prolongado e tratamentos de maior complexidade.
-     </p>
-  
   </div>
 </section>
 
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
