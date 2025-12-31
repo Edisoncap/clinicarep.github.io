@@ -538,6 +538,51 @@ section{
     font-size:1rem;
   }
 }
+/* ===== RODAPÉ ===== */
+.footer{
+  background:linear-gradient(to top, var(--surface), var(--bg));
+  padding:42px 20px 30px;
+  text-align:center;
+}
+
+.footer-social{
+  margin-bottom:14px;
+  font-size:14px;
+}
+
+.footer-social a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+  transition:.3s ease;
+}
+
+.footer-social a:hover{
+  color:var(--accent);
+}
+
+.footer-social span{
+  color:var(--muted);
+  opacity:.45;
+}
+
+.footer-phone{
+  font-weight:500;
+}
+
+.footer-copy{
+  font-size:12px;
+  color:var(--muted);
+  opacity:.7;
+}
+
+/* Melhor toque no mobile */
+@media (max-width:600px){
+  .footer-social{
+    font-size:13px;
+    line-height:1.8;
+  }
+}
 
 </style>
 </head>
@@ -678,6 +723,36 @@ section{
 <path d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.4 2 7.7L0 32l8.5-2.2c2.2 1.2 4.8 1.9 7.5 1.9 8.8 0 16-7.2 16-16S24.8 0 16 0z"/>
 </svg>
 </a>
+<footer class="footer">
+  <div class="footer-social">
+    <a href="https://www.instagram.com/repclinica_/" target="_blank" aria-label="Instagram">
+      Instagram
+    </a>
+
+    <span>|</span>
+
+    <a href="https://maps.app.goo.gl/SeCpuiu4QRJix5NT7?g_st=iw" target="_blank" aria-label="Google Maps">
+      Google Maps
+    </a>
+
+    <span>|</span>
+
+    <a href="https://ul.waze.com/ul?place=ChIJYZtA8EZbzpQR3YhwPxneDl8&ll=-23.60212990%2C-46.61852130&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+       target="_blank" aria-label="Waze">
+      Waze
+    </a>
+
+    <span>|</span>
+
+    <a href="tel:011972268107" class="footer-phone">
+      Telefone
+    </a>
+  </div>
+
+  <p class="footer-copy">
+    © Clínica REP – Todos os direitos reservados
+  </p>
+</footer>
 
 </body>
 </html>
