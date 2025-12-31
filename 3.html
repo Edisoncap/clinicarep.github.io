@@ -322,6 +322,76 @@ body{
   55%{opacity:0}
   100%{opacity:0}
 }
+/* ===== INSTALAÇÕES ===== */
+.instalacoes{
+  background:linear-gradient(to bottom, var(--bg), var(--surface));
+}
+
+.instalacoes-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:60px;
+  align-items:center;
+}
+
+.instalacoes-texto h2{
+  font-family:'Playfair Display', serif;
+  font-size:2.6rem;
+  color:var(--primary);
+  margin-bottom:18px;
+}
+
+.instalacoes-texto p{
+  color:var(--muted);
+  font-size:1.05rem;
+  line-height:1.7;
+  margin-bottom:16px;
+}
+
+.instalacoes-galeria{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-auto-rows:160px;
+  gap:16px;
+}
+
+.instalacoes-galeria img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:18px;
+  filter:brightness(.95);
+  transition:.4s ease;
+}
+
+.instalacoes-galeria img:hover{
+  transform:scale(1.03);
+  filter:brightness(1);
+}
+
+/* Destaque imagem central */
+.instalacoes-galeria img:nth-child(1){
+  grid-column:span 2;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+  .instalacoes-container{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .instalacoes-galeria{
+    grid-template-columns:repeat(2, 1fr);
+    grid-auto-rows:140px;
+  }
+
+  .instalacoes-galeria img:nth-child(1){
+    grid-column:span 2;
+  }
+}
 
 /* ===== EQUIPE ===== */
 section{
@@ -520,8 +590,34 @@ section{
     <div class="story-text">
       <h3>Acolhimento desde o primeiro contato</h3>
       <p>Tudo começa com escuta, cuidado e atenção verdadeira.</p>
+
       
       
+    </div>
+  </div>
+</section>
+<!-- NOSSAS INSTALAÇÕES -->
+<section id="instalacoes" class="instalacoes">
+  <div class="instalacoes-container">
+    <div class="instalacoes-texto">
+      <h2>Nossas Instalações</h2>
+      <p>
+        Pensamos cada detalhe para oferecer um ambiente acolhedor,
+        confortável e seguro, proporcionando tranquilidade desde o
+        primeiro contato até o acompanhamento contínuo.
+      </p>
+      <p>
+        Nossos espaços foram planejados para favorecer o bem-estar,
+        a privacidade e a qualidade do atendimento médico.
+      </p>
+    </div>
+
+    <div class="instalacoes-galeria">
+      <img src="images/sala_1.jpg" alt="Consultório Clínica REP">
+      <img src="images/sala_2.jpg" alt="Sala de atendimento Clínica REP">
+      <img src="images/sala_3.jpg" alt="Ambiente acolhedor Clínica REP">
+      <img src="images/sala_4.jpg" alt="Recepção Clínica REP">
+      <img src="images/sala_5.jpg" alt="Estrutura Clínica REP">
     </div>
   </div>
 </section>
