@@ -115,9 +115,10 @@ body{
   box-shadow:0 30px 60px rgba(0,0,0,.6);
 }
 
-.menu:hover .menu-content{
+.menu.active .menu-content{
   display:block;
 }
+
 
 .menu-content a{
   display:block;
@@ -753,6 +754,20 @@ section{
     © Clínica REP – Todos os direitos reservados
   </p>
 </footer>
+  <!-- Correçao do botao menu no mobile -->
+<script>
+  const menu = document.querySelector('.menu');
+  const button = menu.querySelector('button');
+
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.toggle('active');
+  });
+
+  document.addEventListener('click', () => {
+    menu.classList.remove('active');
+  });
+</script>
 
 </body>
 </html>
