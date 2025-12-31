@@ -2,105 +2,336 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Dr. Victor Silveira | Clínica REP</title>
+<title>Dr. Victor Silveira | Endocrinologia </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link rel="icon" href="images/logo_round_green_250.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Playfair+Display:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --primary:#6b7f6a;
-  --soft:#f1f5f4;
-  --text:#1f2937;
+  --bg:#071A17;
+  --surface:#0C2622;
+  --primary:#3FAE9A;
+  --accent:#7FE0C3;
+  --text:#E6F4F1;
+  --muted:#9CCFC3;
 }
+
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Montserrat',sans-serif;color:var(--text);line-height:1.7}
+
+body{
+  font-family:'Montserrat', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.overlay{
+  background:linear-gradient(
+    to bottom,
+    rgba(7,26,23,.03),
+    rgba(7,26,23,.08)
+  );
+}
+
+/* TOPO */
+.topbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 32px;
+  z-index:1000;
+  background:linear-gradient(to bottom, rgba(7,26,23,.9), rgba(7,26,23,.6));
+}
+
+.logo-img{height:64px;opacity:.7}
 
 /* HERO */
 .hero{
-  height:70vh;
-  position:relative;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.45);
-}
-.hero img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-.hero-content{
-  position:absolute;
-  inset:0;
+  height:100vh;
+  padding-top:90px;
   display:flex;
   align-items:center;
-  padding:40px;
-  color:white;
+  justify-content:center;
+  text-align:center;
+  background:
+     url("images/drvictor1.jpg") center/cover no-repeat;
 }
+
 .hero h1{
-  font-family:'Playfair Display',serif;
+  font-family:'Playfair Display', serif;
   font-size:3rem;
-  font-weight:300;
 }
+
+.hero h2{
+  font-family:'Sacramento', cursive;
+  font-size:3.4rem;
+  color:var(--accent);
+}
+
+.hero p{
+  max-width:700px;
+  margin:20px auto 0;
+  color:var(--muted);
+}
+.menu{
+  position:relative;
+}
+
+.menu button{
+  background:none;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  padding:10px 18px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+/* DROPDOWN */
+.menu-content{
+  position:absolute;
+  top:100%;
+  right:0;
+  margin-top:12px;
+  background:var(--surface);
+  border-radius:16px;
+  min-width:220px;
+  box-shadow:0 30px 60px rgba(0,0,0,.6);
+
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(10px);
+  transition:.25s ease;
+}
+
+.menu-content a{
+  display:block;
+  padding:14px 18px;
+  color:var(--text);
+  text-decoration:none;
+  font-size:14px;
+}
+
+.menu-content a:hover{
+  background:rgba(127,224,195,.12);
+}
+
+/* ABERTURA */
+.menu:hover .menu-content,
+.menu-content:hover{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+
 
 /* CONTEÚDO */
 section{
+  padding:100px 20px;
+}
+
+.content{
   max-width:900px;
   margin:auto;
-  padding:80px 20px;
+  text-align:center;
 }
-h2{
-  font-family:'Playfair Display',serif;
-  font-weight:300;
-  font-size:2rem;
-  color:var(--primary);
-  margin-bottom:24px;
-}
-p{margin-bottom:20px}
 
-.voltar{
+.content img{
+  width:260px;
+  border-radius:50%;
+  margin-bottom:30px;
+}
+.btn-outline{
   display:inline-block;
-  margin-top:40px;
-  padding:12px 28px;
-  border:1.5px solid var(--primary);
+  margin-top:30px;
+  padding:12px 26px;
+  border:1px solid var(--accent);
   border-radius:999px;
+  background:none;
+  color:var(--accent);
+  font-size:14px;
   text-decoration:none;
-  color:var(--primary);
+  transition:.3s ease;
 }
-.voltar:hover{
-  background:var(--primary);
-  color:white;
+
+.btn-outline:hover{
+  background:rgba(127,224,195,.12);
+  transform:translateY(-2px);
 }
+  
+.content h2{
+  font-family:'Playfair Display', serif;
+  font-size:1.8rem;
+  margin-bottom:14px;
+}
+
+  @keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* pequeno atraso entre os textos */
+.hero h1 { animation-delay: 0.2s; }
+.hero h2 { animation-delay: 0.5s; }
+.hero p  { animation-delay: 0.8s; }
+
+
+
+:root{
+  --bg:#071A17;
+  --surface:#0C2622;
+  --primary:#3FAE9A;
+  --accent:#7FE0C3;
+  --text:#E6F4F1;
+  --muted:#9CCFC3;
+}
+
+/* todo o seu CSS acima */
+
+/* BOTÃO */
+.btn-outline:hover{
+  background:rgba(127,224,195,.12);
+  transform:translateY(-2px);
+}
+
+/* CONTRASTE DOS TEXTOS DO HERO */
+/* Títulos do hero */
+.hero h1,
+.hero h2{
+  text-shadow:
+    0 2px 6px rgba(0,0,0,.45);
+}
+
+/* Sombra no Texto menor (descrição) */
+.hero p{
+  text-shadow:
+    0 1px 2px rgba(0,0,0,.7),
+    0 4px 14px rgba(0,0,0,.6);
+}
+
+
+  .content > h2:first-of-type{
+  margin-top: -40px;
+}
+
+
 </style>
+
 </head>
 
 <body>
 
+<div class="topbar">
+  <img src="images/logo2025clear.png" class="logo-img">
+
+  <div class="menu">
+    <button>Menu</button>
+    <div class="menu-content">
+      <a href="index.html">Home</a>
+      <a href="index.html#equipe">Nossa equipe</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Santa+Cruz+2105+Sala+107+São+Paulo+SP" target="_blank">
+        Localização
+      </a>
+      <a href="https://wa.me/5511972268107" target="_blank">
+        Contato
+      </a>
+    </div>
+  </div>
+</div>
+
+
 <header class="hero">
-  <img src="images/drvictor1.jpg">
-  <div class="hero-content">
+  <div>
     <h1>Dr. Victor Silveira</h1>
+    <h2>Endocrinologia</h2>
+    <p>
+    </p>
+    
   </div>
 </header>
 
 <section>
-  <h2>Endocrinologia</h2>
+  <div class="content">
+    
+   <h2>Sobre o médico</h2>
+    
+    <img src="images/drvictor2.jpg" alt="Dr. Victor Silveira">
 
-  <p>
-    O Dr. Victor Silveira atua na Endocrinologia com foco no cuidado integral do paciente,
-    abrangendo diagnóstico, prevenção e acompanhamento de doenças hormonais.
-  </p>
+<p>
+  Médico endocrinologista com atuação voltada ao cuidado integral do
+  paciente adulto, acompanhando condições metabólicas e hormonais
+  que impactam diretamente a saúde, o bem-estar e a qualidade de vida.
+</p>
+<br>
+<p>
+  A prática clínica é baseada em uma abordagem individualizada,
+  fundamentada em evidências científicas e na construção de um plano
+  terapêutico personalizado, considerando o contexto de vida, os hábitos
+  e as expectativas de cada paciente.
+</p>
+<h2 style="margin-top:40px;">Formação e atuação</h2>
 
-  <p>
-    Seu atendimento valoriza clareza, acolhimento e precisão técnica, promovendo
-    decisões compartilhadas e tratamento personalizado.
-  </p>
+<p>
+  Médico formado pela Universidade Federal do Pará (UFPA), com sólida
+  formação em Clínica Médica e Residência Médica em Clínica Médica pelo
+  Hospital Heliópolis, instituição de referência no atendimento de alta
+  complexidade, onde desenvolveu uma base ampla para o cuidado integral
+  do paciente adulto.
+</p>
+<br>
+<p>
+  Concluiu Residência Médica em Endocrinologia e Metabologia pelo IAMSPE
+  (Instituto de Assistência Médica ao Servidor Público Estadual), centro
+  reconhecido pela excelência na formação de especialistas e pelo rigor
+  científico.
+</p>
+<br>
+<p>
+  Possui Título de Especialista em Endocrinologia e Metabologia pela
+  Sociedade Brasileira de Endocrinologia e Metabologia (SBEM), certificação
+  que atesta atualização contínua e atuação alinhada às melhores práticas
+  da especialidade.
+</p>
+<br>
+<p>
+  Atua no acompanhamento de pacientes com obesidade, diabetes, doenças
+  da tireoide e osteoporose, com foco em estratégias terapêuticas que vão
+  além da prescrição medicamentosa, priorizando acompanhamento próximo,
+  decisões compartilhadas e resultados sustentáveis a longo prazo.
+</p>
 
-  <a href="index.html" class="voltar">← Voltar ao site</a>
+
+    <a href="index.html" class="btn-outline">Voltar ao site</a>
+
+  </div>
 </section>
+
 
 </body>
 </html>
+
+
+
+
+
+
+
+
