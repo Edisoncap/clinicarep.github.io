@@ -1,150 +1,423 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
 <meta charset="UTF-8">
 <title>Clínica REP | Atendimento Humanizado</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Clínica REP – Atendimento humanizado em Reumatologia Pediátrica e Endocrinologia.">
+<meta name="description" content="Clínica REP – Atendimento humanizado em Reumatologia Endocrinologia e Pediatria.">
 
 <link rel="icon" href="images/logo_round_green_250.png">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+/* BOTÃO PADRÃO */
+.btn-outline{
+  display:inline-block;
+  margin-top:18px;
+  padding:10px 22px;
+  border:1px solid var(--accent);
+  border-radius:999px;
+  background:none;
+  color:var(--accent);
+  font-size:14px;
+  text-decoration:none;
+  transition:.3s ease;
+}
+
+.btn-outline:hover{
+  background:rgba(127,224,195,.12);
+  transform:translateY(-2px);
+}
+
 :root{
-  --primary:#6b7f6a;
-  --soft:#f1f5f4;
-  --text:#1f2937;
+  --bg:#071A17;
+  --surface:#0C2622;
+  --primary:#3FAE9A;
+  --accent:#7FE0C3;
+  --text:#E6F4F1;
+  --muted:#9CCFC3;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
   font-family:'Montserrat', sans-serif;
+  background:var(--bg);
   color:var(--text);
-  line-height:1.7;
 }
 
-/* LOGO FLUTUANTE */
-.logo-float{
+/* ===== TOPO ===== */
+
+
+.topbar{
   position:fixed;
-  top:16px;
-  right:16px;
-  width:80px;
-  z-index:1200;
-  filter:drop-shadow(0 6px 14px rgba(0,0,0,.18));
+  top:0;
+  width:100%;
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 32px;
+  z-index:1300;
+  background:linear-gradient(to bottom, rgba(7,26,23,.9), rgba(7,26,23,.6));
+  backdrop-filter:blur(8px);
 }
 
-/* HERO */
+.topbar-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo-img{
+  height:64px;
+  opacity:0.70;
+}
+  
+.logo-center{
+  height:0px;
+  opacity:0.5; /* 50% de transparência */
+}
+
+/* MENU */
+.menu{
+  position:absolute;
+  right:24px;
+}
+
+.menu button{
+  background:none;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  padding:10px 18px;
+  border-radius:999px;
+  cursor:pointer;
+}
+
+.menu-content{
+  display:none;
+  position:absolute;
+  right:0;
+  margin-top:12px;
+  background:var(--surface);
+  border-radius:16px;
+  overflow:hidden;
+  min-width:220px;
+  box-shadow:0 30px 60px rgba(0,0,0,.6);
+}
+
+.menu.active .menu-content{
+  display:block;
+}
+
+
+.menu-content a{
+  display:block;
+  padding:14px 18px;
+  text-decoration:none;
+  color:var(--text);
+  transition:.3s;
+}
+
+.menu-content a:hover{
+  background:rgba(127,224,195,.08);
+}
+
+/* ===== HERO ===== */
 .hero{
   height:100vh;
   position:relative;
   overflow:hidden;
+  padding-top:90px;
 }
 
-/* SLIDESHOW */
-.slideshow{
-  position:absolute;
-  inset:0;
-  z-index:0;
-}
-
-.slideshow span{
+.hero .slideshow span{
   position:absolute;
   inset:0;
   background-size:cover;
   background-position:center;
   opacity:0;
-  animation:fade 30s infinite;
+  animation:heroBg 20s infinite;
+  filter:brightness(.9);
 }
 
-.slideshow span:nth-child(1){
-  background-image:url("images/1_home_clean.png");
+/* Slide 1 */
+.hero .slideshow span:nth-child(1){
+  background-image:url("images/drafernanda2.jpg");
+}
+
+/* Slide 2 */
+.hero .slideshow span:nth-child(2){
+  background-image:url("images/driggor2.jpg");
+  animation-delay:10s;
+}
+
+@keyframes heroBg{
+  0%{opacity:1}
+  45%{opacity:1}
+  50%{opacity:0}
+  95%{opacity:0}
+  100%{opacity:1}
+}
+
+  @keyframes heroText{
+  0%{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  10%{
+    opacity:1;
+    transform:translateY(0);
+  }
+  40%{
+    opacity:1;
+  }
+  50%{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(7,26,23,.35), rgba(7,26,23,.65));
+}
+
+/* HERO TEXT */
+.hero-content{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero-story{
+  position:absolute;
+  opacity:0;
+  animation:heroText 20s infinite;
+  text-align:center;
+  max-width:800px;
+  padding:0 20px;
+}
+
+/* Texto 1 → imagem 1 */
+.hero-story:nth-child(1){
   animation-delay:0s;
 }
-.slideshow span:nth-child(2){
-  background-image:url("images/atendimento1.jpg");
-  animation-delay:6s;
+
+/* Texto 2 → imagem 2 */
+.hero-story:nth-child(2){
+  animation-delay:10s;
 }
-.slideshow span:nth-child(3){
-  background-image:url("images/maos.jpg");
-  animation-delay:12s;
+
+.hero-story h1{
+  font-family:'Playfair Display', serif;
+  font-size:3.2rem;
+  color:white;
 }
-.slideshow span:nth-child(4){
-  background-image:url("images/visao.jpg");
-  animation-delay:18s;
+
+.hero-story h2{
+  font-family:'Sacramento', cursive;
+  font-size:3.6rem;
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:1px;
+  text-shadow:0 4px 18px rgba(0,0,0,.35);
 }
-.slideshow span:nth-child(5){
-  background-image:url("images/atendimento2.png");
-  animation-delay:24s;
+
+.hero-story p{
+  color:var(--muted);
+}
+
+@keyframes heroStory{
+  0%{opacity:0}
+  10%{opacity:1}
+  40%{opacity:1}
+  50%{opacity:0}
+  100%{opacity:0}
+}
+
+/* ===== STORYTELLING ATENDIMENTO ===== */
+.storytelling{
+  position:relative;
+  height:70vh;
+  overflow:hidden;
+}
+  
+/* HERO SLIDESHOW – 2 IMAGENS (10s cada) */
+.storytelling .slideshow span{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  animation:fade 20s infinite;
+  filter:brightness(.9);
+}
+
+.storytelling .slideshow span:nth-child(1){
+  background-image:url("images/drvictor2.jpg");
+}
+.storytelling .slideshow span:nth-child(2){
+  background-image:url("images/atendimento2.jpg");
+  animation-delay:10s;
 }
 
 @keyframes fade{
   0%{opacity:0}
   10%{opacity:1}
-  30%{opacity:1}
-  40%{opacity:0}
+  45%{opacity:1}
+  55%{opacity:0}
   100%{opacity:0}
 }
 
-/* OVERLAY ESCURO */
-.overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to bottom,
-    rgba(0,0,0,.35),
-    rgba(0,0,0,.45)
-  );
-  z-index:1;
-}
-
-/* CONTEÚDO HERO */
-.hero-content{
+.story-content{
   position:relative;
   z-index:2;
   height:100%;
-  max-width:1200px;
-  padding:0 20px;
   display:flex;
-  flex-direction:column;
+  align-items:center;
   justify-content:center;
+  text-align:center;
+}
+
+.story-text{
+  position:absolute;
+  opacity:0;
+  animation:storyFade 20s infinite;
+}
+
+.story-text:nth-child(1){animation-delay:0s}
+.story-text:nth-child(2){animation-delay:10s}
+
+.story-text h3{
+  font-family:'Sacramento', cursive;
+  font-size:3.2rem;
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:1px;
   color:white;
+  text-shadow:0 4px 18px rgba(0,0,0,.35);
 }
 
-.hero h1{
+
+.story-text p{
+  color:var(--accent);
+}
+
+@keyframes storyFade{
+  0%{opacity:0}
+  10%{opacity:1}
+  45%{opacity:1}
+  55%{opacity:0}
+  100%{opacity:0}
+}
+
+  /* ===== TITULOS PADRAO PARA CORRIGIR NOSSAEQUIPE ===== */
+  .section-title{
   font-family:'Playfair Display', serif;
-  font-size:3rem;
-  font-weight:300;
-  max-width:700px;
+  font-size:2.6rem;
+  color:var(--primary);
+  margin-bottom:60px;
+  text-align:center;
 }
 
-.hero p{
-  margin-top:12px;
-  font-size:1.15rem;
+/* ===== INSTALAÇÕES ===== */
+.instalacoes{
+  background:linear-gradient(to bottom, var(--bg), var(--surface));
 }
 
-/* SEÇÕES */
+.instalacoes-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:60px;
+  align-items:center;
+}
+
+.instalacoes-texto h2{
+  font-family:'Playfair Display', serif;
+  font-size:2.6rem;
+  color:var(--primary);
+  margin-bottom:18px;
+}
+
+.instalacoes-texto p{
+  color:var(--muted);
+  font-size:1.05rem;
+  line-height:1.7;
+  margin-bottom:16px;
+}
+
+.instalacoes-galeria{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-auto-rows:160px;
+  gap:16px;
+}
+
+.instalacoes-galeria img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:18px;
+  filter:brightness(.95);
+  transition:.4s ease;
+}
+
+.instalacoes-galeria img:hover{
+  transform:scale(1.03);
+  filter:brightness(1);
+}
+
+/* Destaque imagem central */
+.instalacoes-galeria img:nth-child(1){
+  grid-column:span 2;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+  .instalacoes-container{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .instalacoes-galeria{
+    grid-template-columns:repeat(2, 1fr);
+    grid-auto-rows:140px;
+  }
+
+  .instalacoes-galeria img:nth-child(1){
+    grid-column:span 2;
+  }
+}
+
+/* ===== EQUIPE ===== */
 section{
   padding:100px 20px;
 }
 
-section:nth-of-type(even){
-  background:var(--soft);
+#equipe{
+  background:var(--surface);
 }
 
-h2{
-  text-align:center;
-  font-family:'Playfair Display', serif;
-  font-size:2.4rem;
-  font-weight:300;
-  color:var(--primary);
-  margin-bottom:60px;
-}
-
-/* EQUIPE */
 .equipe{
   max-width:1200px;
   margin:auto;
@@ -154,149 +427,476 @@ h2{
 }
 
 .medico{
-  background:white;
+  background:rgba(127,224,195,.06);
   border-radius:28px;
-  padding:30px;
+  padding:36px 30px;
   text-align:center;
-  box-shadow:0 18px 45px rgba(0,0,0,.08);
 }
 
 .medico img{
   width:100%;
   aspect-ratio:1/1;
-  object-fit:cover;
   border-radius:50%;
-  margin-bottom:18px;
+  margin-bottom:22px;
 }
 
-.medico h3{
-  font-family:'Playfair Display', serif;
-  color:var(--primary);
-  font-size:1.4rem;
-}
-
-.medico p{
-  font-size:.95rem;
-  color:#6b7280;
-}
-
-.medico a{
-  display:inline-block;
-  margin-top:18px;
-  padding:10px 26px;
-  border:1.5px solid var(--primary);
-  border-radius:999px;
-  text-decoration:none;
-  color:var(--primary);
-  transition:.3s;
-}
-
-.medico a:hover{
-  background:var(--primary);
-  color:white;
-}
-
-/* FOOTER */
-footer{
-  background:var(--soft);
-  padding:40px 20px;
-  text-align:center;
-  font-size:14px;
-}
-
-/* WHATSAPP FIXO MOBILE */
+/* ===== WHATSAPP ===== */
 .whatsapp-fixed{
-  display:none;
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1400;
+  animation:pulse 2s infinite;
 }
 
-@media (max-width:768px){
-  .hero h1{font-size:2.1rem}
-
-  .whatsapp-fixed{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:fixed;
-    bottom:18px;
-    right:18px;
-    width:56px;
-    height:56px;
-    background:#25D366;
-    border-radius:50%;
-    z-index:1000;
-    animation:pulse 2s infinite;
-  }
-
-  .whatsapp-fixed svg{
-    width:28px;
-    height:28px;
-    fill:white;
-  }
+.whatsapp-fixed svg{
+  width:28px;
+  fill:white;
 }
 
 @keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}
-  70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
+  70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
   100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
+
+
+  /* TOPBAR CONTAINER ESQUERDO DO TOPO */
+
+.topbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 32px;
+  z-index:1300;
+  background:linear-gradient(to bottom, rgba(7,26,23,.9), rgba(7,26,23,.6));
+  backdrop-filter:blur(8px);
+}
+
+.topbar-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo-text{
+  display:flex;
+  align-items:center;
+}
+
+.logo-clinica{
+  font-family:'Sacramento', cursive;
+  font-size:42px;
+}
+
+.logo-rep{
+  font-family:'Playfair Display', serif;
+  font-size:36px;
+  letter-spacing:3px;
+}
+
+
+
+/* ================= MOBILE ================= */
+
+  @media (max-width:768px){
+  .logo-img{
+    height:62px;
+    opacity:0.7;
+  }
+}
+
+  @media (max-width:768px){
+  .logo-clinica{
+    font-size:32px;
+  }
+
+  .logo-rep{
+    font-size:28px;
+    letter-spacing:2px;
+  }
+}
+  
+  @media (max-width:768px){
+  .hero-story h2{
+    font-size:2.6rem;
+  line-height:1.15;
+    letter-spacing:.5px;
+  }
+
+  .hero-story p{
+    font-size:1rem;
+  }
+}
+/* ===== RODAPÉ ===== */
+.footer{
+  background:linear-gradient(to top, var(--surface), var(--bg));
+  padding:42px 20px 30px;
+  text-align:center;
+}
+
+.footer-social{
+  margin-bottom:14px;
+  font-size:14px;
+}
+
+.footer-social a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+  transition:.3s ease;
+}
+
+.footer-social a:hover{
+  color:var(--accent);
+}
+
+.footer-social span{
+  color:var(--muted);
+  opacity:.45;
+}
+
+.footer-phone{
+  font-weight:500;
+}
+
+.footer-copy{
+  font-size:12px;
+  color:var(--muted);
+  opacity:.7;
+}
+
+/* Melhor toque no mobile */
+@media (max-width:600px){
+  .footer-social{
+    font-size:13px;
+    line-height:1.8;
+  }
+}
+/* ===== LIGHTBOX INSTALAÇÕES ===== */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(7,26,23,.95);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s ease;
+  z-index:2000;
+}
+
+.lightbox.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:20px;
+  box-shadow:0 30px 80px rgba(0,0,0,.7);
+  animation:zoomIn .4s ease;
+}
+
+.lightbox-close{
+  position:absolute;
+  top:24px;
+  right:32px;
+  font-size:42px;
+  color:var(--accent);
+  cursor:pointer;
+  font-weight:300;
+}
+
+@keyframes zoomIn{
+  from{transform:scale(.85); opacity:0}
+  to{transform:scale(1); opacity:1}
+}
+
+.google-reviews-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  .google-reviews-container h2 {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+
+  .map-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  @media (max-width: 480px) {
+    .google-reviews-container h2 {
+      font-size: 18px;
+    }
+  }
+
 </style>
 </head>
 
 <body>
 
-<img src="images/Logo_round-modified.png" alt="Clínica REP" class="logo-float">
 
+<!-- TOPO -->
+<div class="topbar">
+  <div class="topbar-left">
+    <img src="images/Logo_round-modified.png" alt="Clínica REP" class="logo-img">
+<!-- TITULO ESCRITO CLINICA REP
+    <div class="logo-text">
+      <span class="logo-clinica">Clínica</span>
+      <span class="logo-rep"> REP</span>
+    </div>
+-->
+    
+  </div>
+    
+  <div class="menu">
+    <button>Menu</button>
+    <div class="menu-content">
+      <a href="#">Home</a>
+      <a href="#instalacoes">Nossas Instalações</a>
+      <a href="#equipe">Nossa equipe</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Santa+Cruz+2105+Sala+107+São+Paulo+SP" target="_blank">Localização</a>
+      <a href="https://wa.me/5511972268107" target="_blank">Contato</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- HERO -->
 <header class="hero">
   <div class="slideshow">
-    <span></span><span></span><span></span><span></span><span></span>
+    <span></span>
+    <span></span>
   </div>
-
   <div class="overlay"></div>
-
-  <div class="hero-content">
-    <h1>Cuidado médico com delicadeza, ciência e atenção</h1>
-    <p>Reumatologia Pediátrica • Endocrinologia Pediátrica • Endocrinologia</p>
+<div class="hero-content">
+  <div class="hero-story">
+    <h2>Reumatologia</h2>
+    <p>“Cuidar hoje é garantir mais movimento, autonomia e qualidade de vida no futuro.”</p>
   </div>
+
+   <div class="hero-story">
+  <h2>Reumatologia Pediátrica</h2>
+  <p>Diagnosticar e cuidar de doenças autoimunes na infância, é proteger a qualidade de vida e futuro da criança.</p>
+</div>
+
+</div>
 </header>
 
-<section>
-  <h2>Nossa Equipe</h2>
-  <div class="equipe">
+<!-- STORYTELLING ATENDIMENTO -->
+<section class="storytelling">
+  <div class="slideshow">
+    <span></span><span></span>
+  </div>
+  <div class="overlay"></div>
+  <div class="story-content">
+    <div class="story-text">
+      <h3>Endocrinologia</h3>
+      <p>Cuidado especializado para equilíbrio hormonal, metabolismo e saúde integral.</p>
 
-    <div class="medico">
-      <img src="images/driggor1.jpg">
-      <h3>Dr. Iggor Sousa</h3>
-      <p>Reumatologia Pediátrica</p>
-      <a href="driggorsousa.html">Saiba mais</a>
+    </div>
+    <div class="story-text">
+      <h3>Acolhimento desde o primeiro contato</h3>
+      <p>Tudo começa com escuta, cuidado e atenção verdadeira.</p>
+
+      
+      
+    </div>
+  </div>
+</section>
+<!-- NOSSAS INSTALAÇÕES -->
+<section id="instalacoes" class="instalacoes">
+  <div class="instalacoes-container">
+    <div class="instalacoes-texto">
+      <h2>Nossas Instalações</h2>
+      <p>
+        Pensamos cada detalhe para oferecer um ambiente acolhedor,
+        confortável e seguro, proporcionando tranquilidade desde o
+        primeiro contato até o acompanhamento contínuo.
+      </p>
+      <p>
+        Nossos espaços foram planejados para favorecer o bem-estar,
+        a privacidade e a qualidade do atendimento médico.
+      </p>
     </div>
 
-    <div class="medico">
-      <img src="images/drafernanda1.jpg">
-      <h3>Dra. Fernanda Silveira</h3>
-      <p>Endocrinologia Pediátrica</p>
-      <a href="drafernandasilveira.html">Saiba mais</a>
+    <div class="instalacoes-galeria">
+      <img src="images/sala_1.jpg" alt="Consultório Clínica REP">
+      <img src="images/sala_2.jpg" alt="Sala de atendimento Clínica REP">
+      <img src="images/sala_3.jpg" alt="Ambiente acolhedor Clínica REP">
+      <img src="images/sala_4.jpg" alt="Recepção Clínica REP">
+      <img src="images/sala_5.jpg" alt="Estrutura Clínica REP">
     </div>
-
-    <div class="medico">
-      <img src="images/drvictor1.jpg">
-      <h3>Dr. Victor Silveira</h3>
-      <p>Endocrinologia</p>
-      <a href="drvictorsilveira.html">Saiba mais</a>
-    </div>
-
   </div>
 </section>
 
-<footer>
-  <strong>Clínica REP</strong><br>
-  Atendimento humanizado
-</footer>
+<!-- SESSÃO NOSSA EQUIPE -->
+<section id="equipe">
+<h2 class="section-title">Nossa Equipe</h2>
 
-<a href="https://wa.me/5511972268107" class="whatsapp-fixed" aria-label="WhatsApp">
+  <div class="equipe">
+    <div class="medico">
+
+  <img src="images/driggor1.jpg">
+  <h3>Dr. Iggor Sousa</h3>
+  <p>Reumatologia Pediátrica</p>
+  <a href="driggorsousa.html" class="btn-outline">Saiba mais</a>
+</div>
+
+    
+ 
+      <div class="medico">
+  <img src="images/drafernanda1.jpg">
+  <h3>Dra. Fernanda Silveira</h3>
+  <p>Reumatologia</p>
+  <a href="drafernandasilveira.html" class="btn-outline">Saiba mais</a>
+</div>
+      
+
+    <div class="medico">
+  <img src="images/drvictor1.jpg">
+  <h3>Dr. Victor Silveira</h3>
+  <p>Endocrinologia</p>
+  <a href="drvictorsilveira.html" class="btn-outline">Saiba mais</a>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- SESSÃO AVALIAÇÕES GOOGLE-->
+<section
+class="google-reviews-container">
+  <h2>Avaliações dos nossos pacientes ⭐⭐⭐⭐⭐</h2>
+
+  <div class="map-responsive">
+    <iframe
+      src="https://www.google.com/maps?q=Clínica&output=embed&hl=pt-BR&z=15"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/5511972268107" class="whatsapp-fixed" target="_blank">
 <svg viewBox="0 0 32 32">
 <path d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.4 2 7.7L0 32l8.5-2.2c2.2 1.2 4.8 1.9 7.5 1.9 8.8 0 16-7.2 16-16S24.8 0 16 0z"/>
 </svg>
 </a>
+<footer class="footer">
+  <div class="footer-social">
+    <a href="https://www.instagram.com/repclinica_/" target="_blank" aria-label="Instagram">
+      Instagram
+    </a>
 
+    <span>|</span>
+
+    <a href="https://maps.app.goo.gl/SeCpuiu4QRJix5NT7?g_st=iw" target="_blank" aria-label="Google Maps">
+      Google Maps
+    </a>
+
+    <span>|</span>
+
+    <a href="https://ul.waze.com/ul?place=ChIJYZtA8EZbzpQR3YhwPxneDl8&ll=-23.60212990%2C-46.61852130&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+       target="_blank" aria-label="Waze">
+      Waze
+    </a>
+
+    <span>|</span>
+
+    <a href="tel:011972268107" class="footer-phone">
+      Telefone
+    </a>
+  </div>
+
+  <p class="footer-copy">
+    © Clínica REP – Todos os direitos reservados
+  </p>
+</footer>
+  <!-- Correçao do botao menu no mobile -->
+<script>
+  const menu = document.querySelector('.menu');
+  const button = menu.querySelector('button');
+
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.toggle('active');
+  });
+
+  document.addEventListener('click', () => {
+    menu.classList.remove('active');
+  });
+</script>
+<!-- LIGHTBOX INSTALAÇÕES -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="Imagem ampliada">
+</div>
+
+<script>
+  const galleryImages = document.querySelectorAll('.instalacoes-galeria img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if(e.target === lightbox){
+      lightbox.classList.remove('active');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape'){
+      lightbox.classList.remove('active');
+    }
+  });
+</script>
 </body>
 </html>
